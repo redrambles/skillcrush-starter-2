@@ -25,13 +25,38 @@
  * since Skillcrush Starter 1.0
  */
 
-// Turns on widgets
-if (function_exists('register_sidebar')) {
-	register_sidebar();
+// Theme support for post-thumbnails and menus
+function skillcrushstarter_setup() {
+
+	// Post thumbnails support
+	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size( 825, 510, true ); // This is optional - just testing
+
+	// Register Menus 
+	register_nav_menus ( array (
+		'primary-menu' => __( 'Primary Menu', 'skillcrushstarter' ),
+		'secondary' => __( 'Secondary Menu', 'skillcrushstarter' ),  
+	) );
 }
 
-// Turns on post thumbnails
-add_theme_support('post-thumbnails');
+add_action( 'after_setup_theme', 'skillcrushstarter_setup' );
+
+/**
+ * Register widget area 
+ *
+ */
+function skillcrushstarter_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar 1', 'skillcrushstarter' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'skillcrushstarter' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
 
 // defines custom markup for post comments
 function skillcrush_comments($comment, $args, $depth) {

@@ -25,7 +25,7 @@
  * since Skillcrush Starter 1.0
  */
 
-// ANN ADDITION - Theme support for post-thumbnails and menus
+// Theme support for post-thumbnails and menus
 function skillcrushstarter_setup() {
 
 	// Post thumbnails support
@@ -42,7 +42,7 @@ function skillcrushstarter_setup() {
 add_action( 'after_setup_theme', 'skillcrushstarter_setup' );
 
 /**
- * Register widget area - ANN ADDITION.
+ * Register widget area 
  *
  */
 function skillcrushstarter_widgets_init() {
