@@ -20,20 +20,14 @@ get_header(); ?>
 	<div class="main-content">
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part('content-blog', get_post_format()); ?>
+				<h3>Hello, Skillcrushers!</h3>
+				<p>This is your main index page.</p>
+				<p>The file that creates this default page is index.php.</p>
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
 	
 	<?php get_sidebar(); ?>
-
-	<?php if ( have_posts() ): ?>
-		<div id="navigation" class="container">
-	        <div class="left"><?php next_posts_link('&larr; Older Posts'); ?></div>
-	        <div class="right"><?php previous_posts_link('Newer Posts &rarr;'); ?></div>
-	    </div>
-	<?php endif; ?>
-
 </section>
 
 <?php get_footer(); ?>

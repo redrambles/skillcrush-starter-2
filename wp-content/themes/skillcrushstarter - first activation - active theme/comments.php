@@ -1,6 +1,7 @@
 <div id="comments" class="comments-area">
 		<?php if ( have_comments() ) : ?>
 			<h2 class="comments-title">
+				<!-- The code below will be comment count sensitive -->
 				<?php
 					printf( _n( '1 comment', '%1$s comments', get_comments_number(), 'skillcrushstarter' ),
 						number_format_i18n( get_comments_number() ), get_the_title() );
