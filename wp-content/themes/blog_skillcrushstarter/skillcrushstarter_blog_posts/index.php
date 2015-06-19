@@ -20,7 +20,7 @@ get_header(); ?>
 	<div class="main-content">
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part('content-blog', get_post_format()); ?>
+				<?php get_template_part('content', get_post_format()); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
@@ -28,12 +28,11 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 
 	<?php if ( have_posts() ): ?>
-		<div id="navigation" class="container"> <!-- Here I added the 'span' as it was present in the other themes but not this one -->
+		<div id="navigation" class="container">
 	        <div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
 	        <div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
 	    </div>
 	<?php endif; ?>
-
 </section>
 
 <?php get_footer(); ?>

@@ -1,8 +1,8 @@
 /*
-Theme Name: Skillcrush Starter Theme
+Theme Name: Skillcrush Starter Theme Newer Older Posts Links Challenge
 Author: the Skillcrush team
 Author URI: http://skillcrush.com
-Description: ANN CASCARANO - Working theme - This theme is for use in Skillcrush 103, Skillcrush 203 and the Skillcrush WordPress Developer Career Blueprint.
+Description: Newer / Older posts link - This theme is for use in Skillcrush 103, Skillcrush 203 and the Skillcrush WordPress Developer Career Blueprint.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -87,7 +87,6 @@ html[xmlns] .clearfix {
 /** end CSS reset **/
 
 /** theme styles start here! **/
-
 /* FONTS */
 @font-face {
     font-family: 'OpenSans';
@@ -153,10 +152,6 @@ body {
 	font: 17px/1.65 'OpenSans', Arial, sans-serif;
 	letter-spacing: -0.01em;
 }
-/* Testing this image width - very helpful! Otherwise would have to use 'overflow: hidden' on parent element */
-img {
-	max-width: 100%; 
-}
 #page {
 	width: 960px;
 	margin: auto;
@@ -189,14 +184,9 @@ img {
 	float: right;
 	padding-top: 22px;
 }
-
-/* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin */
-
-nav.top-nav ul li, /* Added this line after registering menu */
 .page-header .top-nav .menu ul li {
 	display: inline;
 }
-nav.top-nav ul li a, /* Added this line after registering menu */
 .page-header .top-nav .menu ul li a {
 	color: inherit;
 	font-size: 14px;
@@ -206,7 +196,7 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 	text-transform: uppercase;
 }
 .main-content {
-	padding: 25px 47px 0 0;
+	padding: 55px 47px 0 0;
 	float: left;
 	width: 69%;
 }
@@ -217,16 +207,87 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 	width: 31%;
 }
 
-/*** End of FIRST CODE PACKAGE additions - 103 week 2, Monday **/
+/* sidebar */
+#sidebar {
+	padding-top: 20px;
+}
+#sidebar li {
+	list-style-type: none;
+}
+#sidebar p {
+	font: 14px/28px 'Open Sans';
+	margin-bottom: 20px;
+}
+#sidebar .widget {
+	padding: 28px 31px;
+}
+#sidebar .widget_text {
+	border-bottom: 1px solid #BFBFBF;
+}
+#sidebar .widget_text img {
+	max-width: 175px;
+	margin: auto;
+	display: block;
+	
+}
+#sidebar .widget_text a {
+	color: #3b3b3b;
+	font-weight: 700;
+	text-decoration: underline;
+}
+#sidebar .widget_search {
+	border-bottom: 1px solid #BFBFBF;
+}
+#sidebar .widget_search input[type="text"] {
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	border-left: 1px solid #a6a6a6;
+	border-right: none;
+	width: 200px;
+	height: 36px;
+	padding: 8px;
+	vertical-align: middle;
+}
+#sidebar .widget_search input[type="submit"] {
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+	border-left: none;
+	width: 35px;
+	height: 36px;
+	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
+	color: #ffffff;
+	margin-left: -5px;
+	vertical-align: middle;
+}
+#sidebar .widget_categories {
+	padding: 28px 31px 0 31px;
+}
+#sidebar .widget_categories h2,
+#sidebar .widget_archive h2 {
+	font: 600 14px 'Open Sans';
+	color: #45ac9d;
+	margin-bottom: 20px;
+}
+#sidebar .widget_categories ul li,
+#sidebar .widget_archive ul li {
+	font: 600 14px 'Open Sans';
+	color: #3b3b3b;
+	margin-bottom: 15px;
+}
+#sidebar .widget_categories ul li a,
+#sidebar .widget_archive ul li a {
+	color: #3b3b3b;
+}
 
 /* BLOG styles */
 .post-entry {
 	border-bottom: 1px solid #bfbfbf;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	margin-bottom: 30px;
 }
 .entry-title {
-	margin: 0.25em 0 0.75em;
+	margin: 0.25em 0;
 	font: bold 1.47em/1.4 'Montserrat', sans-serif;
 	letter-spacing: -0.034em;
 }
@@ -244,12 +305,6 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 }
 .entry-summary {
 	font-size: 0.94em;
-}
-.entry-summary h3 {
-	font-weight: bold;
-}
-.entry-summary p {
-	margin-bottom: 20px;
 }
 .entry-summary .wp-caption {
 	margin: 25px 0;
@@ -336,102 +391,9 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 	border-bottom: 0;
 }
 
-/* end BLOG styles  - End of SECOND CODE PACKAGE addtions - 103 Week 2 Monday */
+/* end BLOG styles */
 
-/* sidebar */
-
-/* Ann's image styles */
-.ann-pic img{
-	border-radius: 50%;
-}
-.ann-pic {
-	margin-bottom: 30px;
-}
-#sidebar {
-	padding-top: 20px;
-}
-#sidebar li {
-	list-style-type: none;
-}
-#sidebar p {
-	font: 14px/28px 'Open Sans';
-	margin-bottom: 20px;
-}
-#sidebar .widget {
-	padding: 28px 31px;
-}
-#sidebar .widget_text {
-	border-bottom: 1px solid #BFBFBF;
-}
-#sidebar .widget_text img {
-	max-width: 175px;
-	margin: auto;
-	display: block;
-	
-}
-#sidebar .widget_text a {
-	color: #3b3b3b;
-	font-weight: 700;
-	text-decoration: underline;
-}
-#sidebar .widget_search {
-	border-bottom: 1px solid #BFBFBF;
-}
-#sidebar .widget_search input[type="text"] {
-	border-top: 1px solid #a6a6a6;
-	border-bottom: 1px solid #a6a6a6;
-	border-left: 1px solid #a6a6a6;
-	border-right: none;
-	width: 200px;
-	height: 36px;
-	padding: 8px;
-	vertical-align: middle;
-}
-#sidebar .widget_search input[type="submit"] {
-	border-top: 1px solid #a6a6a6;
-	border-bottom: 1px solid #a6a6a6;
-	border-right: 1px solid #a6a6a6;
-	border-left: none;
-	width: 35px;
-	height: 36px;
-	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
-	color: #ffffff;
-	margin-left: -5px;
-	vertical-align: middle;
-}
-#sidebar .widget_categories {
-	padding: 28px 31px 0 31px;
-}
-/*#sidebar .widget_nav_menu h2,
-#sidebar .popular-posts h2,
-#sidebar .widget_categories h2,
-#sidebar .widget_archive h2*/
-#sidebar .widget>h2 {
-	font: 600 14px 'Open Sans';
-	color: #45ac9d;
-	margin-bottom: 20px;
-}
-/*#sidebar .widget_nav_menu ul li,
-#sidebar .popular-posts ul li,
-#sidebar .widget_categories ul li,
-#sidebar .widget_archive ul li*/
-#sidebar .widget ul li {
-	font: 600 14px 'Open Sans';
-	color: #3b3b3b;
-	margin-bottom: 15px;
-}
-/*#sidebar .widget_nav_menu ul li a,
-#sidebar .popular-posts ul li a,
-#sidebar .widget_categories ul li a,
-#sidebar .widget_archive ul li a*/ 
-#sidebar .widget ul li a{
-	color: #3b3b3b;
-}
-
-/* End of Sidebar CSS - from third code package - Style up your sidebar challenge - 103 week 2, Monday */
-
-
-/* Next / prev  - Add Newer/Older links to your Blog page challenge -> 103 week 2 - Tuesday */
+/* Next / prev */
 #navigation {
 	background: #fff;
 	border: solid #bfbfbf;
@@ -476,176 +438,3 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 	text-decoration: underline;
 }
 /* End next / prev */
-
-/* single posts */
-.single .post-entry {
-	border-bottom: none;
-}
-.comments-area {
-	margin-bottom: 80px;
-	clear: both;
-	overflow: hidden;
-}
-.comments-area .comments-title {
-	border: solid #bfbfbf;
-	border-width: 1px 0;
-	color: #150300;
-	font: 600 0.8em/49px 'OpenSans', Arial, sans-serif;
-	height: 49px;
-	text-transform: uppercase;
-	margin: 15px 0;
-}
-.comment-list {
-	margin-bottom: 50px;
-}
-.comment-list .comment-head {
-	margin: 25px 0 10px;
-}
-.comment-list .comment {
-	font: 0.8em/2.08em 'OpenSans', Arial, sans-serif;
-	border-bottom: 1px solid #BFBFBF;
-	padding-bottom: 23px;
-}
-.comment-list .comment .comment-meta {
-	float: right;
-}
-.comment-list .comment a {
-	color: #45ac9d;
-	text-decoration: none;
-}
-.comment-list .comment a:hover {
-	text-decoration: underline;
-}
-.comment-list .comment .comment-author {
-	font-weight: 600;
-}
-.comments-area .comment-reply-title {
-	color: #45ac9d;
-	font: bold 1.176em 'Montserrat', 'OpenSans', Arial, sans-serif;
-	text-transform: uppercase;
-	margin: 2em 0 1em;
-}
-.comments-area .comment-reply-title a {
-	color: #45ac9d;
-}
-.comments-area .comment-reply-title a:hover {
-	text-decoration: underline;
-}
-.comments-area .comment-form p {
-	font: 0.8em/2.08em 'OpenSans', Arial, sans-serif;
-	padding-bottom: 23px;
-}
-.comments-area .comment-form p a {
-	color: #45ac9d;
-}
-.comments-area .comment-form p a:hover {
-	text-decoration: underline;
-}
-.comments-area .comment-form label {
-	display: block;
-	font: 600 1em 'OpenSans', Arial, sans-serif;
-	margin: 10px 0;
-}
-.comments-area .comment-form textarea {
-	height: 180px;
-	width: 100%;
-	resize: none;
-	font: 16px 'OpenSans', Arial, sans-serif;
-	padding: 5px 10px;
-}
-.comments-area .comment-form input[type="submit"] {
-	background: #45ac9d;
-	width: 206px;
-	height: 55px;
-	font: bold 1.3em/45px 'Montserrat', 'OpenSans', Arial, sans-serif;
-	color: #fff;
-	margin: 24px 0;
-	float: right;
-	border: 0;
-}
-
-/* End single posts */
-
-/* Homepage */
-.home {
-	background: url(img/Skillcrush_Computer_op.jpg) no-repeat center 0;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	min-height: 100%;
-}
-.home .page-header {
-	display: none;
-}
-.home .main-content {
-	width: 100%;
-	float: none;
-	overflow: hidden;
-}
-.home .content {
-	width: 550px;
-	background: #ffffff;
-	float: right;
-	padding: 50px;
-}
-.home .content h1 {
-	font: 700 36px 'Montserrat';
-	margin-bottom: 30px;
-}
-.home .content p {
-	font: 17px/1.9 'OpenSans', Arial, sans-serif;
-	margin-bottom: 24px;
-}
-.home .content p a {
-	font-weight: 700;
-	text-decoration: underline;
-	color: #3b3b3b;
-}
-.home .content .social-btns {
-	margin-bottom: 30px;
-}
-.home .content .social-btns a {
-	display: inline-block;
-	width: 23px;
-	height: 23px;
-	margin-right: 5px;
-	/* added for fun */
-	-webkit-transition: 600ms ease-in-out;
-    -moz-transition: 600ms ease-in-out;
-    -o-transition: 600ms ease-in-out;
-    transition: 600ms ease-in-out;
-}
-.home .content .soc-icon.tw {
-	background: url(img/twitter-icon.png) no-repeat center 0;
-}
-.home .content .soc-icon.fb {
-	background: url(img/facebook-icon.png) no-repeat center 0;
-}
-.home .content .soc-icon.ln {
-	background: url(img/linkedin-icon.png) no-repeat center 0;
-}
-.home .content .soc-icon.db {
-	background: url(img/dribbble-icon.png) no-repeat center 0;
-}
-.social-btns .soc-icon:hover {
-	/* added for fun */
-	-moz-transform: scale(1) rotate(360deg);
-	-webkit-transform: scale(1) rotate(360deg);
-	-o-transform: scale(1) rotate(360deg);
-	-ms-transform: scale(1) rotate(360deg);
-	transform: scale(1) rotate(360deg);
-}
-.home .btn {
-	background: #45ac9d;
-	color: #fff;
-	font: bold 1.17em/2.77 'Montserrat', 'OpenSans', Arial, sans-serif;
-	display: inline-block;
-	height: 55px;
-	min-width: 250px;
-	width: 100%;
-	padding: 0 20px;
-	text-align: center;
-	text-decoration: none;
-}
-
