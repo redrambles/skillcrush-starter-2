@@ -118,19 +118,19 @@ html[xmlns] .clearfix {
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/montserrat-regular.eot');
-    src: url('fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-regular.woff') format('woff'),
-         url('fonts/montserrat-regular.ttf') format('truetype');
+    src: url('/fonts/montserrat-regular.eot');
+    src: url('/fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/montserrat-regular.woff') format('woff'),
+         url('/fonts/montserrat-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/montserrat-bold.eot');
-    src: url('fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-bold.woff') format('woff'),
-         url('fonts/montserrat-bold.ttf') format('truetype');
+    src: url('/fonts/montserrat-bold.eot');
+    src: url('/fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/montserrat-bold.woff') format('woff'),
+         url('/fonts/montserrat-bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -227,7 +227,7 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 }
 .entry-title {
 	margin: 0.25em 0 0.75em;
-	font: bold 1.47em/1.4 'Montserrat', sans-serif;
+	font: bold 1.47em/1.4 'Montserrat', 'OpenSans' sans-serif;
 	letter-spacing: -0.034em;
 }
 .entry-title a {
@@ -647,5 +647,43 @@ nav.top-nav ul li a, /* Added this line after registering menu */
 	padding: 0 20px;
 	text-align: center;
 	text-decoration: none;
+}
+
+/* Search Form Experiment - No results */
+.search-header{
+	padding: 20px 0;
+	border-bottom: 1px solid #a6a6a6;
+	margin-bottom: 30px;
+}
+.search-form {
+	overflow: hidden;
+}
+.search-form .input-btn {
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+	border-left: none;
+	width: 35px;
+	height: 36px;
+	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
+	color: #ffffff;
+	margin-left: -5px;
+	vertical-align: middle;
+}
+.search-form input[type="text"] {
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	border-left: 1px solid #a6a6a6;
+	border-right: none;
+	color: #bfbfbf;
+	font-style: italic;
+	width: 85%;
+	height: 36px;
+	padding: 8px;
+	vertical-align: middle;
+}
+
+.new-search ~ p { /* Having fun with the sibling selector! */
+	padding: 20px 0px 50px;
 }
 

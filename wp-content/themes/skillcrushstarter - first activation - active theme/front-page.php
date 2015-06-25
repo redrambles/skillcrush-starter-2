@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php while ( have_posts() ): the_post(); ?>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
-				<a href="<?php echo site_url('/blog/'); ?>" class="btn">View My Blog</a>
+				<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>" class="btn">View My Blog</a>
 			<?php endwhile; ?>
 		</div>
 	</div>

@@ -61,10 +61,11 @@ add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
 /**
  * Enqueue scripts and styles
  */
-// function skillcrushstarter_scripts() {
-//     wp_enqueue_style( 'style', get_stylesheet_uri() );
-// }
-// add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
+function skillcrushstarter_scripts() {
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
+}
+add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 
 
 // defines custom markup for post comments
@@ -84,7 +85,7 @@ function skillcrush_comments($comment, $args, $depth) {
 
 // changes excerpt symbol
 function custom_excerpt_more($more) {
-	return ' ...';
+	return '...';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 ?>
