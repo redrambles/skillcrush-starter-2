@@ -10,6 +10,7 @@
  */
 ?>
 <!DOCTYPE html>
+<html <?php language_attributes(); ?>> <!-- Added for theme check - but would need a language folder and .po / .pot files -->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">

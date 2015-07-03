@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="post-entry">
+<article id="post-<?php the_ID(); ?>" class="post-entry <?php post_class(); ?>"> <!-- Added post_class for theme check -->
 	<div class="entry-wrap">
 		<header class="entry-header">
 			<div class="entry-meta">
@@ -17,6 +17,14 @@
 					Written by <?php the_author(); ?>
 					/
 					Posted in <?php the_category(', ') ?>
+					/
+					<?php $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'skillcrushstarter' ) );
+					if ( $tags_list ) {
+						printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+							_x( 'Tagged ', 'Used before tag names.', 'skillcrushstarter' ),
+							$tags_list
+						);
+					} ?>
 					/
 					<?php echo get_comments_number() ?> comments
 				</span>

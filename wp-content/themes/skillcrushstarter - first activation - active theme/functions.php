@@ -25,12 +25,23 @@
  * since Skillcrush Starter 1.0
  */
 
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ * In response to the theme checker
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 960;
+}
+
 // Theme support for post-thumbnails and menus
 function skillcrushstarter_setup() {
 
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 725, 510, true ); // This is optional - just testing
+
+	// Add default posts and comments RSS feed links to head. - In response to Theme Check
+	add_theme_support( 'automatic-feed-links' );
 
 	// Register Menus 
 	register_nav_menus ( array (
@@ -64,6 +75,10 @@ add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
 function skillcrushstarter_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+    	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 
@@ -88,4 +103,9 @@ function custom_excerpt_more($more) {
 	return '...';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+// add_filter( 'excerpt_more', 'new_excerpt_more' );
+// function new_excerpt_more( $more ) {
+//     return '... <a href="' . get_permalink() . '">More</a>';
+// }
 ?>

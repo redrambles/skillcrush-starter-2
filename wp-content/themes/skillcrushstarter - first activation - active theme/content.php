@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="post-entry">
+<article id="post-<?php the_ID(); ?>" class="post-entry <?php post_class(); ?>"> <!-- Added post_class for theme check -->
 	<div class="entry-wrap">
 		<header class="entry-header">
 			<div class="entry-meta">

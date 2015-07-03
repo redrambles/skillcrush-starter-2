@@ -12,9 +12,13 @@ get_header(); ?>
 <section class="single-page">		
 	<div class="main-content">
 		<?php while ( have_posts() ) : the_post(); ?>
+
 			<?php the_post_thumbnail(); ?>
+
 			<?php get_template_part('content', get_post_format()); ?>
+
 			<?php comments_template(); ?>
+			
 		<?php endwhile; ?>
 	</div>
 	

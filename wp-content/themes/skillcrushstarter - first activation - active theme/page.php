@@ -17,6 +17,16 @@ get_header(); ?>
 				<!-- Added the post thumbnail as my 'own touch' as per the freedom to experiment here in the lessons -->
 				<?php the_post_thumbnail(); ?>
 				<?php the_content(); ?>
+				
+				<!-- testing -->
+				<?php wp_link_pages( array(
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
+				'after'       => '</div>',
+				'link_before' => '<span>',
+				'link_after'  => '</span>',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+				'separator'   => '<span class="screen-reader-text">, </span>',
+			) );?>
 			</article>
 		<?php endwhile; ?>
 	</div>
