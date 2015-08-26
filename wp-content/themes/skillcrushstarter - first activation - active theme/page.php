@@ -8,27 +8,34 @@
  */
 
 get_header(); ?>
+<pre><?php //print_r($wp_query->posts); exit; ?></pre>
 
 <section class="default-page">		
-	<div class="main-content">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<h2 class="entry-title"><?php the_title(); ?></h2>
-			<article class="post-entry">
+	<div class="full-main-content"> <!-- used to be 'main-content' -->
+
+		<?php while ( have_posts() ) : the_post(); ?>			
+
+			<article class="post-entry page-entry">
 				<!-- Added the post thumbnail as my 'own touch' as per the freedom to experiment here in the lessons -->
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('full-page'); ?>
+
+				<h2 class="entry-title"><?php the_title(); ?></h2>
+
 				<?php the_content(); ?>
 				
 				<!-- testing -->
 				<?php wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'skillcrushstarter' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'skillcrushstarter' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );?>
 			</article>
+
 		<?php endwhile; ?>
+
 	</div>
 	
 	<?php //get_sidebar(); ?>

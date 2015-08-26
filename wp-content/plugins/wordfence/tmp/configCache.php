@@ -1,0 +1,4 @@
+<?php
+/* Wordfence temporary file security header */
+echo "Nothing to see here!\n"; exit(0);
+?>a:18:{s:9:"cacheType";s:0:"";s:15:"firewallEnabled";s:1:"1";s:6:"apiKey";s:192:"7bf83aa0fa1cfe021f109b0c3e2cca4f8838936fc2c5662d0771138bf6d5094ba4011cdd7a959a22ecac6b9c4588d7cf442ee7510e96df37cf38ea9c2807dd35c66ac848143316f2d2c1e976251a6f6e0269240d62c933c7999b0cb89763102c";s:9:"howGetIPs";s:0:"";s:18:"liveTrafficEnabled";s:1:"1";s:14:"disableCookies";s:1:"0";s:17:"actUpdateInterval";s:0:"";s:7:"debugOn";s:1:"0";s:10:"tourClosed";s:1:"1";s:13:"welcomeClosed";s:1:"1";s:26:"loginSec_disableAuthorScan";s:1:"1";s:25:"liveTraf_ignorePublishers";s:1:"1";s:19:"other_hideWPVersion";s:1:"1";s:10:"autoUpdate";s:1:"1";s:11:"alertEmails";s:21:"a.cascarano@gmail.com";s:38:"email_summary_dashboard_widget_enabled";s:1:"1";s:22:"email_summary_interval";s:8:"biweekly";s:11:"whitelisted";s:0:"";}

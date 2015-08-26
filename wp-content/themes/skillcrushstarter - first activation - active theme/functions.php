@@ -38,7 +38,10 @@ function skillcrushstarter_setup() {
 
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size( 725, 510, true ); // This is optional - just testing
+	set_post_thumbnail_size( 650, 510, true ); // For blog pages - will leave this as default thumbnail size
+
+	add_image_size('full-page', 930, 400, true); // For full width page featured image
+	add_image_size('blog-page', 200, 200, true); // For full width page featured image
 
 	// Add default posts and comments RSS feed links to head. - In response to Theme Check
 	add_theme_support( 'automatic-feed-links' );
@@ -66,6 +69,15 @@ function skillcrushstarter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	// register_sidebar( array(
+	// 	'name'          => __( 'Sidebar 2', 'skillcrushstarter' ),
+	// 	'id'            => 'sidebar-2',
+	// 	'description'   => __( 'Add widgets here to appear in your page sidebar.', 'skillcrushstarter' ),
+	// 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</aside>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 }
 add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
 
@@ -74,8 +86,10 @@ add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
  */
 function skillcrushstarter_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_style( 'custom-archive-css', get_template_directory_uri(). '/inc/custom-archive.css' );
     wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
-
+    wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,700,400');
+    
     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -108,4 +122,28 @@ add_filter('excerpt_more', 'custom_excerpt_more');
 // function new_excerpt_more( $more ) {
 //     return '... <a href="' . get_permalink() . '">More</a>';
 // }
-?>
+
+// Make the excerpt length smaller
+function my_custom_excerpt_length( $length ) {
+     return 25;
+}
+add_filter( 'excerpt_length', 'my_custom_excerpt_length', 999 );
+
+// // Hilarious Joke Title - Put this in plugin
+// function funny_title($title) {
+
+// 	$day = date( 'F j' ); 
+// 	if ( $day === 'August 24') {
+// 		$title = 'Bunny Foo Foo';
+// 	}
+
+// 	return $title;
+// }
+// add_filter( 'wp_title', 'funny_title', 10, 1 );
+
+/**
+ * Custom archive template 
+ *
+ * Ann addition
+ */
+require get_template_directory() . '/inc/custom-archives-functions.php';

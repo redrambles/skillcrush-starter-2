@@ -8,7 +8,7 @@
 			<?php //the_post_thumbnail(); ?>
 		</header>
 		<div class="entry-summary">
-			<?php the_excerpt() ?>
+			<?php the_excerpt(); ?>
 			<p><a href="<?php the_permalink(); ?>">Read more</a></p>
 		</div>
 		<footer class="entry-footer">
@@ -17,16 +17,16 @@
 					Written by <?php the_author(); ?>
 					/
 					Posted in <?php the_category(', ') ?>
-					/
 					<?php $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'skillcrushstarter' ) );
 					if ( $tags_list ) {
+						echo '/ ';
 						printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
 							_x( 'Tagged ', 'Used before tag names.', 'skillcrushstarter' ),
 							$tags_list
 						);
 					} ?>
 					/
-					<?php echo get_comments_number() ?> comments
+					<?php comments_number( 'No comments yet!', '1 comment', '% comments' ); ?>
 				</span>
 			</div>
 		</footer>

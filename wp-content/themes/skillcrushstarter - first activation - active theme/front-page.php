@@ -15,7 +15,13 @@ get_header(); ?>
 			<?php while ( have_posts() ): the_post(); ?>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
-				<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>" class="btn">View My Blog</a>
+<!-- 			<div class="social-btns">
+				<a href="" class="soc-icon tw"></a>
+				<a href="" class="soc-icon fb"></a>
+				<a href="" class="soc-icon ln"></a>
+				<a href="" class="soc-icon db"></a>
+			</div> -->
+				<a href="<?php echo esc_attr( site_url('/blog/') ); ?>" class="btn">View My Blog</a>
 			<?php endwhile; ?>
 		</div>
 	</div>
