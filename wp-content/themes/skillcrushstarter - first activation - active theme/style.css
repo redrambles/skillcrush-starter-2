@@ -140,9 +140,6 @@ html[xmlns] .clearfix {
 header, footer, section, aside, time, article {
 	display: block;
 }
-a {
-	text-decoration: none;
-}
 html,
 body {
 	height: 100%;
@@ -157,6 +154,12 @@ body {
 /* Testing this image width - very helpful! Otherwise would have to use 'overflow: hidden' on parent element */
 img {
 	max-width: 100%; 
+}
+a {
+	text-decoration: none;
+}
+p {
+	margin: 30px 0;
 }
 
 #page {
@@ -198,12 +201,12 @@ img {
 
 /* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin */
 
-nav.top-nav ul li, /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
-.page-header .top-nav .menu ul li {
+nav.top-nav ul li /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
+/*.page-header .top-nav .menu ul li*/ {
 	display: inline;
 }
-nav.top-nav ul li a, /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
-.page-header .top-nav .menu ul li a {
+nav.top-nav ul li a /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
+/*.page-header .top-nav .menu ul li a */{
 	color: inherit;
 	font-size: 14px;
 	line-height: normal;
@@ -216,6 +219,14 @@ nav.top-nav ul li a, /* Added this line after adding to Primary menu theme locat
 	width: 100%;
 	/*float: left*/
 }
+
+.full-main-content .post-entry {
+	border-bottom: none;
+	padding-bottom: 10px;
+}
+/* end full width styles */
+
+
 .main-content {
 	padding: 25px 47px 0 0;
 	float: left;
@@ -223,7 +234,8 @@ nav.top-nav ul li a, /* Added this line after adding to Primary menu theme locat
 }
 /* addition - border around post thumbnail for posts */
 .main-content img {
-	border: 2px solid #BFBFBF;
+	border-radius: 5px;
+	margin-top: 10px;
 }
 #sidebar {
 	border-left: 1px solid #bfbfbf;
@@ -285,11 +297,22 @@ nav.top-nav ul li a, /* Added this line after adding to Primary menu theme locat
 }
 .entry-summary a {
 	color: #45ac9d;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 	font-weight: bold;
+    font-weight: bold;
+    padding: 7px 15px;
+    border: 1px solid #45ac9d;
+    border-radius: 5px;
+    -webkit-transition: all 350ms linear;
+    -moz-transition: all 350ms linear;
+    -ms-transition: all 350ms linear;
+    -o-transition: all 350ms linear;
+    transition: all 350ms linear;
 }
 .entry-summary a:hover {
-	text-decoration: none;
+	/*text-decoration: none;*/
+	background: #45ac9d;
+    color: #fff;
 }
 .entry-summary blockquote {
 	margin: 0 47px;
@@ -364,6 +387,10 @@ nav.top-nav ul li a, /* Added this line after adding to Primary menu theme locat
 .blog-index-img {
 	float: left;
 	margin-right: 1em;
+}
+
+.blog p {
+	margin: 15px 0;
 }
 
 
@@ -726,6 +753,25 @@ nav.top-nav ul li a, /* Added this line after adding to Primary menu theme locat
 }
 
 
+/*** Site Footer ***/
+
+.site-footer {
+	background-color: #4E4E4E;
+	border-top: 1px solid #d9d9d9;
+	color: #fff;
+	font-size: 12px;
+	font-size: 0.9rem;
+	padding: 24px 34px 24px 34px;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.site-info a {
+	color: #fff;
+}
+.site-info a:hover {
+	color: #45ac9d;
+}
 
 /*** Media Queries ***/
 
@@ -775,5 +821,6 @@ nav.top-nav ul li a, /* Added this line after adding to Primary menu theme locat
 }
 .aligncenter {
 }
+
 
 

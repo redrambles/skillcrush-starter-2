@@ -21,13 +21,15 @@ get_header(); ?>
 
 <section class="index-page">		
 	<div class="main-content">
+
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<figure class="blog-index-img"><?php the_post_thumbnail( 'blog-page' ); ?></figure>
 				<?php get_template_part('content-blog', get_post_format()); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
+
 	</div>
+	
 	<?php get_sidebar(); ?>
 
 	<?php //if ( have_posts() ): ?>

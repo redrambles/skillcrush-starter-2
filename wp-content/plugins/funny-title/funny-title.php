@@ -3,6 +3,7 @@
 * Plugin Name: Funny Title
 * Description: This is a mostly useless plugin that will modify your site title temporarily based on the day.
 * Author: Ann Cascarano
+* Author URI: www.redrambles.com
 * Version: 0.1
 */
 

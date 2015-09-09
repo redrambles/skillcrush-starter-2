@@ -86,7 +86,8 @@ add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
  */
 function skillcrushstarter_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_style( 'custom-archive-css', get_template_directory_uri(). '/inc/custom-archive.css' );
+    wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/inc/custom-archive.css' );
+    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
     wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,700,400');
     
@@ -129,17 +130,9 @@ function my_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'my_custom_excerpt_length', 999 );
 
-// // Hilarious Joke Title - Put this in plugin
-// function funny_title($title) {
+// Hilarious Joke Title - IN PLUGIN (funny-title)
 
-// 	$day = date( 'F j' ); 
-// 	if ( $day === 'August 24') {
-// 		$title = 'Bunny Foo Foo';
-// 	}
-
-// 	return $title;
-// }
-// add_filter( 'wp_title', 'funny_title', 10, 1 );
+// After Post Info - IN PLUGIN (after-post-info)
 
 /**
  * Custom archive template 

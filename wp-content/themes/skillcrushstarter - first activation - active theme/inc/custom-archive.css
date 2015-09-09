@@ -38,7 +38,7 @@
 }
 
 .archives-by-month-section {
-   ext-align: center;
+  text-align: center;
   word-spacing: 5px;
 }
 .archives-by-month-section p {
