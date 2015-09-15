@@ -15,6 +15,26 @@
 
 	<?php if (!is_front_page() ) { ?>
 		<!-- Ann addition -->
+
+		<!-- Testing Footer Widget Area  -->
+		<div class="footer-widget-area">
+			<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+			<div class="footer-widgets" role="complementary">
+				<?php dynamic_sidebar( 'footer-1' ); ?>
+			</div>
+			<?php endif; ?>
+			<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+			<div class="footer-widgets" role="complementary">
+				<?php dynamic_sidebar( 'footer-2' ); ?>
+			</div>
+			<?php endif; ?>
+			<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+			<div class="footer-widgets" role="complementary">
+				<?php dynamic_sidebar( 'footer-3' ); ?>
+			</div>
+			<?php endif; ?>
+		</div>
+
 		<footer id="colophon" class="site-footer">
 
 			<!-- dont have this menu built in yet -->
