@@ -26,7 +26,7 @@ function red01_after_info_css() {
 		.after-info {
 			padding: 1.5em 1em;
 		    background-color: $color;
-		    font-size: 0.9rem;
+		    font-size: 14px;
 		    font-style: oblique;
 		    text-align: center;
 		    margin-top: 50px;

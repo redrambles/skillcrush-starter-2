@@ -24,7 +24,7 @@ function red01_after_post_info( $content ) {
 		return $content;
 	}
 	
-	if( empty( $after_info ) ) {
+	if ( empty( $after_info ) ) {
 		$default_info = '<div class="after-info"> Thanks for reading! </div>';
 		return $content . $default_info;
 	}
