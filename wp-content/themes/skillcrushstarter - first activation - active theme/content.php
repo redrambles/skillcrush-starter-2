@@ -8,7 +8,7 @@
 			<?php //the_post_thumbnail(); ?>
 		</header>
 		<div class="entry-summary">
-			<?php the_content() ?>
+			<?php the_content(); ?>
 		</div>
 		<footer class="entry-footer">
 			<div class="entry-meta">
