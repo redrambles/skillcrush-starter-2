@@ -1,11 +1,14 @@
-<?php
+<?php namespace Red_Plugins;
 /* 
 * Styles for the after-post-info plugin
 */
 
 
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\after_info_css' );
+
+
 // We need some CSS to position the paragraph
-function red01_after_info_css() {
+function after_info_css() {
 	
 	// Fetch the value of the 'info_bottom_post_color' custom field, if there is one
 	// We don't need to use global $post here and then object -> method notation because we are running within the 'content' hook which is already in the loop. This is why 'get_the_ID()' works.
@@ -35,5 +38,3 @@ function red01_after_info_css() {
 		</style>
 	";
 }
-
-add_action( 'wp_enqueue_scripts', 'red01_after_info_css' );
