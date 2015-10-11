@@ -201,11 +201,11 @@ p {
 
 /* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin */
 
-nav.top-nav ul li /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
+.top-nav ul li /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
 /*.page-header .top-nav .menu ul li*/ {
 	display: inline;
 }
-nav.top-nav ul li a /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
+.top-nav ul li a /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
 /*.page-header .top-nav .menu ul li a */{
 	color: inherit;
 	font-size: 14px;
@@ -226,7 +226,6 @@ nav.top-nav ul li a /* Added this line after adding to Primary menu theme locati
 }
 /* end full width styles */
 
-
 .main-content {
 	padding: 25px 47px 0 0;
 	float: left;
@@ -237,6 +236,7 @@ nav.top-nav ul li a /* Added this line after adding to Primary menu theme locati
 	border-radius: 5px;
 	margin-top: 10px;
 }
+
 #sidebar {
 	border-left: 1px solid #bfbfbf;
 	padding: 55px 0;
@@ -295,7 +295,39 @@ nav.top-nav ul li a /* Added this line after adding to Primary menu theme locati
 	height: 375px;
 	display: block;
 }
-.entry-summary a {
+
+/**
+ ** List styling Added these after the fact, after adding them to a post / page and nothing showed up due to the reset **
+ */
+
+.entry-summary ul,
+.post-entry ul,
+.entry-summary ol,
+.post-entry ol {
+	margin: 0 0 1.6em 1.3333em;
+}
+
+.entry-summary ul,
+.post-entry ul {
+	list-style: disc;
+}
+
+.entry-summary ol,
+.post-entry ol {
+	list-style: decimal;
+}
+
+.entry-summary ul > li,
+.post-entry ul > li  {
+	margin-left: 1em;
+}
+
+/**/
+
+
+
+
+.blog .entry-summary a {
 	color: #45ac9d;
 	/*text-decoration: underline;*/
 	font-weight: bold;
@@ -309,7 +341,7 @@ nav.top-nav ul li a /* Added this line after adding to Primary menu theme locati
     -o-transition: all 350ms linear;
     transition: all 350ms linear;
 }
-.entry-summary a:hover {
+.blog .entry-summary a:hover {
 	/*text-decoration: none;*/
 	background: #45ac9d;
     color: #fff;
@@ -838,6 +870,8 @@ nav.top-nav ul li a /* Added this line after adding to Primary menu theme locati
 .footer-widgets a:hover {
     color: #45ac9d;
  }
+
+
 
 /*** Theme check additions **/
 

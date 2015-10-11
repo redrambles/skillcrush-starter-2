@@ -5,7 +5,7 @@
 			<div class="entry-meta">
 				<h3 class="entry-time"><?php the_time('F j, Y');?></h3><!-- Modified the_date to be the_time  -->
 			</div>
-			<h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php //the_post_thumbnail(); ?>
 		</header>
 		<div class="entry-summary">
@@ -17,7 +17,7 @@
 				<span class="entry-terms comments author">
 					Written by <?php the_author(); ?>
 					/
-					Posted in <?php the_category(', ') ?>
+					Posted in <?php the_category(', '); ?>
 					<?php $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'skillcrushstarter' ) );
 					if ( $tags_list ) {
 						echo '/ ';

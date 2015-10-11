@@ -38,10 +38,10 @@ function skillcrushstarter_setup() {
 
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size( 650, 510, true ); // For blog pages - will leave this as default thumbnail size
+	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size 
 
 	add_image_size('full-page', 930, 400, true); // For full width page featured image
-	add_image_size('blog-page', 200, 200, true); // For full width page featured image
+	add_image_size('blog-page', 200, 200, true); // For blog index page
 
 	// Add default posts and comments RSS feed links to head. - In response to Theme Check
 	add_theme_support( 'automatic-feed-links' );
@@ -142,11 +142,34 @@ add_filter('excerpt_more', 'custom_excerpt_more');
 //     return '... <a href="' . get_permalink() . '">More</a>';
 // }
 
-// Make the excerpt length smaller
+// Make the excerpt length smaller so that it fits my blog page design idea
 function my_custom_excerpt_length( $length ) {
      return 25;
 }
 add_filter( 'excerpt_length', 'my_custom_excerpt_length', 999 );
+
+
+
+// Remove automatic styling for the content area of the front-page that is messing with our social icons (otherwise have to line them up side by side)
+add_filter( 'the_content', 'skillcrushstarter_no_wpautop_front_page', 9 );
+
+function skillcrushstarter_no_wpautop_front_page( $content ) {
+
+    if ( is_front_page() ) { 
+        remove_filter( 'the_content', 'wpautop' );
+        return $content;
+    } else {
+        return $content;
+    }
+}
+
+// Sweet admin notice
+add_action( 'admin_notices', 'admin_notice_of_happiness' );
+function admin_notice_of_happiness() {
+  echo '<div class="updated">
+          <p>Did I mention yet today that you are wonderful? Keep up the great work!</p>
+        </div>';
+}
 
 // Hilarious Joke Title - IN PLUGIN (funny-title)
 

@@ -16,6 +16,7 @@ include( RED01_PLUGIN_PATH . 'after-post-styles.php' );
 
 add_filter( 'the_content', __NAMESPACE__ . '\\after_post_info' );
 
+// Because we are calling this within the 'content' and that the content is running inside the loop - we can simply use 'get_the_ID()' when fetching our custom field
 function after_post_info( $content ) {
 
 	// testing this with ACF - but using the 'get_post_meta' call instead of 'get_field' just in case ACF is deactivated - will not break the front end.
@@ -26,9 +27,13 @@ function after_post_info( $content ) {
 		return $content;
 	}
 	
+	// $args = func_get_args();
+
+	// var_dump($args);
+	
 	if ( empty( $after_info ) ) {
-		$default_info = '<div class="after-info"> Thanks for reading! </div>';
-		return $content . $default_info;
+		$after_info = '<div class="after-info"> Thanks for reading! </div>';
+		return $content . $after_info;
 	}
 
 	$custom_after_info = '<div class="after-info">' . $after_info . '</div>';
