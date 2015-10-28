@@ -40,6 +40,8 @@ function skillcrushstarter_setup() {
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size 
 
+
+
 	add_image_size('full-page', 930, 400, true); // For full width page featured image
 	add_image_size('blog-page', 200, 200, true); // For blog index page
 
@@ -49,7 +51,8 @@ function skillcrushstarter_setup() {
 	// Register Menus 
 	register_nav_menus ( array (
 		'primary-menu' => __( 'Primary Menu', 'skillcrushstarter' ),
-		'secondary' => __( 'Secondary Menu', 'skillcrushstarter' ),  
+		'secondary' => __( 'Secondary Menu', 'skillcrushstarter' ),
+		'category-menu' => __( 'Category Menu', 'skillcrushstarter'), // optional addition  
 	) );
 }
 
@@ -163,6 +166,20 @@ function skillcrushstarter_no_wpautop_front_page( $content ) {
     }
 }
 
+//Adds custom classes to the array of post classes.
+function skillcrushstarter_post_classes( $classes ) {
+
+    if ( ! has_post_thumbnail() ) {
+        $classes[] = 'without-featured-image';
+    } else {
+        $classes[] = 'with-featured-image';
+    }
+
+    return $classes;
+}
+add_filter( 'post_class', 'skillcrushstarter_post_classes' );
+
+
 // Sweet admin notice
 add_action( 'admin_notices', 'admin_notice_of_happiness' );
 function admin_notice_of_happiness() {
@@ -170,6 +187,16 @@ function admin_notice_of_happiness() {
           <p>Did I mention yet today that you are wonderful? Keep up the great work!</p>
         </div>';
 }
+
+// shortcode: [home]
+add_shortcode('home', 'my_home_link_shortcode');
+
+function my_home_link_shortcode() {
+
+	$string = '<a href="' . get_home_url() .'">Home Page</a>';
+	return $string;
+}
+
 
 // Hilarious Joke Title - IN PLUGIN (funny-title)
 

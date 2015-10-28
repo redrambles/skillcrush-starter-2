@@ -30,14 +30,14 @@ function after_post_info( $content ) {
 	// $args = func_get_args();
 
 	// var_dump($args);
-	
-	if ( empty( $after_info ) ) {
-		$after_info = '<div class="after-info"> Thanks for reading! </div>';
+
+	if ( !empty( $after_info ) ) {
+		$after_info = '<div class="after-info">' . $after_info . '</div>';
 		return $content . $after_info;
 	}
 
-	$custom_after_info = '<div class="after-info">' . $after_info . '</div>';
-	return $content . $custom_after_info;
+	// If nothing is entered in the 'After Info Text' field - return the unaltered post content
+	return $content;
 }
 
 

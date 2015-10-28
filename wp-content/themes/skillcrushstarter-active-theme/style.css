@@ -161,6 +161,15 @@ a {
 p {
 	margin: 30px 0;
 }
+p:first-child {
+	margin: 20px 0;
+}
+h2 {
+	margin: 20px 0 10px 0;
+}
+em {
+	font-style: italic;
+}
 
 #page {
 	/* testing this out for responsiveness - Still a TON of work to be done here */
@@ -214,6 +223,7 @@ p {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
 /* For full width pages - in page.php right now - may make a template later */
 .full-main-content {
 	width: 100%;
@@ -259,6 +269,7 @@ p {
 	padding-bottom: 20px;
 	margin-bottom: 30px;
 }
+
 .entry-title {
 	margin: 0.25em 0 0.75em;
 	font: bold 1.47em/1.4 'Montserrat', 'OpenSans' sans-serif;
@@ -297,7 +308,7 @@ p {
 }
 
 /**
- ** List styling Added these after the fact, after adding them to a post / page and nothing showed up due to the reset **
+ ** List styling Added these after the fact, after adding them to a post / page in the dashboard content box and nothing showed up due to the reset **
  */
 
 .entry-summary ul,
@@ -415,6 +426,11 @@ p {
 }
 
 /* Ann addition */
+
+/* see notes in index.php */
+.index-page {
+	display: flex;
+}
 
 .blog-index-img {
 	float: left;
@@ -872,7 +888,6 @@ p {
  }
 
 
-
 /*** Theme check additions **/
 
 .wp-caption-text {
@@ -889,6 +904,5 @@ p {
 }
 .aligncenter {
 }
-
 
 

@@ -31,6 +31,10 @@ get_header(); ?>
 	</div>
 	
 	<?php get_sidebar(); ?>
+</section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element 
+to allow the both the content and the sidebar to have equal height - making the border follow all the way down. Problem: looks
+terrible when browser size is reduced - will have to look into proper use of flex - should probably fall back with a float and 
+build on responsiveness. -->
 
 	<?php //if ( have_posts() ): ?>
 		<div id="navigation" class="container"> <!-- Here I added the 'span' as it was present in the other themes but not this one -->
@@ -39,6 +43,6 @@ get_header(); ?>
 	    </div>
 	<?php //endif; ?>
 
-</section>
+
 
 <?php get_footer(); ?>

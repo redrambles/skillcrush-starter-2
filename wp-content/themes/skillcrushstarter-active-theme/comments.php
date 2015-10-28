@@ -8,7 +8,6 @@
 				?>
 			</h2>
 
-
 	<ol class="comment-list">
 		<?php
 			wp_list_comments( array(

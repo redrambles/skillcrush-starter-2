@@ -7,7 +7,7 @@
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\after_info_css' );
 
 
-// We need some CSS to position the paragraph
+// We need some CSS to style the info box
 function after_info_css() {
 	
 	// Fetch the value of the 'info_bottom_post_color' custom field, if there is one
