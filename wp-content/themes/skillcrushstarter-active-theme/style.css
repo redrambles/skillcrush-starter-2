@@ -741,6 +741,10 @@ em {
 .home .content .soc-icon.db {
 	background: url(img/dribbble-icon.png) no-repeat center 0;
 }
+/* testing */
+/*.home .content .soc-icon.ap {
+	background: url(img/apple.png) no-repeat center 0;
+}*/
 .social-btns .soc-icon:hover {
 	/* added for fun */
 	-moz-transform: scale(1) rotate(360deg);

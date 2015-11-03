@@ -6,16 +6,7 @@
 				<h3 class="entry-time"><?php the_time('F j, Y');?></h3>
 			</div>
 
-			<?php $post_title = get_post_meta($post->ID, 'custom_post_title', true);
-			if ($post_title) {
-			?>
-			<span class="entry-title"><?php echo $post_title; ?></span>
-
-			<?php } else { ?>
-
 			<h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-
-			<?php } ?>
 			
 		</header>
 
