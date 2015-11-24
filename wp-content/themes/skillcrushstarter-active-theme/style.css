@@ -943,4 +943,9 @@ em {
 .aligncenter {
 }
 
+/* Test for student */
+#sidebar .widget_text .boo {
+	display: inline-block;
+	margin-right: 1em;
+}
 
