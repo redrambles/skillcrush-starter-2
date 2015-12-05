@@ -153,7 +153,9 @@ body {
 }
 /* Testing this image width - very helpful! Otherwise would have to use 'overflow: hidden' on parent element */
 img {
-	max-width: 100%; 
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
 a {
 	text-decoration: none;
@@ -173,10 +175,11 @@ em {
 
 #page {
 	/* testing this out for responsiveness - Still a TON of work to be done here */
-	max-width: 100%;
+	max-width: 960px;
 	overflow: hidden;
 	/* end test */
-	width: 960px;
+	width: 100%;
+	min-width: 320px;
 	margin: auto;
 }
 .page-header {
@@ -240,6 +243,7 @@ em {
 	padding: 25px 47px 0 0;
 	float: left;
 	width: 69%;
+	min-width: 320px;
 }
 /* addition - border around post thumbnail for posts */
 .main-content img {
@@ -943,7 +947,7 @@ em {
 .aligncenter {
 }
 
-/* Test for student */
+/* Test for Tineke */
 #sidebar .widget_text .boo {
 	display: inline-block;
 	margin-right: 1em;
