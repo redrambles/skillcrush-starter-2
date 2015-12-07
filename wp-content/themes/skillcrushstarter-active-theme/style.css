@@ -890,8 +890,7 @@ em {
 		float: none;
 		width: 100%;
 	}
-
-	.post-entry img {
+	.index-page .post-entry img {
 		display: none;
 	}
 
