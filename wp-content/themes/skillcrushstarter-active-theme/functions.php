@@ -25,8 +25,6 @@
  * since Skillcrush Starter 1.0
  */
 
-
-
 $skillcrushstarter_theme_data = wp_get_theme();
 define( 'SKILLCRUSHSTARTER_THEME_URL', get_template_directory_uri() );
 define( 'SKILLCRUSHSTARTER_THEME_TEMPLATE', get_template_directory() );

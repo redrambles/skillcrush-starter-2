@@ -172,6 +172,10 @@ h2 {
 em {
 	font-style: italic;
 }
+b,
+strong {
+	font-weight: 700;
+}
 
 #page {
 	/* testing this out for responsiveness - Still a TON of work to be done here */
