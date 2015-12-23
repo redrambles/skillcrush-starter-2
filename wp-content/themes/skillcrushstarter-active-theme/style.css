@@ -686,9 +686,7 @@ strong {
 
 /* Homepage */
 .home {
-	background-image: url(img/Skillcrush_Computer_int.png);
-	background-repeat:no-repeat;
-	background-position: center center;
+	background: url(img/Skillcrush_Computer_int.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
