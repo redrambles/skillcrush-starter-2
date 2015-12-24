@@ -8,7 +8,8 @@ function toggleSidebar() {
           mainContent.style.width = "69%"; // restoring element to original state
      } else {
           sidebar.style.display = "none";
-          mainContent.style.width = "100%"; //(padding-left is ‘illegal’ in JS - so use paddingLeft)
+          mainContent.style.width = "100%";
+          mainContent.style.paddingRight = "0";
      }
 }
 

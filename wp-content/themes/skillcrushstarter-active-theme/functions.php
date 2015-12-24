@@ -44,7 +44,7 @@ function skillcrushstarter_setup() {
 
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size 
+	set_post_thumbnail_size( 980, 9999, false ); // Will leave this as default thumbnail size 
 
 
 
