@@ -17,7 +17,7 @@
 		<?php //endif; 
 
 	 //} else { // if this is NOT a page, go ahead and display the regular sidebar ?>
-
+		
 		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 		<nav role="navigation" class="navigation site-navigation secondary-navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>

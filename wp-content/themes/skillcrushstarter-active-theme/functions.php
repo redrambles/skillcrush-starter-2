@@ -121,6 +121,9 @@ function skillcrushstarter_scripts() {
     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+		if ( is_singular() ) {
+			wp_enqueue_script( 'sidebar-toggle', get_stylesheet_directory_uri() . '/js/sidebar.js', array(), 20151224, true );
+		}
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 

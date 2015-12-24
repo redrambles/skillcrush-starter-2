@@ -592,6 +592,11 @@ strong {
 /* End next / prev */
 
 /* single posts */
+
+.single-page {
+	position: relative; /* So that our 'toggle sidebar' can be absolutely positioned in relation to it */
+}
+
 .single .post-entry {
 	border-bottom: none;
 }
@@ -954,5 +959,15 @@ strong {
 #sidebar .widget_text .boo {
 	display: inline-block;
 	margin-right: 1em;
+}
+
+/* Toggle Sidebar Function Test */
+
+#control-bar {
+     font-size: 1em;
+     position: absolute;
+     top: 0;
+     right: 0;
+     cursor: pointer;
 }
 

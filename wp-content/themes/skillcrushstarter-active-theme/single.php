@@ -10,7 +10,13 @@
 get_header(); ?>
 
 <section class="single-page">		
-	<div class="main-content">
+	<div class="main-content" id="main-content">
+
+		<!-- Testing a toggle sidebar feature -->
+		<div id="control-bar">
+	     	<i class="fa fa-bars"></i>
+		</div>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php the_post_thumbnail(); ?>
@@ -24,8 +30,9 @@ get_header(); ?>
 		<?php endwhile; ?>
 	</div>
 	
-	<?php get_sidebar(); ?>
 
+	<?php get_sidebar(); ?>
+</section>
 	<div id="navigation" class="container">
 		<?php // testing - this should be used in the loop - according to the Codex - but it seems to work anyways
 			// if ( is_attachment() ) :
@@ -37,6 +44,6 @@ get_header(); ?>
 		?>
 		<div class="left"><a href="<?php echo site_url('/blog/') ?>">&larr; <span>Back to posts</span></a></div>
     </div>
-</section>
+
 
 <?php get_footer(); ?>
