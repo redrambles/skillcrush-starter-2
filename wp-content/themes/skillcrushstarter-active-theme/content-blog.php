@@ -15,7 +15,8 @@
 		<footer class="entry-footer">
 			<div class="entry-meta">
 				<span class="entry-terms comments author">
-					Written by <?php the_author(); ?>
+						
+					Written by <?php the_author_posts_link(); ?>
 					/
 					Posted in <?php the_category(', '); ?>
 					<?php $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'skillcrushstarter' ) );
