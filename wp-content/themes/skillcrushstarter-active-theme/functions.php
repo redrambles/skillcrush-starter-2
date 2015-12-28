@@ -45,6 +45,7 @@ function skillcrushstarter_setup() {
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size 
+	add_image_size('filter-page', 300, 300, true); // For filter page
 
 
 
@@ -121,6 +122,16 @@ function skillcrushstarter_scripts() {
     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// isotope stuff for filter page
+	wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
+    wp_register_script( 'isotope-init', get_template_directory_uri().'/js/isotope.js', array('jquery', 'isotope'),  true );
+    wp_register_style( 'isotope-css', get_stylesheet_directory_uri() . '/css/isotope.css' );
+
+	wp_enqueue_script( 'isotope' );
+    wp_enqueue_script('isotope-init');
+    wp_enqueue_style('isotope-css');
+
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 
