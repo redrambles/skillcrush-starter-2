@@ -343,8 +343,9 @@ strong {
 
 /**/
 
-
-
+.blog .entry-title {
+	font-size: 1.17em;
+}
 
 .blog .entry-summary a {
 	color: #45ac9d;
@@ -935,6 +936,49 @@ strong {
 		display: none;
 	}
 
+}
+
+
+/*** Filter Post Category Page ***/
+
+#filters {
+	margin: 20px 0px 40px 0px;
+	text-align: center;
+}
+
+#filters li {
+	display: inline-block;
+	margin: 5px;
+}
+
+#filters li a {
+	padding: 5px 10px;
+	color: #3B3B3B;
+	border: #45ac9d solid 1.3px;
+	margin: 0.5em;
+	background: lemonchiffon;
+}
+
+.filter-title {
+	max-width: 300px;
+	text-align: center;
+	opacity: 0;
+}
+
+#isotope-section div figure {
+	padding: 0.5em;
+	position: relative;
+}
+
+#isotope-section div figure:hover h3 {
+	opacity: 1;
+	position: absolute;
+	top: 15px;
+	color: #3B3B3B;
+}
+
+#isotope-section div a img {
+	max-width: 100%;
 }
 
 
