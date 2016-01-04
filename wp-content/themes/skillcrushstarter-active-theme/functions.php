@@ -210,7 +210,7 @@ add_shortcode('home', 'my_home_link_shortcode');
 
 function my_home_link_shortcode() {
 
-	$string = '<a href="' . get_home_url() .'">Home Page</a>';
+	$string = '<a href= class="home-link"' . get_home_url() .'">Home Page</a>';
 	return $string;
 }
 
