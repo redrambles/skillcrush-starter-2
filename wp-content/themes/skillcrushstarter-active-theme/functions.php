@@ -116,8 +116,8 @@ function skillcrushstarter_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/inc/custom-archive.css' );
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-    wp_enqueue_style('skillcrushstarter-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
-    wp_enqueue_style('skillcrushstarter-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,700,400');
+    wp_enqueue_style('skillcrushstarter-google-fonts-1', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
+    wp_enqueue_style('skillcrushstarter-google-fonts-2', 'https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,400');
     
     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
