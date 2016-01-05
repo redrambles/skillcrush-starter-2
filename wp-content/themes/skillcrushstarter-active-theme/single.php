@@ -19,10 +19,15 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+		<?php $download = get_field('download'); ?>
+
 			<?php the_post_thumbnail(); ?>
 
 			<?php get_template_part('content', get_post_format()); ?>
 
+			<?php if ( !empty( $download ) ) { ?>
+				<p><a class="download-button" href="<?php echo $download["url"]; ?>" target="_blank" name="Spec Sheet">Random Download</a></p>
+			<?php } ?>
 			<?php //wp_list_authors(); ?>
 			
 			<?php comments_template(); ?>
