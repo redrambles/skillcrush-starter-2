@@ -45,6 +45,7 @@ function skillcrushstarter_setup() {
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size 
+	add_image_size('filter-page', 300, 300, true); // For filter page
 
 
 
@@ -115,12 +116,22 @@ function skillcrushstarter_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/inc/custom-archive.css' );
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-    wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
-    wp_enqueue_style('skillcrushstarter-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,700,400');
+    wp_enqueue_style('skillcrushstarter-google-fonts-1', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
+    wp_enqueue_style('skillcrushstarter-google-fonts-2', 'https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,400');
     
     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// isotope stuff for filter page
+	wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
+    wp_register_script( 'isotope-init', get_template_directory_uri().'/js/isotope.js', array('jquery', 'isotope'),  true );
+    wp_register_style( 'isotope-css', get_stylesheet_directory_uri() . '/css/isotope.css' );
+
+	wp_enqueue_script( 'isotope' );
+    wp_enqueue_script('isotope-init');
+    wp_enqueue_style('isotope-css');
+
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 
@@ -166,6 +177,9 @@ function skillcrushstarter_no_wpautop_front_page( $content ) {
 
     if ( is_front_page() ) { 
         remove_filter( 'the_content', 'wpautop' );
+
+        //$content = str_replace('mandolin', '<span class="blue">spicy dogs</span>', $content);
+
         return $content;
     } else {
         return $content;
@@ -199,7 +213,7 @@ add_shortcode('home', 'my_home_link_shortcode');
 
 function my_home_link_shortcode() {
 
-	$string = '<a href="' . get_home_url() .'">Home Page</a>';
+	$string = '<a href= class="home-link"' . get_home_url() .'">Home Page</a>';
 	return $string;
 }
 

@@ -341,10 +341,13 @@ strong {
 	margin-left: 1em;
 }
 
+
+
 /**/
 
-
-
+.blog .entry-title {
+	font-size: 1.17em;
+}
 
 .blog .entry-summary a {
 	color: #45ac9d;
@@ -595,6 +598,25 @@ strong {
 .single .post-entry {
 	border-bottom: none;
 }
+a.download-button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    padding: 5px 10px;
+    background-color: lemonchiffon;
+    border: 1px solid #BFBFBF;
+    color: #3B3B3B;
+    -webkit-transition: all 450ms linear;
+    -moz-transition: all 450ms linear;
+    -ms-transition: all 450ms linear;
+    -o-transition: all 450ms linear;
+    transition: all 450ms linear;
+}
+a.download-button:hover {
+	background-color: #45ac9d;
+	color: white;
+}
 .comments-area {
 	margin-bottom: 80px;
 	clear: both;
@@ -676,6 +698,15 @@ strong {
 	margin: 24px 0;
 	float: right;
 	border: 0;
+	-webkit-transition: all 450ms linear;
+    -moz-transition: all 450ms linear;
+    -ms-transition: all 450ms linear;
+    -o-transition: all 450ms linear;
+    transition: all 450ms linear;
+}
+.comments-area .comment-form input[type="submit"]:hover {
+	background: #31756b;
+	cursor: pointer;
 }
 /* Adding this to hide the text for HTML allowed tags in comments box */
 .form-allowed-tags {
@@ -933,7 +964,107 @@ strong {
 }
 
 
+/*** Filter Post Category Page ***/
+
+#filters {
+	margin: 20px 0px 40px 0px;
+	text-align: center;
+}
+
+#filters li {
+	display: inline-block;
+	margin: 5px;
+}
+
+#filters li a {
+	padding: 5px 10px;
+	color: #3B3B3B;
+	border: #45ac9d solid 1.3px;
+	margin: 0.5em;
+	background: lemonchiffon;
+    -webkit-transition: all 350ms linear;
+    -moz-transition: all 350ms linear;
+    -ms-transition: all 350ms linear;
+    -o-transition: all 350ms linear;
+    transition: all 350ms linear;
+}
+
+#filters li a:hover {
+	background-color: #45ac9d;
+	color: white;
+	border-radius: 3px;
+}
+
+.filter-title {
+	max-width: 300px;
+	text-align: center;
+	opacity: 0;
+}
+
+#isotope-section div figure {
+	padding: 0.5em;
+	position: relative;
+}
+
+#isotope-section div figure:hover h3 {
+	opacity: 1;
+	position: absolute;
+	top: 15px;
+	color: #3B3B3B;
+}
+
+#isotope-section div a img {
+	max-width: 100%;
+}
+
+
 /*** Theme check additions **/
+
+/**
+ * Alignments
+ */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin: 0.4em 1.6em 1.6em 0;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin: 0.4em 0 1.6em 1.6em;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0.4em;
+	margin-bottom: 1.6em;
+}
+
+blockquote.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+	margin: 0.4em 1.6em 1.6em 0;
+}
+
+blockquote.alignright,
+.wp-caption.alignright,
+img.alignright {
+	margin: 0.4em 0 1.6em 1.6em;
+}
+
+blockquote.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+	clear: both;
+	margin-top: 0.4em;
+	margin-bottom: 1.6em;
+}
+
+/* Theme check additions */
 
 .wp-caption-text {
 }
@@ -942,12 +1073,6 @@ strong {
 .gallery-caption {
 }
 .bypostauthor {
-}
-.alignright {
-}
-.alignleft {
-}
-.aligncenter {
 }
 
 /* Test for Tineke */
