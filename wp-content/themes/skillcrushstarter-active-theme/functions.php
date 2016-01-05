@@ -177,6 +177,9 @@ function skillcrushstarter_no_wpautop_front_page( $content ) {
 
     if ( is_front_page() ) { 
         remove_filter( 'the_content', 'wpautop' );
+
+        //$content = str_replace('mandolin', '<span class="blue">spicy dogs</span>', $content);
+
         return $content;
     } else {
         return $content;
