@@ -22,8 +22,8 @@ jQuery(function ($) {
 		$this.addClass('selected');
 
 		//When an item is clicked, sort the items.
-		var selector = $(this).attr('data-filter');
-		$container.isotope({ filter: selector });
+		var $selector = $(this).attr('data-filter');
+		$container.isotope({ filter: $selector });
 
 		return false;
 	});
