@@ -530,10 +530,10 @@ strong {
 #sidebar .widget ul li a{
 	color: #3b3b3b;
 }
-#sidebar .widget_calendar {
+/*#sidebar .widget_calendar {
 	background-color: tomato;
 	color: green;
-}
+}*/
 
 #sb_instagram .sbi_follow_btn a {
 	background-color: #45AC9D;
