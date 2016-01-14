@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: skillcrushstarter-active-theme
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -23,8 +23,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -35,7 +35,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -73,15 +73,15 @@ table {
     line-height: 0;
     height: 0;
 }
- 
+
 .clearfix {
     display: inline-block;
 }
- 
+
 html[xmlns] .clearfix {
     display: block;
 }
- 
+
 * html .clearfix {
     height: 1%;
 }
@@ -427,7 +427,7 @@ strong {
 	text-decoration: none;
 }
 .post-entry .read-more span {
-	color: #45ac9d; 
+	color: #45ac9d;
 }
 .post-entry .read-more:hover {
 	border-bottom: 1px solid #45ac9d;
@@ -484,7 +484,7 @@ strong {
 	max-width: 175px;
 	margin: auto;
 	display: block;
-	
+
 }
 #sidebar .widget_text a {
 	color: #3b3b3b;
@@ -530,14 +530,33 @@ strong {
 #sidebar .widget ul li a{
 	color: #3b3b3b;
 }
-/*#sidebar .widget_calendar {
-	background-color: tomato;
-	color: green;
-}*/
+#sidebar .widget_calendar {
+	color: #3b3b3b;
+	text-align: center;
 
+}
+#sidebar .widget_calendar a {
+	color: #45ac9d;
+}
+#sidebar .widget_calendar table {
+	margin: 0 auto;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+#sidebar .widget_calendar td {
+	padding: 0.2em;
+}
+#sidebar .widget_calendar caption {
+	 padding: 15px 0px;
+	 background: #45ac9d;
+	 margin-bottom: 20px;
+}
+#sidebar #text-3 {
+	border-bottom: none;
+	margin-bottom: 30px;
+}
 #sb_instagram .sbi_follow_btn a {
 	background-color: #45AC9D;
-
 }
 
 /* End of Sidebar CSS - from third code package - Style up your sidebar challenge - 103 week 2, Monday */
@@ -934,7 +953,7 @@ a.download-button:hover {
 	    padding: 20px;
 	    width: 100%;
 	    text-align: center;
-	}	
+	}
 
 	.ann-pic {
 		max-width: 150px;
@@ -1075,4 +1094,3 @@ img.aligncenter {
 	display: inline-block;
 	margin-right: 1em;
 }
-
