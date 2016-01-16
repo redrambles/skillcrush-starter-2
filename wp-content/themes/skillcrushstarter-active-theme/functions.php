@@ -44,7 +44,7 @@ function skillcrushstarter_setup() {
 
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size 
+	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size
 	add_image_size('filter-page', 300, 300, true); // For filter page
 
 
@@ -55,18 +55,18 @@ function skillcrushstarter_setup() {
 	// Add default posts and comments RSS feed links to head. - In response to Theme Check
 	add_theme_support( 'automatic-feed-links' );
 
-	// Register Menus 
+	// Register Menus
 	register_nav_menus ( array (
 		'primary-menu' => __( 'Primary Menu', 'skillcrushstarter' ),
 		'secondary' => __( 'Secondary Menu', 'skillcrushstarter' ),
-		'category-menu' => __( 'Category Menu', 'skillcrushstarter'), // optional addition  
+		'category-menu' => __( 'Category Menu', 'skillcrushstarter'), // optional addition
 	) );
 }
 
 add_action( 'after_setup_theme', 'skillcrushstarter_setup' );
 
 /**
- * Register widget area 
+ * Register widget area
  *
  */
 function skillcrushstarter_widgets_init() {
@@ -146,7 +146,7 @@ function skillcrush_comments($comment, $args, $depth) {
 	$comment .= '<p>' . get_comment_text() . '</p>';
 	$comment .= '</div>';
 	$comment .= '</li>';
- 
+
 	echo $comment;
 }
 
@@ -174,7 +174,7 @@ add_filter( 'the_content', 'skillcrushstarter_no_wpautop_front_page', 9 );
 
 function skillcrushstarter_no_wpautop_front_page( $content ) {
 
-    if ( is_front_page() ) { 
+    if ( is_front_page() ) {
         remove_filter( 'the_content', 'wpautop' );
 
         //$content = str_replace('mandolin', '<span class="blue">spicy dogs</span>', $content);
@@ -221,55 +221,11 @@ function my_home_link_shortcode() {
 
 // After Post Info - IN PLUGIN (after-post-info)
 
+
 /**
- * Custom archive template 
+ * Custom archive template
  *
  * Ann addition
  */
 require get_template_directory() . '/inc/custom-archives-functions.php';
-
-
-// Testing this for fun
-
-function skillcrushstarter_add_admin_page(){
-
-	// Generate admin page	
-     add_menu_page( 'Skillcrushstarter Theme Options', 'skillcrushstarter', 'manage_options', 'skillcrushstarter_options', 'skillcrushstarter_theme_create_page', 'dashicons-feedback', 110 );
-
-
-     // Generate admin sub page
-     add_submenu_page( 'skillcrushstarter_options', 'Skillcrushstarter Theme Options', 'General', 'manage_options', 'skillcrushstarter_options', 'skillcrushstarter_theme_create_page' );
-     add_submenu_page( 'skillcrushstarter_options', 'Skillcrushstarter CSS Options', 'Custom CSS', 'manage_options', 'skillcrushstarter_custom_css', 'skillcrushstarter_theme_settings_page' );
-
-     // Activate custom settings
-     add_action( 'admin_init', 'skillcrushstarter_custom_settings' );
-}
-add_action( 'admin_menu', 'skillcrushstarter_add_admin_page');
-
-
-function skillcrushstarter_custom_settings() {
-	register_setting( 'skillcrushstarter-settings-group', 'first_name' );
-	add_settings_section( 'skillcrushstarter-sidebar-options', 'Sidebar Options', 'skillcrushstarter_sidebar_options', 'skillcrushstarter_options' );
-	add_settings_field( 'sidebar-name', 'First Name', 'skillcrushstarter_sidebar_name', 'skillcrushstarter_options', 'skillcrushstarter-sidebar-options' );
-}
-
-function skillcrushstarter_sidebar_options() {
-	echo 'Customize your Sidebar Information';
-}
-
-function skillcrushstarter_sidebar_name() {
-	$firstName = esc_attr( get_option( 'first_name' ) );
-	echo '<input type="text" name="first_name" value="'.$firstName.'" placeholder="First Name" />';
-}
-
-
-function skillcrushstarter_theme_create_page() {
-     //generation of our admin page
-     require_once( get_template_directory(). '/inc/admin/skillcrushstarter-admin.php');
-}
-
-function skillcrushstarter_theme_settings_page() {
-     //generation of our sub admin settings page
-}
-
-
+require get_template_directory() . '/inc/admin/admin-functions.php';
