@@ -176,9 +176,7 @@ function skillcrushstarter_no_wpautop_front_page( $content ) {
 
     if ( is_front_page() ) {
         remove_filter( 'the_content', 'wpautop' );
-
         //$content = str_replace('mandolin', '<span class="blue">spicy dogs</span>', $content);
-
         return $content;
     } else {
         return $content;
@@ -200,12 +198,12 @@ add_filter( 'post_class', 'skillcrushstarter_post_classes' );
 
 
 // Sweet admin notice
-add_action( 'admin_notices', 'admin_notice_of_happiness' );
-function admin_notice_of_happiness() {
-  echo '<div class="updated">
-          <p>Did I mention yet today that you are wonderful? Keep up the great work!</p>
-        </div>';
-}
+// add_action( 'admin_notices', 'admin_notice_of_happiness' );
+// function admin_notice_of_happiness() {
+//   echo '<div class="updated">
+//           <p>Did I mention yet today that you are wonderful? Keep up the great work!</p>
+//         </div>';
+// }
 
 // shortcode: [home]
 add_shortcode('home', 'my_home_link_shortcode');
@@ -229,3 +227,4 @@ function my_home_link_shortcode() {
  */
 require get_template_directory() . '/inc/custom-archives-functions.php';
 require get_template_directory() . '/inc/admin/admin-functions.php';
+require get_template_directory() . '/inc/admin/admin-extras.php';
