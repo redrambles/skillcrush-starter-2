@@ -89,6 +89,12 @@ This is likely an issue with your PHP memory limit. Try temporarily increasing i
 
 == Changelog ==
 
+= 1.3.1 - December 8, 2015 =
+* Added: Link to pro support and documentation in help tab
+* Tweak: "Back to Overview" link now fixed to top of "View Details" box
+* Fix: Bug with case-insensitive searches in serialized objects
+* Fix: Bug with early skip due to lack of primary key
+
 = 1.3 - November 24, 2015 =
 * Added Gzip support for backups and imports
 * Added ability to run a search/replace profile on a backup
