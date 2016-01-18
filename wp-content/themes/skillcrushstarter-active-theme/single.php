@@ -43,32 +43,35 @@ get_header(); ?>
 		<div class="left"><a href="<?php echo site_url('/blog/') ?>">&larr; <span>Back to posts</span></a></div>
     </div>
 </section>
-
-<section class="related-posts">
+<section>
 	<?php
-			$tags = wp_get_post_terms( get_the_ID() );
-			if ( $tags ) {
-				echo 'Related Posts';
+	if ( function_exists('get_field') ) { // Only do this if ACF is active
 
-				$tagcount = count( $tags );
-				for ( $i = 0; $i < $tagcount; $i++ ) {
-					$tagIDs[$i] = $tags[$i]->term_id;
-				}
-			}
-
-			$args=array(
-				'tag_in' => $tagIDs,
-				'post_not_in' => array( $post->ID ),
-				'posts_per_page' => 3,
-				'ignore_sticky_posts' => 1
+			$posts = get_field('related_posts');
+			$posts_count = count($posts);
+			$posts_width = array ( // change the styling according to number of posts. Max 3.
+				'',
+				'full',
+				'half',
+				'third'
 			);
-			$relatedPosts = new WP_Query( $args );
-			if ( $relatedPosts->have_posts() ) {
-				//loop through related posts based on the tag
-				while ( $relatedPosts->have_posts() ) :
-					$relatedPosts->the_post(); ?>
-					<p><a href="<?php the_permalink(); ?>"><?php the_title();?></a></p>
-				<?php endwhile; wp_reset_postdata();
-			}?>
+			$post_class = $posts_width[$posts_count];
+
+			if ($posts) {
+	     echo '<h1 class="related-posts-title">More Goodness</h1>';
+	     echo '<ul class="related-list clearfix">';
+	     foreach ($posts as $post):
+	          setup_postdata($post);
+	          echo '<li class="'.$post_class.'"><a href="' . get_the_permalink() .'">';
+	          echo '<h3 class="related-individual-title">' . get_the_title() . '</h3>';
+	          the_post_thumbnail('related-images');
+	          echo '</a></li>';
+	     endforeach;
+	     echo '</ul>';
+	     wp_reset_postdata();
+
+		 } // end related posts loop
+	 } // end ACF check
+	 ?>
 </section>
 <?php get_footer(); ?>
