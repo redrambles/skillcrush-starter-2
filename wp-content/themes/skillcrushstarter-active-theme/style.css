@@ -176,6 +176,15 @@ b,
 strong {
 	font-weight: 700;
 }
+ul, ol {
+	margin: 0 0 1.6em 1.3333em;
+}
+ ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
 
 #page {
 	/* testing this out for responsiveness - Still a TON of work to be done here */
@@ -319,29 +328,10 @@ strong {
  ** List styling Added these after the fact, after adding them to a post / page in the dashboard content box and nothing showed up due to the reset **
  */
 
-.entry-summary ul,
-.post-entry ul,
-.entry-summary ol,
-.post-entry ol {
-	margin: 0 0 1.6em 1.3333em;
-}
-
-.entry-summary ul,
-.post-entry ul {
-	list-style: disc;
-}
-
-.entry-summary ol,
-.post-entry ol {
-	list-style: decimal;
-}
-
 .entry-summary ul > li,
 .post-entry ul > li  {
 	margin-left: 1em;
 }
-
-
 
 /**/
 
