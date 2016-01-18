@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<section class="single-page">		
+<section class="single-page">
 	<div class="main-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -23,12 +23,12 @@ get_header(); ?>
 				<p><a class="download-button" href="<?php echo $download["url"]; ?>" target="_blank" name="Spec Sheet">Random Download</a></p>
 			<?php } ?>
 			<?php //wp_list_authors(); ?>
-			
+
 			<?php comments_template(); ?>
 
 		<?php endwhile; ?>
 	</div>
-	
+
 	<?php get_sidebar(); ?>
 
 	<div id="navigation" class="container">
@@ -44,4 +44,31 @@ get_header(); ?>
     </div>
 </section>
 
+<section class="related-posts">
+	<?php
+			$tags = wp_get_post_terms( get_the_ID() );
+			if ( $tags ) {
+				echo 'Related Posts';
+
+				$tagcount = count( $tags );
+				for ( $i = 0; $i < $tagcount; $i++ ) {
+					$tagIDs[$i] = $tags[$i]->term_id;
+				}
+			}
+
+			$args=array(
+				'tag_in' => $tagIDs,
+				'post_not_in' => array( $post->ID ),
+				'posts_per_page' => 3,
+				'ignore_sticky_posts' => 1
+			);
+			$relatedPosts = new WP_Query( $args );
+			if ( $relatedPosts->have_posts() ) {
+				//loop through related posts based on the tag
+				while ( $relatedPosts->have_posts() ) :
+					$relatedPosts->the_post(); ?>
+					<p><a href="<?php the_permalink(); ?>"><?php the_title();?></a></p>
+				<?php endwhile; wp_reset_postdata();
+			}?>
+</section>
 <?php get_footer(); ?>
