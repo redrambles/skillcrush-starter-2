@@ -7,7 +7,6 @@ function skillcrushstarter_add_admin_page(){
 	// Generate admin page
      add_menu_page( 'Skillcrushstarter Theme Options', 'skillcrushstarter', 'manage_options', 'skillcrushstarter_options', 'skillcrushstarter_theme_create_page', 'dashicons-feedback', 110 );
 
-
      // Generate admin sub page
      add_submenu_page( 'skillcrushstarter_options', 'Skillcrushstarter Theme Options', 'General', 'manage_options', 'skillcrushstarter_options', 'skillcrushstarter_theme_create_page' );
      add_submenu_page( 'skillcrushstarter_options', 'Skillcrushstarter CSS Options', 'Custom CSS', 'manage_options', 'skillcrushstarter_custom_css', 'skillcrushstarter_theme_settings_page' );
@@ -48,7 +47,7 @@ function skillcrushstarter_sidebar_name() {
 }
 function skillcrushstarter_sidebar_description() {
 	$description = esc_attr( get_option( 'user_description' ) );
-	echo '<input type="text" name="user_description" value="'.$description.'" placeholder="Description" />
+	echo '<input type="text" class="user_description" name="user_description" value="'.$description.'" placeholder="Description" />
   <p class="description">Share a little info about yourself.</p>';
 }
 function skillcrushstarter_sidebar_twitter() {
