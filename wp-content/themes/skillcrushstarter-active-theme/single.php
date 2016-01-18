@@ -55,7 +55,7 @@ get_header(); ?>
 				'half',
 				'third'
 			);
-			$post_class = $posts_width[$posts_count];
+			$post_class = $posts_width[$posts_count]; // Set the width class according to the number of related posts
 
 			if ($posts) {
 	     echo '<h1 class="related-posts-title">More Goodness</h1>';
