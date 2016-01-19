@@ -18,6 +18,7 @@ add_action( 'admin_menu', 'skillcrushstarter_add_admin_page');
 
 
 function skillcrushstarter_custom_settings() {
+  register_setting( 'skillcrushstarter-settings-group', 'profile_pic' );
 	register_setting( 'skillcrushstarter-settings-group', 'first_name' );
   register_setting( 'skillcrushstarter-settings-group', 'last_name');
   register_setting( 'skillcrushstarter-settings-group', 'user_description');
@@ -27,6 +28,7 @@ function skillcrushstarter_custom_settings() {
 
 	add_settings_section( 'skillcrushstarter-sidebar-options', 'Sidebar Options', 'skillcrushstarter_sidebar_options', 'skillcrushstarter_options' );
 
+  add_settings_field( 'sidebar-profile-pic', 'Profile Picture', 'skillcrushstarter_sidebar_profile', 'skillcrushstarter_options', 'skillcrushstarter-sidebar-options' );
   add_settings_field( 'sidebar-name', 'Full Name', 'skillcrushstarter_sidebar_name', 'skillcrushstarter_options', 'skillcrushstarter-sidebar-options' );
   add_settings_field( 'sidebar-description', 'Description', 'skillcrushstarter_sidebar_description', 'skillcrushstarter_options', 'skillcrushstarter-sidebar-options' );
   add_settings_field( 'sidebar-twitter', 'Twitter handler', 'skillcrushstarter_sidebar_twitter', 'skillcrushstarter_options', 'skillcrushstarter-sidebar-options' );
@@ -39,6 +41,10 @@ function skillcrushstarter_sidebar_options() {
 	echo 'Customize your Sidebar Information';
 }
 
+function skillcrushstarter_sidebar_profile() {
+	$profilePic = esc_attr( get_option( 'profile_pic' ) );;
+	echo '<input type="button" class="button button-secondary" value="Upload Profile Picture" id="upload-button"><input type="hidden" name="profile_pic" value="'.$profilePic.'"/>';
+}
 function skillcrushstarter_sidebar_name() {
 	$firstName = esc_attr( get_option( 'first_name' ) );
   $lastName = esc_attr( get_option( 'last_name' ) );
