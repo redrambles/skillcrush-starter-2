@@ -167,6 +167,7 @@ video {
 }
 a {
 	text-decoration: none;
+	color: #f29729;
 }
 p {
 	margin: 30px 0;
@@ -734,6 +735,7 @@ a.download-button:hover {
 }
 .related-list {
 	width: 100%;
+	margin: 0;
 }
 .related-list li {
 	display: inline-block;
