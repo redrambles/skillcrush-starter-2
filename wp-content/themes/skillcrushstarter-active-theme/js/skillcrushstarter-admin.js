@@ -6,9 +6,14 @@ jQuery(document).ready(function($) {
       e.preventDefault();
       if( mediaUploader ){
         mediaUploader.open();
-        return
+        return;
       }
-
+      mediaUploader = wp.media.frames.file_frame = wp.media({
+          title: 'Choose Profile Picture',
+          button: {
+            text: 'Choose Picture'
+          },
+          multiple: false
+      });
   });
-
 });
