@@ -157,6 +157,14 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
+embed,
+iframe,
+object,
+video {
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	vertical-align: middle;
+}
 a {
 	text-decoration: none;
 }
@@ -523,7 +531,6 @@ ol {
 #sidebar .widget_calendar {
 	color: #3b3b3b;
 	text-align: center;
-
 }
 #sidebar .widget_calendar a {
 	color: #45ac9d;
@@ -947,7 +954,7 @@ a.download-button:hover {
 
 	.ann-pic {
 		max-width: 150px;
-    	margin: 0 auto 30px;
+    margin: 0 auto 30px;
 	}
 	#sidebar .widget_text,
 	#sidebar .widget_search {
@@ -977,7 +984,7 @@ a.download-button:hover {
 
 #filters li {
 	display: inline-block;
-	margin: 5px;
+	margin: 5px 5px 15px 5px;
 }
 
 #filters li a {
