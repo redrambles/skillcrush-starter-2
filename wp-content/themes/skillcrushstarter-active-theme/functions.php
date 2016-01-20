@@ -44,11 +44,9 @@ function skillcrushstarter_setup() {
 
 	// Post thumbnails support
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size( 650, 510, true ); // Will leave this as default thumbnail size
+	set_post_thumbnail_size( 650, 510, array( 'left', 'top' ) ); // Will leave this as default thumbnail size
 	add_image_size('filter-page', 300, 300, true); // For filter page
-
-
-
+	add_image_size('related-images', 250, 150, array( 'left', 'top' ));
 	add_image_size('full-page', 930, 400, true); // For full width page featured image
 	add_image_size('blog-page', 200, 200, true); // For blog index page
 

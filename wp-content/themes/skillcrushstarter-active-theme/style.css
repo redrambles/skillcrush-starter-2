@@ -167,6 +167,7 @@ video {
 }
 a {
 	text-decoration: none;
+	color: #f29729;
 }
 p {
 	margin: 30px 0;
@@ -723,6 +724,43 @@ a.download-button:hover {
 .form-allowed-tags {
 	display: none;
 }
+
+/* Related Posts */
+.related-posts-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+.related-list {
+	width: 100%;
+	margin: 0;
+}
+.related-list li {
+	display: inline-block;
+	vertical-align: bottom;
+	text-align: center;
+}
+li.third {
+	width: 31%;
+	margin-right: 3%;
+}
+li.half {
+	width: 48%;
+	margin-right: 4%;
+}
+li.full {
+	width: 100%;
+}
+.related-list li:last-of-type {
+	margin-right: 0;
+}
+.related-individual-title {
+	margin-bottom: 20px;
+	font-size: 90%;
+}
+
 
 /* End single posts */
 
