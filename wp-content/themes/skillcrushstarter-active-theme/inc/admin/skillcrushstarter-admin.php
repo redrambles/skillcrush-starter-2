@@ -9,6 +9,7 @@
 <h1 class="main-options-title">Skillcrushstarter Theme Options</h1>
 <?php settings_errors(); ?>
 <?php
+	$picture = esc_attr( get_option( 'profile_pic' ) );
 	$firstName = esc_attr( get_option( 'first_name' ) );
 	$lastName = esc_attr( get_option( 'last_name' ) );
 	$fullName = $firstName . ' ' . $lastName;
@@ -17,6 +18,9 @@
 <div class="skillcrushstarter-main-options-page">
 	<div class="skillcrushstarter-sidebar-preview">
 		<div class="skilcrushstarter-sidebar">
+			<div class="image-container">
+				<div class="profile-picture" style="background-image: url(<?php print $picture; ?>);"></div>
+			</div>
 			<h1 class="skillcrushstarter-username"><?php echo $fullName; ?></h1>
 			<h2 class="skillcrushstarter-description"><?php echo $description; ?></h2>
 			<div class="icons-wrapper"></div>

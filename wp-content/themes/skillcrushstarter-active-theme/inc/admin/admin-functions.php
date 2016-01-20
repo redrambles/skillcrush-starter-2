@@ -43,7 +43,7 @@ function skillcrushstarter_sidebar_options() {
 
 function skillcrushstarter_sidebar_profile() {
 	$profilePic = esc_attr( get_option( 'profile_pic' ) );;
-	echo '<input type="button" class="button button-secondary" value="Upload Profile Picture" id="upload-button"><input type="hidden" name="profile_pic" value="'.$profilePic.'"/>';
+	echo '<input type="button" class="button button-secondary" value="Upload Profile Picture" id="upload-button"><input type="hidden" id="profile-picture" name="profile_pic" value="'.$profilePic.'"/>';
 }
 function skillcrushstarter_sidebar_name() {
 	$firstName = esc_attr( get_option( 'first_name' ) );
