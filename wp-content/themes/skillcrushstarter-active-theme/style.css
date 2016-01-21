@@ -764,6 +764,7 @@ li.full {
 
 /* End single posts */
 
+
 /* Homepage */
 .home {
 	background: url(img/Skillcrush_Computer_int.png) no-repeat center center;
@@ -911,6 +912,46 @@ li.full {
 	color: #45ac9d;
 }
 
+/** Slider Page **/
+.page-template-slider-page .page-header {
+	border-bottom: none;
+}
+
+.slick-slider .slide,
+.slick-slider .slide img {
+	width: 100%;
+	height: auto;
+}
+
+.slick-slider p:hover {
+	cursor: pointer;
+}
+
+.slick-slider .left-arrow {
+	left: 10px;
+}
+.slick-slider .right-arrow {
+	right: 10px;
+}
+.slick-slider .left-arrow,
+.slick-slider .right-arrow {
+	opacity: 0;
+	position: absolute;
+	top: 40%;
+	text-align: center;
+	z-index: 10;
+	background: #ffffff;
+	width: 25px;
+	border-radius: 50%;
+}
+.slick-slider:hover .left-arrow,
+.slick-slider:hover .right-arrow  {
+	opacity: 1;
+	-webkit-transition: 600ms ease-in-out;
+    -moz-transition: 600ms ease-in-out;
+    -o-transition: 600ms ease-in-out;
+    transition: 600ms ease-in-out;
+}
 
 /*** Footer ***/
 

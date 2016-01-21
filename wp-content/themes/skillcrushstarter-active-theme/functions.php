@@ -107,6 +107,28 @@ function skillcrushstarter_widgets_init() {
 }
 add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
 
+
+/**
+* Register Custom Post Types
+**/
+
+function skillcrushstarter_custom_post_types() {
+
+	register_post_type('slider',
+		array(
+			// 'supports' => $supports,
+			'labels' => array(
+				'name' => _( 'Slider' ),
+				'singular_name' => _( 'Slider' )
+				),
+			'public' => true,
+			'has_archive' => false
+			)
+	 );
+}
+// Hook this custom post type function into the theme
+add_action( 'init', 'skillcrushstarter_custom_post_types' );
+
 /**
  * Enqueue scripts and styles
  */
@@ -128,6 +150,12 @@ function skillcrushstarter_scripts() {
 	wp_enqueue_script( 'isotope' );
     wp_enqueue_script('isotope-init');
     wp_enqueue_style('isotope-css');
+
+
+		// slick slider
+		wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', 'jquery', '1.4.1' );
+		wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
+		wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css', '', '1.4.1' );
 
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
