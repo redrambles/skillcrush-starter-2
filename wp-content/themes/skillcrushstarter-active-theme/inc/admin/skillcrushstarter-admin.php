@@ -1,11 +1,8 @@
 <?php
 /*
-*
 * Generates our Option page. Called at the bottom of admin-functions.php
-*
 */
 ?>
-
 <h1 class="main-options-title">Skillcrushstarter Theme Options</h1>
 <?php settings_errors(); ?>
 <?php
@@ -19,7 +16,7 @@
 	<div class="skillcrushstarter-sidebar-preview">
 		<div class="skilcrushstarter-sidebar">
 			<div class="image-container">
-				<div class="profile-picture" style="background-image: url(<?php print $picture; ?>);"></div>
+				<div id="profile-picture-preview" class="profile-picture" style="background-image: url(<?php print $picture; ?>);"></div>
 			</div>
 			<h1 class="skillcrushstarter-username"><?php echo $fullName; ?></h1>
 			<h2 class="skillcrushstarter-description"><?php echo $description; ?></h2>
