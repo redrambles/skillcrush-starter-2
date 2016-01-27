@@ -19,7 +19,7 @@ get_header(); ?>
 <pre><?php //print_r($wp_query); exit; ?></pre>
 <pre><?php //print_r($wp_query->posts); exit; ?></pre>
 
-<section class="index-page">		
+<section class="index-page">
 	<div class="main-content">
 
 		<?php if ( have_posts() ): ?>
@@ -29,18 +29,18 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</div>
-	
+
 	<?php get_sidebar(); ?>
-</section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element 
+</section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element
 to allow the both the content and the sidebar to have equal height - making the border follow all the way down. Problem: looks
-terrible when browser size is reduced - will have to look into proper use of flex - should probably fall back with a float and 
+terrible when browser size is reduced - will have to look into proper use of flex - should probably fall back with a float and
 build on responsiveness. -->
 
 	<?php //if ( have_posts() ): ?>
 		<div id="navigation" class="container"> <!-- Here I added the 'span' as it was present in the other themes but not this one -->
 	        <div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
 	        <div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
-	    </div>
+	  </div>
 	<?php //endif; ?>
 
 
