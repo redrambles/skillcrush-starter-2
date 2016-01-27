@@ -465,6 +465,10 @@ ol {
 #sidebar {
 	padding-top: 20px;
 }
+#sidebar ul,
+#sidebar li {
+	margin: 0;
+}
 #sidebar li {
 	list-style-type: none;
 }
