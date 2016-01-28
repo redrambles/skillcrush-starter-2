@@ -142,7 +142,7 @@ header, footer, section, aside, time, article {
 }
 html,
 body {
-	height: 100%;
+	height: 100%; /* Might need to change this to 'min-height' for front page image */
 }
 body {
 	background: #fff;
