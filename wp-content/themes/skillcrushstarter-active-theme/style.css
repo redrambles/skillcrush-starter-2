@@ -592,7 +592,7 @@ ol {
 	color: #45AC9D;
 	font-size: 0.8em;
 }
-#sidebar ol.wpp-list > li{
+#sidebar ol.wpp-list li{
     position: relative;
     margin-bottom: 20px;
     padding-left: 0.5em;
@@ -600,7 +600,7 @@ ol {
     border-left: 2px solid #CCCCCC;
 		overflow: visible;
 }
-#sidebar ol.wpp-list > li::before {
+#sidebar ol.wpp-list li::before {
     position: absolute;
     top: 0;
     left: -100px;
