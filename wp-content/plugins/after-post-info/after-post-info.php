@@ -32,7 +32,7 @@ function after_post_info( $content ) {
 	// var_dump($args);
 
 	if ( !empty( $after_info ) ) {
-		$after_info = '<div class="after-info">' . $after_info . '</div>';
+		$after_info = '<div class="after-info">' . esc_html($after_info) . '</div>';
 		return $content . $after_info;
 	}
 
