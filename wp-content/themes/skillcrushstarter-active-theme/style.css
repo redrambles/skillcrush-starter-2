@@ -229,90 +229,89 @@ ol {
 }
 .page-header .top-nav {
 	float: right;
-	padding-top: 22px;
+	/*padding-top: 22px;*/
 }
 
 /*********************/
-.page-header .top-nav {
-margin-right: auto;
-margin-left: auto;
-padding-top: 0;
-z-index: 10;
+.top-nav {
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 10;
+	font-size: 0.9em;
 }
 
 .top-nav li {
-display: inline-block;
-list-style: url(none) none;
-float: left;
+	display: inline-block;
+	list-style: url(none) none;
+	float: left;
 }
 
 .top-nav ul {
-line-height: 31px;
-list-style-image:none;
-list-style-position:outside;
-list-style-type:none;
+	line-height: 31px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
 }
 
 .top-nav a, .top-nav a:hover {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-border:medium none;
-display:block;
-text-decoration:none;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	border:medium none;
+	display:block;
+	text-decoration:none;
 }
 
 .top-nav a, .top-nav a:visited {
-color:#45ac9d;
-text-transform: uppercase;
-display:block;
-padding:0 20px;
+	color:#45ac9d;
+	text-transform: uppercase;
+	display:block;
+	padding:0 20px;
 }
 
 .top-nav a:hover, .top-nav a:active, .current_page_item a, #home .on, .menu-footer a:hover {
-text-decoration:underline;
+	text-decoration:underline;
 }
 
 .top-nav li ul {
-height:auto;
-left:-999em;
-line-height:30px;
-margin:0;
-padding:0;
-position:absolute;
-width:222px;
+	height:auto;
+	left:-999em;
+	line-height:30px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	width:222px;
 }
 
 .top-nav li li {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-width:150px;
-margin-left: 20px;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	width:150px;
+	margin-left: 20px;
 }
 
 .top-nav li li a, .top-nav li li a:visited {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:#45ac9d;
-padding: 5px 5px 5px 10px;
-opacity: 0.9;
-color:#FFFFFF;
-font-size:0.9em;
-font-weight:normal;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#45ac9d;
+	padding: 5px 5px 5px 10px;
+	opacity: 0.9;
+	color:#FFFFFF;
+	font-weight:normal;
 }
 
 .top-nav li li a:hover, .top-nav li li a:active {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:#60625C none repeat scroll 0 0;
-text-decoration: none;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#60625C none repeat scroll 0 0;
+	text-decoration: none;
 }
 
 .top-nav li:hover ul, .top-nav li li:hover ul, .top-nav li li li:hover ul,   .top-nav li.sfhover ul, .top-nav li li.sfhover ul, .top-nav li li li.sfhover ul     {
-left:auto;
+	left:auto;
 }
 /*****************/
 /* For full width pages - in page.php right now - may make a template later */
