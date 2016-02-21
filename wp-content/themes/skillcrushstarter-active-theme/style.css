@@ -232,22 +232,89 @@ ol {
 	padding-top: 22px;
 }
 
-/* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin */
-
-.top-nav ul li /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
-/*.page-header .top-nav .menu ul li*/ {
-	display: inline;
-}
-.top-nav ul li a /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
-/*.page-header .top-nav .menu ul li a */{
-	color: inherit;
-	font-size: 14px;
-	line-height: normal;
-	margin-left: 35px;
-	text-decoration: none;
-	text-transform: uppercase;
+/*********************/
+.page-header .top-nav {
+margin-right: auto;
+margin-left: auto;
+padding-top: 0;
+z-index: 10;
 }
 
+.top-nav li {
+display: inline-block;
+list-style: url(none) none;
+float: left;
+}
+
+.top-nav ul {
+line-height: 31px;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+
+.top-nav a, .top-nav a:hover {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+border:medium none;
+display:block;
+text-decoration:none;
+}
+
+.top-nav a, .top-nav a:visited {
+color:#45ac9d;
+text-transform: uppercase;
+display:block;
+padding:0 20px;
+}
+
+.top-nav a:hover, .top-nav a:active, .current_page_item a, #home .on, .menu-footer a:hover {
+text-decoration:underline;
+}
+
+.top-nav li ul {
+height:auto;
+left:-999em;
+line-height:30px;
+margin:0;
+padding:0;
+position:absolute;
+width:222px;
+}
+
+.top-nav li li {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+width:150px;
+margin-left: 20px;
+}
+
+.top-nav li li a, .top-nav li li a:visited {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#45ac9d;
+padding: 5px 5px 5px 10px;
+opacity: 0.9;
+color:#FFFFFF;
+font-size:0.9em;
+font-weight:normal;
+}
+
+.top-nav li li a:hover, .top-nav li li a:active {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#60625C none repeat scroll 0 0;
+text-decoration: none;
+}
+
+.top-nav li:hover ul, .top-nav li li:hover ul, .top-nav li li li:hover ul,   .top-nav li.sfhover ul, .top-nav li li.sfhover ul, .top-nav li li li.sfhover ul     {
+left:auto;
+}
+/*****************/
 /* For full width pages - in page.php right now - may make a template later */
 .full-main-content {
 	width: 100%;
