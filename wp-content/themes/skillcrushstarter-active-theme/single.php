@@ -46,7 +46,7 @@ get_header(); ?>
 <section>
 	<?php
 	if ( function_exists('get_field') ) { // Only do this if ACF is active
-
+		
 			$posts = get_field('related_posts');
 			$posts_count = count($posts);
 			$posts_width = array ( // change the styling according to number of posts. Max 3.
@@ -57,7 +57,7 @@ get_header(); ?>
 			);
 			$post_class = $posts_width[$posts_count]; // Set the width class according to the number of related posts
 
-			if ($posts) {
+			if ($posts) { // Check first to see if any related posts were set for this particular post
 	     echo '<h1 class="related-posts-title">More Goodness</h1>';
 	     echo '<ul class="related-list clearfix">';
 	     foreach ($posts as $post):
