@@ -216,6 +216,12 @@ function my_home_link_shortcode() {
 	return $string;
 }
 
+// Testing the addition of excerpts for pages
+// function skillcrushstarter_add_excerpt_for_pages() {
+// 	add_post_type_support( 'page', 'excerpt' );
+// }
+// add_action( 'init', 'skillcrushstarter_add_excerpt_for_pages' );
+// 
 
 // Hilarious Joke Title - IN PLUGIN (funny-title)
 

@@ -15,6 +15,11 @@
  */
 
 get_header(); ?>
+<div class="blog-intro">
+	<?php $page_for_posts_id = get_option('page_for_posts');
+	echo get_post_field( 'post_content', $page_for_posts_id ); 
+	//echo '<p>' . get_post_meta($page_for_posts_id, "blog_info", true). '</p>'; ?>
+</div>
 
 <pre><?php //print_r($wp_query); exit; ?></pre>
 <pre><?php //print_r($wp_query->posts); exit; ?></pre>

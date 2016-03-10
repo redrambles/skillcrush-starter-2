@@ -289,6 +289,13 @@ ol {
 /*** End of FIRST CODE PACKAGE additions - 103 week 2, Monday **/
 
 /* BLOG styles */
+.blog-intro {
+	background-color: lemonchiffon;
+	padding: 30px 30px 40px;
+	border-bottom: 1px solid #bfbfbf;
+	
+}
+
 .post-entry {
 	border-bottom: 1px solid #bfbfbf;
 	padding-bottom: 20px;
@@ -565,8 +572,7 @@ ol {
 #sidebar .popular-posts {
 	padding-left: 10px;
 }
-#sidebar .popular-posts h2
- {
+#sidebar .popular-posts h2 {
 	font: 600 14px 'Open Sans';
 	color: #45ac9d;
 	margin: 0px 0px 20px 30px;
