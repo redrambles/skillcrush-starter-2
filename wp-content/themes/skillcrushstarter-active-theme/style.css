@@ -782,6 +782,12 @@ a.download-button:hover {
 	background: #31756b;
 	cursor: pointer;
 }
+
+.comments-area .comment-form input#url,
+.comments-area .comment-form input#author,
+.comments-area .comment-form input#email {
+	height: 30px;
+}
 /* Adding this to hide the text for HTML allowed tags in comments box */
 .form-allowed-tags {
 	display: none;
