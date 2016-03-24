@@ -605,6 +605,10 @@ ol {
     border-left: 2px solid #CCCCCC;
 		overflow: visible;
 }
+
+#sidebar ol.wpp-list > li span a{
+color: #3b3b3b;
+}
 #sidebar ol.wpp-list > li::before {
     position: absolute;
     top: 0;
