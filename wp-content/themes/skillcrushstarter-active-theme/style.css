@@ -1113,8 +1113,21 @@ a.download-button:hover {
 #isotope-section div figure:hover h3 {
 	opacity: 1;
 	position: absolute;
-	top: 15px;
+	padding: 20px;
+	top: 20px;
 	color: #3B3B3B;
+	font-weight: bold;
+	-webkit-transition: 200ms ease-in-out;
+	-moz-transition: 200ms ease-in-out;
+	-o-transition: 200ms ease-in-out;
+	transition: 200ms ease-in-out;
+}
+#isotope-section div figure:hover img {
+	opacity: 0.2;
+	-webkit-transition: 400ms ease-in-out;
+	-moz-transition: 400ms ease-in-out;
+	-o-transition: 400ms ease-in-out;
+	transition: 400ms ease-in-out;
 }
 
 #isotope-section div a img {
