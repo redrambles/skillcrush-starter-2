@@ -35,13 +35,8 @@ body.login {
   color: #555555;
 }
 
-.login input[type="text"]{
-  background-color: #ffffff;
-  border-color:#dddddd;
-  -webkit-border-radius: 4px;
-}
-
-.login input[type="password"]{
+.login input[type="text"],
+.login input[type="password"] {
   background-color: #ffffff;
   border-color:#dddddd;
   -webkit-border-radius: 4px;
