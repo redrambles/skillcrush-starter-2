@@ -167,6 +167,7 @@ video {
 }
 a {
 	text-decoration: none;
+	color: #45ac9d;
 }
 p {
 	margin: 30px 0;
@@ -284,6 +285,9 @@ ol {
 .page-entry img{
 	width: 100%;
 	margin-bottom: 30px;
+}
+section.single-page {
+	display: flex;
 }
 
 /*** End of FIRST CODE PACKAGE additions - 103 week 2, Monday **/

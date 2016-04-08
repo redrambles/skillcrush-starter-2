@@ -31,17 +31,17 @@ get_header(); ?>
 	
 	<?php get_sidebar(); ?>
 
-	<div id="navigation" class="container">
-		<?php // testing - this should be used in the loop - according to the Codex - but it seems to work anyways
-			// if ( is_attachment() ) :
-			// 	previous_post_link( '%link', __( '<span>Published In</span>', 'skillcrushstarter' ) );
-			// else :
-			// 	previous_post_link( '%link', __( '<span>Previous Post</span>', 'skillcrushstarter' ) );
-			// 	next_post_link( '%link', __( '<span>Next Post</span>', 'skillcrushstarter' ) );
-			// endif;
-		?>
-		<div class="left"><a href="<?php echo site_url('/blog/') ?>">&larr; <span>Back to posts</span></a></div>
-    </div>
 </section>
+<div id="navigation" class="container">
+	<?php // testing - this should be used in the loop - according to the Codex - but it seems to work anyways
+		// if ( is_attachment() ) :
+		// 	previous_post_link( '%link', __( '<span>Published In</span>', 'skillcrushstarter' ) );
+		// else :
+		// 	previous_post_link( '%link', __( '<span>Previous Post</span>', 'skillcrushstarter' ) );
+		// 	next_post_link( '%link', __( '<span>Next Post</span>', 'skillcrushstarter' ) );
+		// endif;
+	?>
+	<div class="left"><a href="<?php echo site_url('/blog/') ?>">&larr; <span>Back to posts</span></a></div>
+</div>
 
 <?php get_footer(); ?>
