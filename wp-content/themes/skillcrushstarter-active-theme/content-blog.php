@@ -10,7 +10,7 @@
 		</header>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
-			<p class="more"><a href="<?php the_permalink(); ?>">Read more</a></p>
+			<p class="more"><a href="<?php the_permalink(); ?>"><?php _e( 'Read more' ); ?></a></p>
 		</div>
 		<footer class="entry-footer">
 			<div class="entry-meta">
