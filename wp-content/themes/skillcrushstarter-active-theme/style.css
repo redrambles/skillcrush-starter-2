@@ -215,7 +215,9 @@ ol {
 }
 .page-header .top-logo {
 	color: inherit;
-	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	/*float: left;*/
 }
 .page-header .top-logo .title {
 	color: #45ac9d;
@@ -228,25 +230,113 @@ ol {
 	color: inherit;
 	display: block;
 }
-.page-header .top-nav {
-	float: right;
-	padding-top: 22px;
+
+/* Flex nav */
+
+header.page-header { 
+	padding-top: 20px;
+	padding-bottom: 0px;
+	display: flex; 
+	flex-direction: column; 
+	flex-wrap: wrap;
+	align-self: center;
 }
 
-/* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin */
+.page-header .top-logo { 
+	align-self: center;
+	text-align: center; 
+	min-width: 300px;
+}
+
+.top-nav ul { 
+	margin: 20px 0px 0px 0px; 
+	display: flex; 
+	flex-direction: column; 
+}
+.top-nav ul li {
+	list-style-type: none;
+}
+
+.top-nav ul li a {
+	text-align:center;
+	display: block;
+	padding: 10px;
+	border-bottom: 1px dotted #bfbfbf;
+	color: inherit;
+	font-size: 14px;
+	line-height: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.top-nav ul li a:hover {
+	color: black;
+	background-color: #bfbfbf;
+}
+
+@media (min-width: 690px){
+
+	header.page-header { 
+		height: 200px;
+		padding-bottom: 40px;
+	}
+
+	.top-nav ul { 
+		padding: 20px;
+		flex-direction: row; 
+		justify-content: space-around; 
+	}
+	.top-nav ul li {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+	.top-nav ul li a {
+		border-bottom-color: transparent;
+	}
+	.top-nav ul li a:hover {
+		color: black;
+		background-color: transparent;
+		border-bottom: 1px solid lightgrey;
+		-webkit-transition: 300ms ease-in-out;
+			-moz-transition: 300ms ease-in-out;
+			-o-transition: 300ms ease-in-out;
+			transition: 300ms ease-in-out;
+	}
+
+}
+
+@media (min-width: 1025px) {
+	header.page-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+.page-header .top-logo {
+		text-align: left; 
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+		
+	.top-nav {
+	margin-top: 0;
+	align-self: center;
+
+	}
+}
+
+/* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin  - this is the 'non flex' version. */
 
 .top-nav ul li /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
 /*.page-header .top-nav .menu ul li*/ {
-	display: inline;
+	/*display: inline;*/
 }
 .top-nav ul li a /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
 /*.page-header .top-nav .menu ul li a */{
-	color: inherit;
+	/*color: inherit;
 	font-size: 14px;
 	line-height: normal;
 	margin-left: 35px;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: uppercase;*/
 }
 
 /* For full width pages - in page.php right now - may make a template later */
@@ -999,13 +1089,13 @@ a.download-button:hover {
 	    width: 100%;
 	}
 
-	.top-logo {
+	/*.top-logo {
 		margin-left: 30px;
-	}
+	}*/
 
-	.top-nav {
+	/*.top-nav {
 		margin-right: 30px;
-	}
+	}*/
 
 	div.left {
 		margin-left: 30px;
