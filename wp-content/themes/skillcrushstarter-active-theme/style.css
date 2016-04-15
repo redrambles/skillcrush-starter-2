@@ -263,6 +263,7 @@ ol {
 
 .main-content {
 	padding: 25px 47px 0 0;
+	flex: 1 1 69%;
 	float: left;
 	width: 69%;
 	min-width: 320px;
@@ -288,6 +289,7 @@ ol {
 }
 section.single-page {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 /*** End of FIRST CODE PACKAGE additions - 103 week 2, Monday **/
@@ -450,6 +452,7 @@ section.single-page {
 /* see notes in index.php */
 .index-page {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .blog-index-img {
@@ -523,7 +526,7 @@ section.single-page {
 	border-bottom: 1px solid #a6a6a6;
 	border-right: 1px solid #a6a6a6;
 	border-left: none;
-	width: 35px;
+	width: 32px;
 	height: 36px;
 	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
 	color: #ffffff;
