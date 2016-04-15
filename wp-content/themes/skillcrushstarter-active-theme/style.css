@@ -274,12 +274,7 @@ header.page-header {
 }
 
 @media (min-width: 690px){
-
-	header.page-header { 
-		height: 200px;
-		padding-bottom: 40px;
-	}
-
+	
 	.top-nav ul { 
 		padding: 20px;
 		flex-direction: row; 
@@ -308,6 +303,7 @@ header.page-header {
 	header.page-header {
 		flex-direction: row;
 		justify-content: space-between;
+		padding-bottom: 40px;
 	}
 
 .page-header .top-logo {
