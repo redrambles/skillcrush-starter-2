@@ -384,16 +384,13 @@ section.single-page {
 .blog-intro {
 	background-color: lemonchiffon;
 	padding: 30px 30px 40px;
-	border-bottom: 1px solid #bfbfbf;
-	
+	border-bottom: 1px solid #bfbfbf;	
 }
-
 .post-entry {
 	border-bottom: 1px solid #bfbfbf;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
 }
-
 .entry-title {
 	margin: 0.25em 0 0.75em;
 	font: bold 1.47em/1.4 'Montserrat', 'Open Sans' sans-serif;
@@ -465,6 +462,12 @@ section.single-page {
 	background: #45ac9d;
     color: #fff;
 }
+.blog .more:hover {
+	transform: scale(1.04);
+}
+.blog .more {
+	transition: all 350ms;
+}
 .entry-summary blockquote {
 	margin: 0 47px;
 	padding: 0 14px;
@@ -533,8 +536,6 @@ section.single-page {
 	border-bottom: 0;
 }
 
-/* Ann addition */
-
 /* see notes in index.php */
 .index-page {
 	display: flex;
@@ -550,12 +551,8 @@ section.single-page {
 	margin: 15px 0;
 }
 
-
-/* end BLOG styles  - End of SECOND CODE PACKAGE addtions - 103 Week 2 Monday */
-
 /* sidebar */
 
-/* Ann's image styles */
 .ann-pic img{
 	border-radius: 50%;
 }
@@ -586,7 +583,6 @@ section.single-page {
 	max-width: 175px;
 	margin: auto;
 	display: block;
-
 }
 #sidebar .widget_text a {
 	color: #3b3b3b;
