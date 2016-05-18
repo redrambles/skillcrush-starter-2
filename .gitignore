@@ -6,3 +6,4 @@ wp-content/uploads/
 .htaccess
 wp-content/backupwordpress-ce0efcf332-backups/
 wp-content/plugins/backupwordpress/
+wp-content/debug.log
