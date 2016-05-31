@@ -888,6 +888,12 @@ a.download-button:hover {
 
 /* End single posts */
 
+/* Contact Page - Body Class added via filter in functions.php */
+.contact .entry-title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 /* Homepage */
 .home {
 	background: url(img/Skillcrush_Computer_int.png) no-repeat center center;
@@ -1281,8 +1287,9 @@ img.aligncenter {
 .bypostauthor {
 }
 
-/* Test for Tineke - social icons in sidebar */
+/* Test for social icons in sidebar using text widget */
 #sidebar .widget_text .boo {
 	display: inline-block;
 	margin-right: 1em;
 }
+

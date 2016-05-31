@@ -239,6 +239,19 @@ function my_home_link_shortcode() {
 
 // After Post Info - IN PLUGIN (after-post-info)
 
+// Testing the addition of a body class for the contact page
+add_filter( 'body_class', 'skillcrushstarter_body_classes' );
+
+function skillcrushstarter_body_classes( $classes ) {
+
+    if( is_page('contact') ) {
+        $classes[] = 'contact';
+    }
+    return $classes;
+}
+
+
+
 /**
  * Custom archive template 
  *
