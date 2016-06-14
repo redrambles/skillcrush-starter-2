@@ -51,6 +51,7 @@ function skillcrushstarter_setup() {
 
 	// Add default posts and comments RSS feed links to head. - In response to Theme Check
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'post-formats', array('quote') );
 
 	// Register Menus 
 	register_nav_menus ( array (
@@ -258,3 +259,4 @@ function skillcrushstarter_body_classes( $classes ) {
  * Ann addition
  */
 require get_template_directory() . '/inc/custom-archives-functions.php';
+require get_template_directory() . '/inc/extras.php';

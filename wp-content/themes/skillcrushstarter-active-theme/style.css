@@ -64,7 +64,7 @@ table {
   box-sizing: border-box;
 }
 
-/** Clearfix **/
+/* Clearfix */
 .clearfix:after {
     content: ".";
     display: block;
@@ -86,8 +86,6 @@ html[xmlns] .clearfix {
     height: 1%;
 }
 /** end CSS reset **/
-
-/** theme styles start here! **/
 
 /* FONTS  - These are useless unless they are stored in the fonts folder - found the folder in the HTML/JPEGS downloads in CSS folder */
 /*@font-face {
@@ -136,7 +134,8 @@ html[xmlns] .clearfix {
     font-style: normal;
 }*/
 
-/* MAIN STYLES */
+/**** MAIN STYLES ****/
+
 header, footer, section, aside, time, article {
 	display: block;
 }
@@ -151,7 +150,6 @@ body {
 	font: 17px/1.65 'Open Sans', Arial, sans-serif;
 	letter-spacing: -0.01em;
 }
-/* Testing this image width - very helpful! Otherwise would have to use 'overflow: hidden' on parent element */
 img {
     height: auto;
     max-width: 100%;
@@ -231,7 +229,9 @@ ol {
 	display: block;
 }
 
-/* Flex nav */
+/***** NAVIGATION *****/
+
+/* Flex nav - Top Nav */
 
 header.page-header { 
 	padding-top: 20px;
@@ -335,10 +335,9 @@ header.page-header {
 	text-transform: uppercase;*/
 }
 
-/* For full width pages - in page.php right now - may make a template later */
+/* For full width pages */
 .full-main-content {
 	width: 100%;
-	/*float: left*/
 }
 
 .full-main-content .post-entry {
@@ -354,7 +353,7 @@ header.page-header {
 	width: 69%;
 	min-width: 320px;
 }
-/* addition - border around post thumbnail for posts */
+
 .main-content img {
 	border-radius: 5px;
 	margin-top: 10px;
@@ -377,8 +376,6 @@ section.single-page {
 	display: flex;
 	flex-wrap: wrap;
 }
-
-/*** End of FIRST CODE PACKAGE additions - 103 week 2, Monday **/
 
 /* BLOG styles */
 .blog-intro {
@@ -427,40 +424,29 @@ section.single-page {
 	height: 375px;
 	display: block;
 }
-
-/**
- ** List styling Added these after the fact, after adding them to a post / page in the dashboard content box and nothing showed up due to the reset **
- */
-
 .entry-summary ul > li,
 .post-entry ul > li  {
 	margin-left: 1em;
 }
-
-/**/
-
 .blog .entry-title {
 	font-size: 1.17em;
 }
-
 .blog .entry-summary a {
 	color: #45ac9d;
-	/*text-decoration: underline;*/
 	font-weight: bold;
-    font-weight: bold;
-    padding: 7px 15px;
-    border: 1px solid #45ac9d;
-    border-radius: 5px;
-    -webkit-transition: all 350ms linear;
-    -moz-transition: all 350ms linear;
-    -ms-transition: all 350ms linear;
-    -o-transition: all 350ms linear;
-    transition: all 350ms linear;
+  font-weight: bold;
+  padding: 7px 15px;
+  border: 1px solid #45ac9d;
+  border-radius: 5px;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+  transition: all 350ms linear;
 }
 .blog .entry-summary a:hover {
-	/*text-decoration: none;*/
 	background: #45ac9d;
-    color: #fff;
+  color: #fff;
 }
 .blog .more:hover {
 	transform: scale(1.04);
@@ -886,7 +872,40 @@ a.download-button:hover {
 	display: none;
 }
 
-/* End single posts */
+/***** POST FORMATS *****/
+
+/* Quote */
+
+.entry-header .quote-content{
+	font-size: 42px;
+	font-weight: 100;
+	line-height: 1.3em;
+	letter-spacing: 0.03em;
+}
+.entry-header .quote-content:before,
+.entry-header .quote-content:after {
+	content: '';
+	display: inline-block;
+	position: relative;
+	font-size: 1.2em;
+	color: #ccc;
+}
+.entry-header .quote-content:before{
+	content: '“'
+}
+.entry-header .quote-content:after{
+	content: '”'
+}
+.entry-header .quote-author {
+	color: #898989;
+	font-size: 13px;
+	letter-spacing: 0.06em;
+	text-align: center;
+	padding-bottom: 15px;
+}
+.quote-content a {
+	color: #3b3b3b;
+}
 
 /* Contact Page - Body Class added via filter in functions.php */
 .contact .entry-title {
