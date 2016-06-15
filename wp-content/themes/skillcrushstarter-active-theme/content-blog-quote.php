@@ -14,4 +14,5 @@
 				<?php skillcrushstarter_quote_footer(); ?>
 			</div>
 		</footer>
+		
 </article>

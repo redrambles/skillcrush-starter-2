@@ -1,3 +1,27 @@
+/*
+Custom CSS for the Custom Archive page template (custom-archive.php)
+*/
+
+.archive-title {
+  font-size: 42px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.archive-widgets{
+  width: 100%;
+}
+
+.archive-widgets .widget-title {
+  font-size: 1.2em;
+  border: 2px solid #CCC;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+.archives-widget-left ul,
+.archives-widget-right ul {
+  margin-left: 5px;
+}
 .archives-widget-left {
   float: left;
   width: 50%;

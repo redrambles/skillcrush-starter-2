@@ -578,6 +578,7 @@ section.single-page {
 #sidebar .widget_search {
 	border-bottom: 1px solid #BFBFBF;
 	padding-top: 31px;
+	margin-bottom: 40px;
 }
 #sidebar .widget_search input[type="text"] {
 	border-top: 1px solid #a6a6a6;
@@ -898,7 +899,7 @@ a.download-button:hover {
 }
 .entry-header .quote-author {
 	color: #898989;
-	font-size: 13px;
+	font-size: 16px;
 	letter-spacing: 0.06em;
 	text-align: center;
 	padding-bottom: 15px;
@@ -1027,12 +1028,13 @@ a.download-button:hover {
 	border-bottom: 1px solid #a6a6a6;
 	border-left: 1px solid #a6a6a6;
 	border-right: none;
-	color: #bfbfbf;
+	color: #888;
 	font-style: italic;
 	width: 85%;
 	height: 36px;
 	padding: 8px;
 	vertical-align: middle;
+	font-size: 0.85em;
 }
 
 .new-search ~ p { /* Having fun with the sibling selector! */

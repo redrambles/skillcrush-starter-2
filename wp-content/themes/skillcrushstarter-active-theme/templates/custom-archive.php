@@ -21,15 +21,14 @@ get_header(); ?>
 				
 					<?php the_post_thumbnail('full-page'); ?>
 
-					<h2 class="entry-title"><?php the_title(); ?></h2>
+					<h2 class="entry-title archive-title"><?php the_title(); ?></h2>
 
 					<?php the_content(); ?>
 
 				</div>
+				<?php endwhile; ?>
 
-				<div class="archive-widgets">
-
-					<?php /* Enabling the widget areas for the archive page. */ ?>
+				<div class="archive-widgets clearfix">
 
 					<?php if ( is_active_sidebar('archives-left') ) dynamic_sidebar( 'archives-left' ); ?>
 					<?php if ( is_active_sidebar('archives-right') ) dynamic_sidebar( 'archives-right' ); ?>
@@ -44,23 +43,26 @@ get_header(); ?>
 		  
 		  	if ( $how_many_last_posts > 200 || $how_many_last_posts < 2 ) $how_many_last_posts = 15;
 
-		  	$my_query = new WP_Query('post_type=post&nopaging=1');
+				 $args = array (
+						
+						'post_type' => 'post',
+						'posts_per_page' => $how_many_last_posts, // for some reason, this won't work.
+						'order' => 'ASC',
+					); 
+					
+					$my_query = new WP_Query($args);
 
-		  	if ( $my_query->have_posts() ) : ?>
+		  	  if ( $my_query->have_posts() ) : ?>
 
-		    	<h1 class="widget-title">Last <?php $how_many_last_posts ?> Posts <i class="fa fa-bullhorn" style="vertical-align: baseline;"></i></h1>&nbsp;
+		    	<h1 class="widget-title">Last <?php echo $how_many_last_posts ?> Posts <i class="fa fa-bullhorn" style="vertical-align: baseline;"></i></h1>&nbsp;
 		    	<div class="archives-latest-section">
 		    		<ol>
 		    	
-				    	<?php $counter = 1;
-				    
-				    	while ( $my_query->have_posts() && $counter <= $how_many_last_posts ) : $my_query->the_post(); ?>
+				    <?php while ( $my_query->have_posts()) : $my_query->the_post(); ?>
  
 				      	<li><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 				      
-				      <?php
-				      $counter++;
-				    	endwhile; ?>
+				    <?php	endwhile; ?>
 		    
 		    	</ol>
 		    </div>
@@ -82,8 +84,6 @@ get_header(); ?>
 			  </div>
 
 		</article>
-
-		<?php endwhile; ?>
 
 		</div>
 </section>
