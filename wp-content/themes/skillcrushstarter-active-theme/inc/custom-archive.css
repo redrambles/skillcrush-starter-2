@@ -7,42 +7,66 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
   font-weight: 100;
   text-align: center;
 }
-
 .archive-widgets{
   width: 100%;
 }
-
-.archive-widgets .widget-title {
+.archive-widgets .widget-title,
+.custom-archive-footer .widget-title,
+.how-many.widget-title {
   font-size: 1.2em;
+  font-weight: 100;
+  padding-left: 15px;
+}
+.archive-widgets .widget-title{
   border: 2px solid #CCC;
-  padding: 15px;
   margin-bottom: 25px;
+  padding: 15px;
+}
+.latest-posts {
+    border: 1px solid #CCC;
+    padding: 20px;
+    background-color: rgba(238, 238, 238, 0.11);
+}
+.custom-archive-footer .widget-title {
+  margin-top: 30px;
+}
+.widget-title .fa {
+  padding-left: 8px;
 }
 .archives-widget-left ul,
 .archives-widget-right ul {
-  margin-left: 5px;
+  margin-left: 10px;
+}
+.archives-widget-left li,
+.archives-widget-right li {
+  margin: 0.75em 0px;
+}
+.archives-widget-left li:hover,
+.archives-widget-right li:hover {
+  text-decoration: underline;
 }
 .archives-widget-left {
   float: left;
-  width: 50%;
+  width: 48%;
 }
-
 .archives-widget-right {
   float: left;
-  padding-left: 4%;
-  width: 46%;
+  margin-left: 4%;
+  width: 48%;
 }
-
-.archives-latest-section { }
 .archives-latest-section ol {
   font-style: italic;
   font-size: 20px;
   padding: 10px 0;
+  margin-bottom: 0;
 }
 .archives-latest-section ol li {
   padding-left: 8px;
+  margin: 0.75em 0;
 }
-
+.archives-latest-section ol li:first-of-type {
+  margin: 0;
+}
 .archives-authors-section { }
 .archives-authors-section ul {
   list-style: none;
@@ -60,7 +84,6 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
 .archives-authors-section ul li a {
   text-decoration:none;
 }
-
 .archives-by-month-section {
   text-align: center;
   word-spacing: 5px;
