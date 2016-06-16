@@ -9,6 +9,7 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
 }
 .archive-widgets{
   width: 100%;
+  margin-bottom: 40px;
 }
 .archive-widgets .widget-title,
 .custom-archive-footer .widget-title,
@@ -16,6 +17,9 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
   font-size: 1.2em;
   font-weight: 100;
   padding-left: 15px;
+}
+.how-many.widget-title {
+  text-align: center;
 }
 .archive-widgets .widget-title{
   border: 2px solid #CCC;
@@ -26,6 +30,10 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
     border: 1px solid #CCC;
     padding: 20px;
     background-color: rgba(238, 238, 238, 0.11);
+}
+.custom-archive-footer {
+  margin-top: 30px;
+  overflow: hidden;
 }
 .custom-archive-footer .widget-title {
   margin-top: 30px;
@@ -67,12 +75,14 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
 .archives-latest-section ol li:first-of-type {
   margin: 0;
 }
-.archives-authors-section { }
+.archives-authors-section {
+  float: left;
+  width: 48%
+ }
 .archives-authors-section ul {
   list-style: none;
   text-align: center;
   border-top: 1px dotted #888;
-  border-bottom: 1px dotted #888;
   padding: 10px 0;
   font-size: 20px;
   margin: 0 0 20px 0;
@@ -85,16 +95,21 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
   text-decoration:none;
 }
 .archives-by-month-section {
-  text-align: center;
+  float: right;
+  width: 48%;
+  margin-left: 4%;
   word-spacing: 5px;
 }
 .archives-by-month-section p {
   border-top: 1px dotted #888;
-  border-bottom: 1px dotted #888;
   padding: 15px 0;
+  margin: 0;
 }
 .archives-by-month-section p a {
   text-decoration:none;
+}
+.archives-by-month-section p a:after {
+  content: " | ";
 }
 
 @media only screen and (max-width: 600px) {
