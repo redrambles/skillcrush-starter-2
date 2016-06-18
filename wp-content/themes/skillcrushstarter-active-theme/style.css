@@ -250,6 +250,7 @@ header.page-header {
 
 .top-nav ul { 
 	margin: 20px 0px 0px 0px; 
+	padding: 20px;
 	display: flex; 
 	flex-direction: column; 
 }
@@ -260,7 +261,7 @@ header.page-header {
 .top-nav ul li a {
 	text-align:center;
 	display: block;
-	padding: 10px;
+	padding: 12px;
 	border-bottom: 1px dotted #bfbfbf;
 	color: inherit;
 	font-size: 14px;
@@ -272,17 +273,22 @@ header.page-header {
 	color: black;
 	background-color: #bfbfbf;
 }
+/* This will make the current menu item bold in top navigation bar */
+.top-nav .current-menu-item > a,
+.top-nav .current_page_item > a {
+font-weight: bold;
+}
 
 @media (min-width: 690px){
 	
 	.top-nav ul { 
-		padding: 20px;
+		/*padding: 20px;*/
 		flex-direction: row; 
 		justify-content: space-around; 
 	}
 	.top-nav ul li {
-		margin-right: 20px;
-		margin-left: 20px;
+		/*margin-right: 20px;
+		margin-left: 20px;*/
 	}
 	.top-nav ul li a {
 		border-bottom-color: transparent;
