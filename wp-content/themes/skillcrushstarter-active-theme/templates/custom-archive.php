@@ -50,9 +50,9 @@ get_header(); ?>
 						$how_many_last_posts = intval(get_field('how_many_last_posts'));
 			  		
 					}
+					// Make sure that a number between 2 and 50 has been assigned - otherwise default to 15
 			  	if ( $how_many_last_posts > 50 || $how_many_last_posts < 2 ) $how_many_last_posts = 12;
 					
-
 					 $args = array (
 							'post_type' => 'post',
 							'posts_per_page' => $how_many_last_posts,
@@ -79,7 +79,7 @@ get_header(); ?>
 			   	<?php wp_reset_postdata();
 			  		endif;
 			  	?>
-				</div>
+				</div> <!-- .latest-posts -->
 
 				<div class="custom-archive-footer">
 					<div class="archives-authors-section">
@@ -97,7 +97,7 @@ get_header(); ?>
 
 		</article>
 
-		</div>
+	</div>	<!-- .full-main-content -->
 </section>
 
 <?php get_footer(); ?>
