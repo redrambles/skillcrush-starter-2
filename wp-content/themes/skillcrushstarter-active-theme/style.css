@@ -250,7 +250,6 @@ header.page-header {
 
 .top-nav ul { 
 	margin: 20px 0px 0px 0px; 
-	padding: 20px;
 	display: flex; 
 	flex-direction: column; 
 }
@@ -269,6 +268,9 @@ header.page-header {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+.top-nav ul li:last-child a {
+	border-bottom: none;
+}
 .top-nav ul li a:hover {
 	color: black;
 	background-color: #bfbfbf;
@@ -282,11 +284,11 @@ font-weight: bold;
 @media (min-width: 690px){
 	
 	.top-nav ul { 
-		/*padding: 20px;*/
 		flex-direction: row; 
 		justify-content: space-around; 
 	}
 	.top-nav ul li {
+		margin-bottom: 20px;
 		/*margin-right: 20px;
 		margin-left: 20px;*/
 	}
