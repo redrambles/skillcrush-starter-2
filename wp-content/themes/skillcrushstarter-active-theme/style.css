@@ -377,7 +377,7 @@ font-weight: bold;
 /* Page Styles - addition*/
 
 .page-entry img{
-	width: 100%;
+	max-width: 100%;
 	margin-bottom: 30px;
 }
 section.single-page {
