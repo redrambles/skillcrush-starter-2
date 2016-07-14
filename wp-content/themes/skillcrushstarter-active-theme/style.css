@@ -1106,7 +1106,7 @@ a.download-button:hover {
 
  /*** Media Queries ***/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
 
 	.index-page {
@@ -1137,7 +1137,7 @@ a.download-button:hover {
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 
 	div.footer-widgets {
 		width: 48%;
@@ -1149,6 +1149,28 @@ a.download-button:hover {
 	    text-align: center;
 	}
 
+/* Additions */
+#sidebar .widget h2 {
+    padding: 10px 15px;
+    border: 1px solid #45ac9d;
+		margin-bottom: 25px;
+}
+#sidebar .popular-posts {
+	padding-left: 0px;
+}
+#sidebar .widget ul li {
+    font-size: 16px;
+    text-align: left;
+}
+
+#sidebar .widget_search input[type="text"] {
+		width: 80%;
+}
+
+#sidebar .widget_search input[type="submit"] {
+		width: 12%;
+}
+/**/
 	.ann-pic {
 		max-width: 150px;
     margin: 0 auto 30px;
