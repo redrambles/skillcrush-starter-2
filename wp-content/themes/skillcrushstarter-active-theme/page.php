@@ -20,8 +20,11 @@ get_header(); ?>
 				<?php the_post_thumbnail('full-page'); ?>
 
 				<h2 class="entry-title"><?php the_title(); ?></h2>
-
-				<?php the_content(); ?>
+				
+				<!-- Added .entry-summary div to benefit from styling already present in blog, archive and single post pages. -->
+				<div class="entry-summary">
+					<?php the_content(); ?>
+				</div>
 				
 				<!-- testing -->
 				<?php wp_link_pages( array(
