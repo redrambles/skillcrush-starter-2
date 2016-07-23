@@ -19,6 +19,14 @@ add_filter( 'the_content', __NAMESPACE__ . '\\after_post_info' );
 // Because we are calling this within the 'content' and that the content is running inside the loop - we can simply use 'get_the_ID()' when fetching our custom field
 function after_post_info( $content ) {
 
+	if( ! function_exists('the_field') ||  empty( get_field('after_info_text' ) ) ) {			
+			$after_info = "";
+	
+	} else { 
+		
+		$after_info = get_field('after_info_text' );
+		
+	}
 	// testing this with ACF - but using the 'get_post_meta' call instead of 'get_field' just in case ACF is deactivated - will not break the front end.
 	$after_info = get_post_meta( get_the_ID(), 'after_info_text', true );
 
