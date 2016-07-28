@@ -12,16 +12,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>> <!-- Added for theme check - but would need a language folder and .po / .pot files -->
 <head>
-	<title><?php bloginfo('name'); wp_title('|'); ?></title>
-	<!-- <title><?php //wp_title('|', true, 'right'); ?></title> -->
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="viewport" content="width=device-width" initial-scale="1">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
-	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,400' rel='stylesheet' type='text/css'> -->
-	<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php //bloginfo('stylesheet_url'); ?>" /> -->
 	<?php wp_head(); ?>
 </head>
 

@@ -52,6 +52,7 @@ function skillcrushstarter_setup() {
 	// Add default posts and comments RSS feed links to head. - In response to Theme Check
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-formats', array('quote') );
+	add_theme_support( 'title-tag' );
 
 	// Register Menus 
 	register_nav_menus ( array (
