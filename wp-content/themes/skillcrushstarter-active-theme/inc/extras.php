@@ -15,3 +15,21 @@ function skillcrushstarter_quote_footer(){ ?>
     );
   } 
 }
+
+
+//If this is the blog page, display the content of the editor at the top - if the user has entered something there.
+function skillcrushstarter_blog_intro(){
+if ( is_home() ) { 
+	$page_for_posts_id = get_option('page_for_posts');
+	// don't print unnecessary markup - check for content first
+	if ( !empty (get_post_field( 'post_content', $page_for_posts_id ) ) ) {
+    
+    $output = "";
+		$output .= '<div class="blog-intro">';
+		$output .= get_post_field( 'post_content', $page_for_posts_id ); 
+		$output .= '</div>';
+    
+    return $output;
+		  } //end check for if empty field
+	 } // end check for if is_home
+ } 
