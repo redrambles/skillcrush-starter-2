@@ -83,14 +83,14 @@ get_header(); ?>
 
 				<div class="custom-archive-footer">
 					<div class="archives-authors-section">
-		  	  	<h1 class="widget-title">Our Authors <i class="fa fa-user" style="vertical-align: baseline;"></i></h1>&nbsp;
+		  	  	<h1 class="widget-title">Our Authors <i class="fa fa-user"></i></h1>&nbsp;
 				    <ul>
 				      <?php wp_list_authors('exclude_admin=0&optioncount=1'); ?>
 				    </ul>
 				  </div>
 
 					<div class="archives-by-month-section">
-				  	<h1 class="widget-title">By Month <i class="fa fa-calendar" style="vertical-align: baseline;"></i></h1>&nbsp;
+				  	<h1 class="widget-title">By Month <i class="fa fa-calendar"></i></h1>&nbsp;
 				    <p><?php wp_get_archives('type=monthly&format=custom'); ?></p>
 				  </div>
 				</div>
