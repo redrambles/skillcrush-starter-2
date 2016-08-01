@@ -593,7 +593,7 @@ section.single-page {
 	border-bottom: 1px solid #a6a6a6;
 	border-left: 1px solid #a6a6a6;
 	border-right: none;
-	width: 200px;
+	max-width: 200px;
 	height: 36px;
 	padding: 8px;
 	vertical-align: middle;
@@ -603,7 +603,7 @@ section.single-page {
 	border-bottom: 1px solid #a6a6a6;
 	border-right: 1px solid #a6a6a6;
 	border-left: none;
-	width: 32px;
+	max-width: 32px;
 	height: 36px;
 	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
 	color: #ffffff;
