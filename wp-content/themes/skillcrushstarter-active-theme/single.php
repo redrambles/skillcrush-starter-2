@@ -18,6 +18,8 @@ get_header(); ?>
 			<?php the_post_thumbnail(); ?>
 
 			<?php get_template_part('content', get_post_format()); ?>
+			
+			<?php //do_action('red_after_content'); ?>
 
 			<?php if ( !empty( $download ) ) { ?>
 				<p><a class="download-button" href="<?php echo $download["url"]; ?>" target="_blank" name="Spec Sheet">Random Download</a></p>

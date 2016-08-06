@@ -252,7 +252,18 @@ function skillcrushstarter_body_classes( $classes ) {
     return $classes;
 }
 
-
+// called in single.php with 'do_action'
+// function red_cta_below_posts() {	
+// 	
+// 	if ( is_singular( 'post' ) ) { 
+// 		
+// 	$output =	'<div class="cta-in-post">';
+// 			$output .= 'Call us at 555-5555 or email <a href="email@email.com">email@email.com</a>';
+// 		$output .= '</div>';
+// 		echo $output;
+// 	}
+// }
+// add_action( 'red_after_content', 'red_cta_below_posts' );
 
 /**
  * Custom archive template 

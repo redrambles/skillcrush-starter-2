@@ -1,0 +1,23 @@
+/* Styles for the call-to-action shortcode */
+
+.cta {
+	clear: both;
+	width: 25em;
+	max-width: 90%;
+	margin: 10px auto;
+	padding: 15px 5%;
+	font: 'Montserrat', arial, sans-serif;
+	font-size: 1.4rem;
+	text-align: center;
+	line-height: 1.8rem;
+	background-color: rgb(59, 59, 59);
+	color: #fff;
+}
+.cta a:link,
+.cta a:visited {
+	text-decoration: none;
+}
+.cta a:hover,
+.cta a:active {
+	text-decoration: underline;
+}
