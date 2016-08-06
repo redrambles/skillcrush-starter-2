@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+		
 <section class="home-page">
 	<div class="main-content">
 		<div class="content">
