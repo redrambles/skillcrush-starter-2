@@ -25,7 +25,7 @@
 					/
 					Posted in <?php the_category(', '); ?> 
 					/
-					<?php comments_number( 'No comments yet!', '1 comment', '% comments' ); ?>
+					<a href="<?php comments_link(); ?>"><?php comments_number( 'No comments yet!', '1 comment', '% comments' ); ?></a>
 				</span>
 			</div>
 		</footer>
