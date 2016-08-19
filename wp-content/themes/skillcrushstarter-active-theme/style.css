@@ -758,7 +758,7 @@ color: #3b3b3b;
 }
 /* End next / prev */
 
-/* single posts */
+/* Single posts */
 .single .post-entry {
 	border-bottom: none;
 }
@@ -781,6 +781,8 @@ a.download-button:hover {
 	background-color: #45ac9d;
 	color: white;
 }
+
+/* Comments */
 .comments-area {
 	margin-bottom: 80px;
 	clear: both;
@@ -833,7 +835,7 @@ a.download-button:hover {
 }
 .comments-area .comment-form p {
 	font: 0.8em/2.08em 'Open Sans', Arial, sans-serif;
-	padding-bottom: 23px;
+	padding-bottom: 5px;
 }
 .comments-area .comment-form p a {
 	color: #45ac9d;
@@ -876,8 +878,22 @@ a.download-button:hover {
 .comments-area .comment-form input#url,
 .comments-area .comment-form input#author,
 .comments-area .comment-form input#email {
-	height: 30px;
+	height: 37px;
+	border: 1px solid #BFBFBF;
+	line-height: 25px;
+	padding: 5px 10px;
+	background: #fff;
+	vertical-align: middle;
+	margin: 0;
+	font: 16px 'OpenSans', Arial, sans-serif;
 }
+/* Adding this to have the email and name fields be side by side */
+.comment-form-author,
+.comment-form-email {
+	width: 50%;
+	float: left;
+}
+
 /* Adding this to hide the text for HTML allowed tags in comments box */
 .form-allowed-tags {
 	display: none;
@@ -1181,6 +1197,22 @@ a.download-button:hover {
 	#sidebar .widget_search {
 		border-bottom: none;
 	}
+}
+
+@media screen and (max-width: 750px) {
+	
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		padding-left: 0;
+	}
+	.comments-area .comment-form input[type="submit"] {
+		float: left;
+	}
+	
 }
 
 @media screen and (max-width: 550px) {
