@@ -742,9 +742,11 @@ color: #3b3b3b;
 }
 #navigation .left a span {
 	padding-left: 8px;
+	display: inline-block; /* added to fix display */
 }
 #navigation .right a span {
 	padding-right: 8px;
+	display: inline-block; /* added to fix display */
 }
 #navigation .left a:hover,
 #navigation .right a:hover {
