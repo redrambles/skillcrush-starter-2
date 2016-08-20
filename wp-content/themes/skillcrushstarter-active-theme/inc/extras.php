@@ -14,6 +14,7 @@ function skillcrushstarter_quote_footer(){ ?>
       $tags_list
     );
   } 
+  skillcrushstarter_show_some_love();
 }
 
 
