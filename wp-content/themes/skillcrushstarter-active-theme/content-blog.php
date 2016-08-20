@@ -29,6 +29,7 @@
 					} ?>
 					|
 					<a href="<?php comments_link(); ?>"><?php comments_number( 'No comments yet!', '1 comment', '% comments' ); ?></a>
+					<?php skillcrushstarter_show_some_love(); ?>
 				</span>
 			</div>
 		</footer>

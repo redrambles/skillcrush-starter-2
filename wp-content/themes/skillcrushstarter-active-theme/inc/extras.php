@@ -33,3 +33,23 @@ if ( is_home() ) {
 		  } //end check for if empty field
 	 } // end check for if is_home
  } 
+ 
+ // AJAXFor the 'show some love' button 
+ function skillcrushstarter_show_some_love() {
+   $love = get_post_meta( get_the_ID(), 'show_some_love', true );
+   $love = ( empty( $love ) ) ? 0 : $love;
+   echo '<span class="love-button"> <img width="28" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0MHB4IiBpZD0iTGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDAgNDA7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA0MCA0MCIgd2lkdGg9IjQwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0xOS45NzkwMDAxLDkuMTk1MzAwMSAgQzI1LjYzOTIwMDItMS44ODY3LDM4LjUxMTY5OTcsMy4zOTU5OTk5LDM3Ljk0OTE5OTcsMTMuMzAyN0MzNy4zNjM4LDIzLjYxNjE5OTUsMjIuODc0NTAwMywyNy4xNzM3OTk1LDE5Ljk3OTAwMDEsMzQuOTgxODk5MyAgQzE3LjA4MzAwMDIsMjYuOTc5MDAwMSwyLjc4OTU5OTksMjMuODExNTAwNSwyLjAwODMwMDEsMTMuMzAyN0MxLjI3MzksMy40MDc3MDAxLDE0LjkzNTk5OTktMS45MzEyLDE5Ljk3OTAwMDEsOS4xOTUzMDAxeiIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0ZGNTk0RjsiLz48L3N2Zz4="><span class="number">' . $love . '</span></span>';
+ }
+ 
+add_action( 'wp_ajax_add_love', 'ajax_test_add_love' );
+add_action( 'wp_ajax_nopriv_add_love', 'ajax_test_add_love' );
+
+function ajax_test_add_love() {
+    $love = get_post_meta( $_POST['post_id'], 'show_some_love', true );
+    //$love = 0; //Use to reset - comment next two lines
+    $love = ( empty( $love ) ) ? 0 : $love;
+    $love++;
+    update_post_meta( $_POST['post_id'], 'show_some_love', $love );
+    echo $love;
+    die();
+}

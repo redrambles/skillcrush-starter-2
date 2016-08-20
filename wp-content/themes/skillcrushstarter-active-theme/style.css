@@ -1241,7 +1241,7 @@ a.download-button:hover {
 		float: none;
 		width: 100%;
 	}
-	.index-page .post-entry img {
+	.index-page .post-entry img.wp-post-image {
 		display: none;
 	}
 
@@ -1376,5 +1376,15 @@ img.aligncenter {
 #sidebar .widget_text .boo {
 	display: inline-block;
 	margin-right: 1em;
+}
+
+/* Show some love ajax button */
+.love-button img {
+    margin: 0 6px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.love-button img:hover {
+    opacity: 1;
 }
 

@@ -120,6 +120,10 @@ function skillcrushstarter_scripts() {
      	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	// ajax
+		wp_enqueue_script( 'ajax-test', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0', true );
+		wp_localize_script( 'ajax-test', 'ajaxTest', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 	// isotope stuff for filter page
 		wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
