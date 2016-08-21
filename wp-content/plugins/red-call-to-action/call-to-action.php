@@ -3,7 +3,6 @@
  * Plugin Name:   Red Call to Action Shortcode
  * Description:   Adds a shortcode for a call to action box
  * Version:       1.0
- *
  */
  
 // Let's pull in the css 
