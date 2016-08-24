@@ -12,7 +12,7 @@
         var post_id = parseInt( $(this).parents('article.post:first').attr('id').replace( 'post-', '' ) );
         var $number = $(this).siblings('.number');
         $.ajax({
-            url: ajaxTest.ajax_url,
+            url: ajaxHeart.ajax_url,
             type: 'post',
             data: {
                 action: 'add_love',
