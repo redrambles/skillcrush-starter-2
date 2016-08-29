@@ -758,6 +758,14 @@ color: #3b3b3b;
 }
 /* End next / prev */
 
+/* Category pages */
+.category-page .page-header h1 {
+	font: 25px 'Montserrat', 'Open Sans', Arial, sans-serif;
+}
+.category-page .page-header h1 span {
+	color: #45ac9d;
+}
+
 /* Single posts */
 .single .post-entry {
 	border-bottom: none;
@@ -965,7 +973,7 @@ a.download-button:hover {
 	padding: 50px;
 }
 .home .content h1 {
-	font: 700 36px 'Montserrat';
+	font: 700 36px 'Montserrat', 'Open Sans', Arial, sans-serif;
 	margin-bottom: 30px;
 }
 .home .content p {
