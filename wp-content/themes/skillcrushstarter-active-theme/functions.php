@@ -138,13 +138,11 @@ function skillcrushstarter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 
-/**
- * Enqueue style for login page
- */
+/* Load CSS for custom login page */
 function skillcrushstarter_custom_login() {
-echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/custom-login-styles.css" />';
+   wp_enqueue_style( 'login_styles', get_template_directory_uri() . '/login/custom-login-styles.css' );
 }
-add_action('login_head', 'skillcrushstarter_custom_login');
+add_action( 'login_enqueue_scripts', 'skillcrushstarter_custom_login');
 
 // Change error message upon login
 function login_error_custom()
