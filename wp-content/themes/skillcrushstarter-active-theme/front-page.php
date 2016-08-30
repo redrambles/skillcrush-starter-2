@@ -18,11 +18,12 @@ get_header(); ?>
 
 				<?php the_content(); ?>
 
-<!-- 				<div class="social-btns">
+				<!-- <div class="social-btns">
 					<a href="http://www.twitter.com" class="soc-icon tw"></a>
 					<a href="" class="soc-icon fb"></a>
 					<a href="" class="soc-icon ln"></a>
 					<a href="" class="soc-icon db"></a>
+					<a href="" class="soc-icon gh"></a>
 				</div> -->
 				
 				<a href="<?php echo esc_attr( site_url('/blog/') ); ?>" class="btn">View My Blog</a>
