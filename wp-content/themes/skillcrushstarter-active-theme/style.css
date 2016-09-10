@@ -459,7 +459,8 @@ section.single-page {
 .blog .more:hover {
 	transform: scale(1.04);
 }
-.blog .more {
+.blog .more,
+.page-template-custom-masonry .more {
 	transition: all 350ms;
 }
 .entry-summary blockquote {
@@ -1398,7 +1399,34 @@ img.aligncenter {
 }
 
 
-/* Makes two columns */
+/* Masonry stuffs */
+.page-template-custom-masonry p {
+	margin: 10px;
+}
+.page-template-custom-masonry .more {
+	margin: 0;
+	text-align: center;
+}
+
+.page-template-custom-masonry .more a {
+	color: #45ac9d;
+	font-weight: bold;
+  font-weight: bold;
+	font-size: 85%;
+  padding: 7px 15px;
+  border: 1px solid #45ac9d;
+  border-radius: 5px;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+  transition: all 350ms linear;
+}
+.page-template-custom-masonry .more a:hover {
+	background: #45ac9d;
+	color: #fff;
+	cursor: pointer;
+}
 .ms-item {
 width: 33%;
 padding: 1%;

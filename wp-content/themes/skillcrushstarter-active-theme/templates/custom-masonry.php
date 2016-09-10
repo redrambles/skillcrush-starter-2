@@ -44,10 +44,10 @@ get_header(); ?>
             <h2 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h2>
             
         <?php the_excerpt(); ?>
-    <        
+      
     <div class="clearfix"></div>
     
-<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
+<p class="more"><a href="<?php the_permalink(); ?>">Read More</a></p>
 
     <div class="clearfix"></div>
   </div>
