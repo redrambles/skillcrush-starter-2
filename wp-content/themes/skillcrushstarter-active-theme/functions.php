@@ -127,13 +127,20 @@ function skillcrushstarter_scripts() {
 		wp_localize_script( 'ajax-heart', 'ajaxHeart', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 	// isotope stuff for filter page
-		wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
-    wp_register_script( 'isotope-init', get_template_directory_uri().'/js/isotope.js', array('jquery', 'isotope'),  true );
-    wp_register_style( 'isotope-css', get_stylesheet_directory_uri() . '/css/isotope.css' );
+		// wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
+    // wp_register_script( 'isotope-init', get_stylesheet_directory_uri().'/js/isotope.js', array('jquery', 'isotope'),  true );
+    // wp_register_style( 'isotope-css', get_stylesheet_directory_uri() . '/css/isotope.css' );
 
-	wp_enqueue_script( 'isotope' );
-    wp_enqueue_script('isotope-init');
-    wp_enqueue_style('isotope-css');
+	// wp_enqueue_script( 'isotope' );
+  //   wp_enqueue_script('isotope-init');
+  //   wp_enqueue_style('isotope-css');
+  
+  
+    // Pull Masonry from the core of WordPress
+      // wp_enqueue_script( 'masonry', '//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.js', array('jquery'), true );
+      wp_enqueue_script('masonry');
+      wp_enqueue_script( 'masonry_script', get_stylesheet_directory_uri() . '/js/masonry_script.js', array( 'masonry' ), true );
+      //wp_enqueue_script('masonry_script');
 
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
@@ -145,8 +152,7 @@ function skillcrushstarter_custom_login() {
 add_action( 'login_enqueue_scripts', 'skillcrushstarter_custom_login');
 
 // Change error message upon login
-function login_error_custom()
-{
+function login_error_custom(){
     return 'Incorrect login details, my dear.';
 }
 add_filter('login_errors', 'login_error_custom');
