@@ -1,8 +1,7 @@
 (function($) {
 
   $(window).load(function() {
-  console.log("hello");
-    // MASSONRY Without jquery
+  //console.log("hello");
     var container = document.querySelector('#ms-container');
     var msnry = new Masonry( container, {
       itemSelector: '.ms-item',
