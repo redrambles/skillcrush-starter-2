@@ -16,6 +16,9 @@
 
 get_header(); ?>
 
+<!-- If this is the blog page, display the content of the editor at the top - if the user has entered something there. -->
+<?php echo skillcrushstarter_blog_intro(); ?>
+
 <pre><?php //print_r($wp_query); exit; ?></pre>
 <pre><?php //print_r($wp_query->posts); exit; ?></pre>
 
@@ -31,6 +34,7 @@ get_header(); ?>
 	</div>
 
 	<?php get_sidebar(); ?>
+
 </section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element
 to allow the both the content and the sidebar to have equal height - making the border follow all the way down. Problem: looks
 terrible when browser size is reduced - will have to look into proper use of flex - should probably fall back with a float and

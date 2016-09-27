@@ -1,30 +1,88 @@
+/*
+Custom CSS for the Custom Archive page template (custom-archive.php)
+*/
+
+.archive-title {
+  font-size: 42px;
+  font-weight: 100;
+  text-align: center;
+}
+.archive-widgets{
+  width: 100%;
+  margin-bottom: 40px;
+}
+.archive-widgets .widget-title,
+.custom-archive-footer .widget-title,
+.how-many.widget-title {
+  font-size: 1.2em;
+  font-weight: 100;
+  padding-left: 15px;
+}
+.how-many.widget-title {
+  text-align: center;
+}
+.archive-widgets .widget-title{
+  border: 2px solid #CCC;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+.latest-posts {
+    border: 1px solid #CCC;
+    padding: 20px;
+    background-color: rgba(238, 238, 238, 0.11);
+}
+.custom-archive-footer {
+  margin-top: 30px;
+  overflow: hidden;
+}
+.custom-archive-footer .widget-title {
+  margin-top: 30px;
+}
+.widget-title .fa {
+  padding-left: 8px;
+}
+.archives-widget-left ul,
+.archives-widget-right ul {
+  margin-left: 10px;
+}
+.archives-widget-left li,
+.archives-widget-right li {
+  margin: 0.75em 0px;
+}
+.archives-widget-left li:hover,
+.archives-widget-right li:hover {
+  text-decoration: underline;
+}
 .archives-widget-left {
   float: left;
-  width: 50%;
+  width: 48%;
 }
-
 .archives-widget-right {
   float: left;
-  padding-left: 4%;
-  width: 46%;
+  margin-left: 4%;
+  width: 48%;
 }
-
-.archives-latest-section { }
 .archives-latest-section ol {
   font-style: italic;
   font-size: 20px;
   padding: 10px 0;
+  margin-bottom: 0;
 }
 .archives-latest-section ol li {
   padding-left: 8px;
+  margin: 0.75em 0;
 }
-
-.archives-authors-section { }
+.archives-latest-section ol li:first-of-type {
+  margin: 0;
+}
+.archives-authors-section {
+  float: left;
+  width: 48%
+ }
 .archives-authors-section ul {
   list-style: none;
   text-align: center;
   border-top: 1px dotted #888;
-  border-bottom: 1px dotted #888;
   padding: 10px 0;
   font-size: 20px;
   margin: 0 0 20px 0;
@@ -36,18 +94,22 @@
 .archives-authors-section ul li a {
   text-decoration:none;
 }
-
 .archives-by-month-section {
-  text-align: center;
+  float: right;
+  width: 48%;
+  margin-left: 4%;
   word-spacing: 5px;
 }
 .archives-by-month-section p {
   border-top: 1px dotted #888;
-  border-bottom: 1px dotted #888;
   padding: 15px 0;
+  margin: 0;
 }
 .archives-by-month-section p a {
   text-decoration:none;
+}
+.archives-by-month-section p a:after {
+  content: " | ";
 }
 
 @media only screen and (max-width: 600px) {

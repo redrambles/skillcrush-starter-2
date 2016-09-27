@@ -47,11 +47,13 @@ function skillcrushstarter_setup() {
 	set_post_thumbnail_size( 650, 510, array( 'left', 'top' ) ); // Will leave this as default thumbnail size
 	add_image_size('filter-page', 300, 300, true); // For filter page
 	add_image_size('related-images', 250, 150, array( 'left', 'top' ));
-	add_image_size('full-page', 930, 400, true); // For full width page featured image
+	add_image_size('full-page', 960, 400, true); // For full width page featured image
 	add_image_size('blog-page', 200, 200, true); // For blog index page
 
 	// Add default posts and comments RSS feed links to head. - In response to Theme Check
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'post-formats', array('quote') );
+	add_theme_support( 'title-tag' );
 
 	// Register Menus
 	register_nav_menus ( array (
@@ -133,32 +135,50 @@ add_action( 'init', 'skillcrushstarter_custom_post_types' );
  * Enqueue scripts and styles
  */
 function skillcrushstarter_scripts() {
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'normalize', get_stylesheet_directory_uri(). '/css/normalize.css' );
+    wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'normalize' ) );
     wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/inc/custom-archive.css' );
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-    wp_enqueue_style('skillcrushstarter-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,600');
+    wp_enqueue_style('skillcrushstarter-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,600');
 
      	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	// ajax
+		wp_enqueue_script( 'ajax-heart', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0', true );
+		wp_localize_script( 'ajax-heart', 'ajaxHeart', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-	// isotope stuff for filter page
-	wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
-    wp_register_script( 'isotope-init', get_template_directory_uri().'/js/isotope.js', array('jquery', 'isotope'),  true );
-    wp_register_style( 'isotope-css', get_stylesheet_directory_uri() . '/css/isotope.css' );
+	// isotope + masonry used on blog-grid page
+		wp_register_script( 'isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', array('jquery'),  true );
+    wp_register_script( 'isotope-init', get_stylesheet_directory_uri().'/js/isotope.js', array('jquery', 'isotope'),  true );
 
-	wp_enqueue_script( 'isotope' );
-    wp_enqueue_script('isotope-init');
-    wp_enqueue_style('isotope-css');
-
-
-		// slick slider
-		wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', 'jquery', '1.4.1' );
-		wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
-		wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css', '', '1.4.1' );
+	   wp_enqueue_script( 'isotope' );
+     wp_enqueue_script('isotope-init');
+  
+    // Pull Masonry from the core of WordPress
+      wp_enqueue_script('masonry');
+      wp_enqueue_script( 'masonry_script', get_stylesheet_directory_uri() . '/js/masonry_script.js', array( 'masonry' ), true );
+			
+			// slick slider
+			wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', 'jquery', '1.4.1' );
+			wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
+			wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css', '', '1.4.1' );
 
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
+
+/* Load CSS for custom login page */
+function skillcrushstarter_custom_login() {
+   wp_enqueue_style( 'login_styles', get_template_directory_uri() . '/login/custom-login-styles.css' );
+}
+add_action( 'login_enqueue_scripts', 'skillcrushstarter_custom_login');
+
+// Change error message upon login
+function login_error_custom(){
+    return 'Incorrect login details, my dear.';
+}
+add_filter('login_errors', 'login_error_custom');
 
 
 // defines custom markup for post comments
@@ -240,11 +260,36 @@ function my_home_link_shortcode() {
 	return $string;
 }
 
+// Testing the addition of excerpts for pages
+// function skillcrushstarter_add_excerpt_for_pages() {
+// 	add_post_type_support( 'page', 'excerpt' );
+// }
+// add_action( 'init', 'skillcrushstarter_add_excerpt_for_pages' );
+// 
 
-// Hilarious Joke Title - IN PLUGIN (funny-title)
+// Testing the addition of a body class for the contact page
+add_filter( 'body_class', 'skillcrushstarter_body_classes' );
 
-// After Post Info - IN PLUGIN (after-post-info)
+function skillcrushstarter_body_classes( $classes ) {
 
+    if( is_page('contact') ) {
+        $classes[] = 'contact';
+    }
+    return $classes;
+}
+
+// called in single.php with 'do_action'
+// function red_cta_below_posts() {	
+// 	
+// 	if ( is_singular( 'post' ) ) { 
+// 		
+// 	$output =	'<div class="cta-in-post">';
+// 			$output .= 'Call us at 555-5555 or email <a href="email@email.com">email@email.com</a>';
+// 		$output .= '</div>';
+// 		echo $output;
+// 	}
+// }
+// add_action( 'red_after_content', 'red_cta_below_posts' );
 
 /**
  * Custom archive template
@@ -254,3 +299,4 @@ function my_home_link_shortcode() {
 require get_template_directory() . '/inc/custom-archives-functions.php';
 require get_template_directory() . '/inc/admin/admin-functions.php';
 require get_template_directory() . '/inc/admin/admin-extras.php';
+require get_template_directory() . '/inc/extras.php';

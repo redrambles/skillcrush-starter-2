@@ -1,9 +1,9 @@
 jQuery(function ($) {
 
-	var $container = $('#isotope-section'); //The ID for the list with all the blog posts
+	var $container = $('#ms-container'); //The ID for the list with all the blog posts
 
 	$container.isotope({ //Isotope options, 'item' matches the class in the PHP
-		itemSelector : '.item',
+			itemSelector : '.ms-item',
 	   	layoutMode : 'masonry'
 	});
 

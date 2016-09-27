@@ -1,9 +1,9 @@
 /*
-Theme Name: Skillcrush Starter Theme
+Theme Name: Skillcrush Starter Theme - MINE ALL MINE
 Theme URI:
-Author: the Skillcrush team
+Author: Ann Cascarano and the Skillcrush Team
 Author URI: http://skillcrush.com
-Description: ANN CASCARANO - Working theme - This theme is for use in Skillcrush 103, Skillcrush 203 and the Skillcrush WordPress Developer Career Blueprint.
+Description: ANN CASCARANO - Working theme! 
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,7 +64,7 @@ table {
   box-sizing: border-box;
 }
 
-/** Clearfix **/
+/* Clearfix */
 .clearfix:after {
     content: ".";
     display: block;
@@ -86,8 +86,6 @@ html[xmlns] .clearfix {
     height: 1%;
 }
 /** end CSS reset **/
-
-/** theme styles start here! **/
 
 /* FONTS  - These are useless unless they are stored in the fonts folder - found the folder in the HTML/JPEGS downloads in CSS folder */
 /*@font-face {
@@ -136,7 +134,8 @@ html[xmlns] .clearfix {
     font-style: normal;
 }*/
 
-/* MAIN STYLES */
+/**** MAIN STYLES ****/
+
 header, footer, section, aside, time, article {
 	display: block;
 }
@@ -151,7 +150,6 @@ body {
 	font: 17px/1.65 'Open Sans', Arial, sans-serif;
 	letter-spacing: -0.01em;
 }
-/* Testing this image width - very helpful! Otherwise would have to use 'overflow: hidden' on parent element */
 img {
     height: auto;
     max-width: 100%;
@@ -167,7 +165,7 @@ video {
 }
 a {
 	text-decoration: none;
-	color: #f29729;
+	color: #45ac9d;
 }
 p {
 	margin: 30px 0;
@@ -215,7 +213,9 @@ ol {
 }
 .page-header .top-logo {
 	color: inherit;
-	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	/*float: left;*/
 }
 .page-header .top-logo .title {
 	color: #45ac9d;
@@ -228,31 +228,124 @@ ol {
 	color: inherit;
 	display: block;
 }
-.page-header .top-nav {
-	float: right;
-	padding-top: 22px;
+
+/***** NAVIGATION *****/
+
+/* Flex nav - Top Nav */
+
+header.page-header { 
+	padding-top: 20px;
+	padding-bottom: 0px;
+	display: flex; 
+	flex-direction: column; 
+	flex-wrap: wrap;
+	align-self: center;
 }
 
-/* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin */
+.page-header .top-logo { 
+	align-self: center;
+	text-align: center; 
+	min-width: 300px;
+}
+
+.top-nav ul { 
+	margin: 20px 0px 0px 0px; 
+	display: flex; 
+	flex-direction: column; 
+}
+.top-nav ul li {
+	list-style-type: none;
+}
+
+.top-nav ul li a {
+	text-align:center;
+	display: block;
+	padding: 12px;
+	border-bottom: 1px dotted #bfbfbf;
+	color: inherit;
+	font-size: 14px;
+	line-height: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.top-nav ul li:last-child a {
+	border-bottom: none;
+}
+.top-nav ul li a:hover {
+	color: black;
+	background-color: #bfbfbf;
+}
+/* This will make the current menu item bold in top navigation bar */
+.top-nav .current-menu-item > a,
+.top-nav .current_page_item > a {
+font-weight: bold;
+}
+
+@media (min-width: 690px){
+	
+	.top-nav ul { 
+		flex-direction: row; 
+		justify-content: space-around; 
+	}
+	.top-nav ul li {
+		margin-bottom: 20px;
+		/*margin-right: 20px;
+		margin-left: 20px;*/
+	}
+	.top-nav ul li a {
+		border-bottom-color: transparent;
+	}
+	.top-nav ul li a:hover {
+		color: black;
+		background-color: transparent;
+		border-bottom: 1px solid lightgrey;
+		-webkit-transition: 300ms ease-in-out;
+			-moz-transition: 300ms ease-in-out;
+			-o-transition: 300ms ease-in-out;
+			transition: 300ms ease-in-out;
+	}
+
+}
+
+@media (min-width: 1025px) {
+	header.page-header {
+		flex-direction: row;
+		justify-content: space-between;
+		padding-bottom: 40px;
+	}
+
+.page-header .top-logo {
+		text-align: left; 
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+		
+	.top-nav {
+	margin-top: 0;
+	align-self: center;
+
+	}
+}
+
+/* Added the two following lines (with comments) after registering the primary menu in functions (called in header.php) and assigning it in Admin  - this is the 'non flex' version. */
 
 .top-nav ul li /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
 /*.page-header .top-nav .menu ul li*/ {
-	display: inline;
+	/*display: inline;*/
 }
 .top-nav ul li a /* Added this line after adding to Primary menu theme location - Could also just remove the .menu class from below */
 /*.page-header .top-nav .menu ul li a */{
-	color: inherit;
+	/*color: inherit;
 	font-size: 14px;
 	line-height: normal;
 	margin-left: 35px;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: uppercase;*/
 }
 
-/* For full width pages - in page.php right now - may make a template later */
+/* For full width pages */
 .full-main-content {
 	width: 100%;
-	/*float: left*/
 }
 
 .full-main-content .post-entry {
@@ -263,11 +356,12 @@ ol {
 
 .main-content {
 	padding: 25px 47px 0 0;
+	flex: 1 1 69%;
 	float: left;
 	width: 69%;
 	min-width: 320px;
 }
-/* addition - border around post thumbnail for posts */
+
 .main-content img {
 	border-radius: 5px;
 	margin-top: 10px;
@@ -283,19 +377,25 @@ ol {
 /* Page Styles - addition*/
 
 .page-entry img{
-	width: 100%;
+	max-width: 100%;
 	margin-bottom: 30px;
 }
-
-/*** End of FIRST CODE PACKAGE additions - 103 week 2, Monday **/
+section.single-page {
+	display: flex;
+	flex-wrap: wrap;
+}
 
 /* BLOG styles */
+.blog-intro {
+	background-color: lemonchiffon;
+	padding: 30px 30px 40px;
+	border-bottom: 1px solid #bfbfbf;	
+}
 .post-entry {
 	border-bottom: 1px solid #bfbfbf;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
 }
-
 .entry-title {
 	margin: 0.25em 0 0.75em;
 	font: bold 1.47em/1.4 'Montserrat', 'Open Sans' sans-serif;
@@ -332,40 +432,36 @@ ol {
 	height: 375px;
 	display: block;
 }
-
-/**
- ** List styling Added these after the fact, after adding them to a post / page in the dashboard content box and nothing showed up due to the reset **
- */
-
 .entry-summary ul > li,
 .post-entry ul > li  {
 	margin-left: 1em;
 }
-
-/**/
-
 .blog .entry-title {
 	font-size: 1.17em;
 }
-
 .blog .entry-summary a {
 	color: #45ac9d;
-	/*text-decoration: underline;*/
 	font-weight: bold;
-    font-weight: bold;
-    padding: 7px 15px;
-    border: 1px solid #45ac9d;
-    border-radius: 5px;
-    -webkit-transition: all 350ms linear;
-    -moz-transition: all 350ms linear;
-    -ms-transition: all 350ms linear;
-    -o-transition: all 350ms linear;
-    transition: all 350ms linear;
+  font-weight: bold;
+  padding: 7px 15px;
+  border: 1px solid #45ac9d;
+  border-radius: 5px;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+  transition: all 350ms linear;
 }
 .blog .entry-summary a:hover {
-	/*text-decoration: none;*/
 	background: #45ac9d;
-    color: #fff;
+  color: #fff;
+}
+.blog .more:hover {
+	transform: scale(1.04);
+}
+.blog .more,
+.page-template-custom-masonry .more {
+	transition: all 350ms;
 }
 .entry-summary blockquote {
 	margin: 0 47px;
@@ -435,11 +531,10 @@ ol {
 	border-bottom: 0;
 }
 
-/* Ann addition */
-
 /* see notes in index.php */
 .index-page {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .blog-index-img {
@@ -451,12 +546,8 @@ ol {
 	margin: 15px 0;
 }
 
-
-/* end BLOG styles  - End of SECOND CODE PACKAGE addtions - 103 Week 2 Monday */
-
 /* sidebar */
 
-/* Ann's image styles */
 .ann-pic img{
 	border-radius: 50%;
 }
@@ -487,7 +578,6 @@ ol {
 	max-width: 175px;
 	margin: auto;
 	display: block;
-
 }
 #sidebar .widget_text a {
 	color: #3b3b3b;
@@ -497,13 +587,14 @@ ol {
 #sidebar .widget_search {
 	border-bottom: 1px solid #BFBFBF;
 	padding-top: 31px;
+	margin-bottom: 40px;
 }
 #sidebar .widget_search input[type="text"] {
 	border-top: 1px solid #a6a6a6;
 	border-bottom: 1px solid #a6a6a6;
 	border-left: 1px solid #a6a6a6;
 	border-right: none;
-	width: 200px;
+	max-width: 200px;
 	height: 36px;
 	padding: 8px;
 	vertical-align: middle;
@@ -513,7 +604,7 @@ ol {
 	border-bottom: 1px solid #a6a6a6;
 	border-right: 1px solid #a6a6a6;
 	border-left: none;
-	width: 35px;
+	max-width: 32px;
 	height: 36px;
 	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
 	color: #ffffff;
@@ -566,8 +657,7 @@ ol {
 #sidebar .popular-posts {
 	padding-left: 10px;
 }
-#sidebar .popular-posts h2
- {
+#sidebar .popular-posts h2 {
 	font: 600 14px 'Open Sans';
 	color: #45ac9d;
 	margin: 0px 0px 20px 30px;
@@ -599,6 +689,10 @@ ol {
     min-height: 3em;
     border-left: 2px solid #CCCCCC;
 		overflow: visible;
+}
+
+#sidebar ol.wpp-list > li span a{
+color: #3b3b3b;
 }
 #sidebar ol.wpp-list > li::before {
     position: absolute;
@@ -649,9 +743,11 @@ ol {
 }
 #navigation .left a span {
 	padding-left: 8px;
+	display: inline-block; /* added to fix display */
 }
 #navigation .right a span {
 	padding-right: 8px;
+	display: inline-block; /* added to fix display */
 }
 #navigation .left a:hover,
 #navigation .right a:hover {
@@ -663,7 +759,15 @@ ol {
 }
 /* End next / prev */
 
-/* single posts */
+/* Category pages */
+.category-page .page-header h1 {
+	font: 25px 'Montserrat', 'Open Sans', Arial, sans-serif;
+}
+.category-page .page-header h1 span {
+	color: #45ac9d;
+}
+
+/* Single posts */
 .single .post-entry {
 	border-bottom: none;
 }
@@ -686,6 +790,8 @@ a.download-button:hover {
 	background-color: #45ac9d;
 	color: white;
 }
+
+/* Comments */
 .comments-area {
 	margin-bottom: 80px;
 	clear: both;
@@ -738,7 +844,7 @@ a.download-button:hover {
 }
 .comments-area .comment-form p {
 	font: 0.8em/2.08em 'Open Sans', Arial, sans-serif;
-	padding-bottom: 23px;
+	padding-bottom: 5px;
 }
 .comments-area .comment-form p a {
 	color: #45ac9d;
@@ -777,6 +883,26 @@ a.download-button:hover {
 	background: #31756b;
 	cursor: pointer;
 }
+
+.comments-area .comment-form input#url,
+.comments-area .comment-form input#author,
+.comments-area .comment-form input#email {
+	height: 37px;
+	border: 1px solid #BFBFBF;
+	line-height: 25px;
+	padding: 5px 10px;
+	background: #fff;
+	vertical-align: middle;
+	margin: 0;
+	font: 16px 'OpenSans', Arial, sans-serif;
+}
+/* Adding this to have the email and name fields be side by side */
+.comment-form-author,
+.comment-form-email {
+	width: 50%;
+	float: left;
+}
+
 /* Adding this to hide the text for HTML allowed tags in comments box */
 .form-allowed-tags {
 	display: none;
@@ -821,6 +947,47 @@ li.full {
 
 /* End single posts */
 
+/***** POST FORMATS *****/
+
+/* Quote */
+
+.entry-header .quote-content{
+	font-size: 42px;
+	font-weight: 100;
+	line-height: 1.3em;
+	letter-spacing: 0.03em;
+}
+.entry-header .quote-content:before,
+.entry-header .quote-content:after {
+	content: '';
+	display: inline-block;
+	position: relative;
+	font-size: 1.2em;
+	color: #ccc;
+}
+.entry-header .quote-content:before{
+	content: '“'
+}
+.entry-header .quote-content:after{
+	content: '”'
+}
+.entry-header .quote-author {
+	color: #898989;
+	font-size: 16px;
+	letter-spacing: 0.06em;
+	text-align: center;
+	padding-bottom: 15px;
+}
+.quote-content a {
+	color: #3b3b3b;
+}
+
+/* Contact Page - Body Class added via filter in functions.php */
+.contact .entry-title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 
 /* Homepage */
 .home {
@@ -847,7 +1014,7 @@ li.full {
 	padding: 50px;
 }
 .home .content h1 {
-	font: 700 36px 'Montserrat';
+	font: 700 36px 'Montserrat', 'Open Sans', Arial, sans-serif;
 	margin-bottom: 30px;
 }
 .home .content p {
@@ -884,6 +1051,9 @@ li.full {
 }
 .home .content .soc-icon.db {
 	background: url(img/dribbble-icon.png) no-repeat center 0;
+}
+.home .content .soc-icon.gh {
+	background: url(img/github-icon.png) no-repeat center 0;
 }
 /* testing */
 /*.home .content .soc-icon.ap {
@@ -936,12 +1106,13 @@ li.full {
 	border-bottom: 1px solid #a6a6a6;
 	border-left: 1px solid #a6a6a6;
 	border-right: none;
-	color: #bfbfbf;
+	color: #888;
 	font-style: italic;
 	width: 85%;
 	height: 36px;
 	padding: 8px;
 	vertical-align: middle;
+	font-size: 0.85em;
 }
 
 .new-search ~ p { /* Having fun with the sibling selector! */
@@ -1045,7 +1216,7 @@ li.full {
 
  /*** Media Queries ***/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
 
 	.index-page {
@@ -1058,13 +1229,13 @@ li.full {
 	    width: 100%;
 	}
 
-	.top-logo {
+	/*.top-logo {
 		margin-left: 30px;
-	}
+	}*/
 
-	.top-nav {
+	/*.top-nav {
 		margin-right: 30px;
-	}
+	}*/
 
 	div.left {
 		margin-left: 30px;
@@ -1073,11 +1244,6 @@ li.full {
 	div.right {
 		margin-right: 30px;
 	}
-
-}
-
-@media screen and (max-width: 750px) {
-
 	div.footer-widgets {
 		width: 48%;
 	}
@@ -1088,6 +1254,28 @@ li.full {
 	    text-align: center;
 	}
 
+	/* Additions */
+	#sidebar .widget h2 {
+	    padding: 10px 15px;
+	    border: 1px solid #45ac9d;
+			margin-bottom: 25px;
+	}
+	#sidebar .popular-posts {
+		padding-left: 0px;
+	}
+	#sidebar .widget ul li {
+	    font-size: 16px;
+	    text-align: left;
+	}
+
+	#sidebar .widget_search input[type="text"] {
+			width: 80%;
+	}
+
+	#sidebar .widget_search input[type="submit"] {
+			width: 12%;
+	}
+/**/
 	.ann-pic {
 		max-width: 150px;
     margin: 0 auto 30px;
@@ -1098,13 +1286,50 @@ li.full {
 	}
 }
 
+
+@media screen and (max-width: 750px) {
+	
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		padding-left: 0;
+	}
+	.comments-area .comment-form input[type="submit"] {
+		float: left;
+	}
+	
+}
+
 @media screen and (max-width: 550px) {
+	
+	.home .main-content {
+		padding: 0;
+		margin-top: 40px;
+		opacity: 0.9;
+	}
+	.home .content {
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+	}
+	.home .content h1 {
+		font-size: 28px;
+	}
+	.home .content p {
+		display: none;
+	}
+	.home .btn {
+		min-width: 100%;
+	}
 
 	div.footer-widgets {
 		float: none;
 		width: 100%;
 	}
-	.index-page .post-entry img {
+	.index-page .post-entry img.wp-post-image {
 		display: none;
 	}
 
@@ -1156,8 +1381,21 @@ li.full {
 #isotope-section div figure:hover h3 {
 	opacity: 1;
 	position: absolute;
-	top: 15px;
+	padding: 20px;
+	top: 20px;
 	color: #3B3B3B;
+	font-weight: bold;
+	-webkit-transition: 200ms ease-in-out;
+	-moz-transition: 200ms ease-in-out;
+	-o-transition: 200ms ease-in-out;
+	transition: 200ms ease-in-out;
+}
+#isotope-section div figure:hover img {
+	opacity: 0.2;
+	-webkit-transition: 400ms ease-in-out;
+	-moz-transition: 400ms ease-in-out;
+	-o-transition: 400ms ease-in-out;
+	transition: 400ms ease-in-out;
 }
 
 #isotope-section div a img {
@@ -1222,8 +1460,72 @@ img.aligncenter {
 .bypostauthor {
 }
 
-/* Test for Tineke */
+/* Test for social icons in sidebar using text widget */
 #sidebar .widget_text .boo {
 	display: inline-block;
 	margin-right: 1em;
+}
+
+/* Show some love ajax button */
+.love-button img {
+    margin: 0 6px;
+    opacity: 0.7;
+    cursor: pointer;
+		transition: all .2s ease-in-out;
+}
+.love-button img:hover {
+    opacity: 1;
+		transform: scale(1.2);
+}
+
+
+/* Masonry stuffs */
+.page-template-custom-masonry p {
+	margin: 10px;
+}
+.page-template-custom-masonry .more {
+	margin: 0;
+	text-align: center;
+}
+
+.page-template-custom-masonry .more a {
+	color: #45ac9d;
+	font-weight: bold;
+  font-weight: bold;
+	font-size: 85%;
+  padding: 7px 15px;
+  border: 1px solid #45ac9d;
+  border-radius: 5px;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+  transition: all 350ms linear;
+}
+.page-template-custom-masonry .more a:hover {
+	background: #45ac9d;
+	color: #fff;
+	cursor: pointer;
+}
+.ms-item {
+width: 33%;
+padding: 1%;
+margin: 2% 0%;
+}
+.page-template-custom-masonry .page-header {
+	border-bottom: none;
+}
+
+@media screen and (max-width: 800px) {
+	.ms-item {
+	width: 50%;
+	padding: 2%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.ms-item {
+	width: 100%;
+	padding: 3% 4%;
+	}
 }
