@@ -1,3 +1,4 @@
+/* To use with Slick Slider */
 jQuery(document).ready(function($){
 	$('.slick-slider').slick({
     infitine: true,
@@ -5,7 +6,7 @@ jQuery(document).ready(function($){
 		fade: true,
 		speed: 2000,
 		autoplaySpeed: 6000,
-		prevArrow: '<p class="one-half first left-arrow">&#8592;</p>',
-		nextArrow: '<p class="one-half right-arrow">&#8594;</p>'
+		prevArrow: '<p class="one-half first left-arrow">&#8249;</p>',
+		nextArrow: '<p class="one-half right-arrow">&#8250;</p>'
 	});
 });
