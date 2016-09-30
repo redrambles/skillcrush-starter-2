@@ -33,6 +33,14 @@
 			<nav class="top-nav">
 				<?php wp_nav_menu(array('theme_location' => 'primary-menu')); ?> 
 			</nav>
+			<div class="top-header social-btns">
+				<a href="http://www.twitter.com" class="soc-icon tw"></a>
+				<a href="" class="soc-icon fb"></a>
+				<a href="" class="soc-icon ln"></a>
+				<a href="" class="soc-icon db"></a>
+				<a href="" class="soc-icon gh"></a>
+			</div>
 		</header>
+
 
 		<div id="main" class="site-main">
