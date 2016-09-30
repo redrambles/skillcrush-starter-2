@@ -36,19 +36,6 @@ get_header(); ?>
 			</div>
 		<?php } //End ACF Check ?>
 		<!-- End slider section -->
-
-		<div>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<article class="post-entry page-entry">
-							<?php the_content(); ?>
-						</article>
-
-				<?php endwhile; ?>
-
-		</div>
-
-	</div>
 </section>
 
 <?php get_footer(); ?>
