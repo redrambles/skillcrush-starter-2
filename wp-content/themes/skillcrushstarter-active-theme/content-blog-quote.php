@@ -4,7 +4,7 @@
 		
 		<header class="entry-header">
 			<div class="quote">
-				<h1 class="quote-content"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo get_the_content(); ?></a></h1>
+				<h1 class="quote-content"><?php echo get_the_content(); ?></h1>
 				<h2 class="quote-author">- <?php the_title(); ?> -</h2>
 			</div>
 		</header>
