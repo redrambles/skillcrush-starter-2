@@ -34,38 +34,38 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 
 </section>
-
-<section>
+<?php // TODO: Fix up the styling for the related posts section ?>
+<!-- <section> -->
 		<?php
-		if ( function_exists('get_field') ) { // Only do this if ACF is active
-
-				$posts = get_field('related_posts');
-				$posts_count = count($posts);
-				$posts_width = array ( // change the styling according to number of posts. Max 3.
-					'',
-					'full',
-					'half',
-					'third'
-				);
-				$post_class = $posts_width[$posts_count]; // Set the width class according to the number of related posts
-
-				if ($posts) {
-		     echo '<h1 class="related-posts-title">More Goodness</h1>';
-		     echo '<ul class="related-list clearfix">';
-		     foreach ($posts as $post):
-		          setup_postdata($post);
-		          echo '<li class="'.$post_class.'"><a href="' . get_the_permalink() .'">';
-		          echo '<h3 class="related-individual-title">' . get_the_title() . '</h3>';
-		          the_post_thumbnail('related-images');
-		          echo '</a></li>';
-		     endforeach;
-		     echo '</ul>';
-		     wp_reset_postdata();
-
-			 } // end related posts loop
-		 } // end ACF check
-		 ?>
-	</section>
+		// if ( function_exists('get_field') ) { // Only do this if ACF is active
+		// 
+		// 		$posts = get_field('related_posts');
+		// 		$posts_count = count($posts);
+		// 		$posts_width = array ( // change the styling according to number of posts. Max 3.
+		// 			'',
+		// 			'full',
+		// 			'half',
+		// 			'third'
+		// 		);
+		// 		$post_class = $posts_width[$posts_count]; // Set the width class according to the number of related posts
+		// 
+		// 		if ($posts) {
+		//      echo '<h1 class="related-posts-title">More Goodness</h1>';
+		//      echo '<ul class="related-list clearfix">';
+		//      foreach ($posts as $post):
+		//           setup_postdata($post);
+		//           echo '<li class="'.$post_class.'"><a href="' . get_the_permalink() .'">';
+		//           echo '<h3 class="related-individual-title">' . get_the_title() . '</h3>';
+		//           the_post_thumbnail('related-images');
+		//           echo '</a></li>';
+		//      endforeach;
+		//      echo '</ul>';
+		//      wp_reset_postdata();
+		// 
+		// 	 } // end related posts loop
+		//  } // end ACF check
+		//  ?>
+	<!-- </section> -->
 	<div id="navigation" class="container">
 		<?php // testing - this should be used in the loop - according to the Codex - but it seems to work anyways
 			// if ( is_attachment() ) :
