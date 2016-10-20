@@ -25,9 +25,10 @@ get_header(); ?>
 <section class="index-page">
 	<div class="main-content">
 
+<?php global $paged; ?>
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if (0 == $wp_query->current_post){
+				<?php if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) ){
 					get_template_part('content', get_post_format());
 				} else {
 			    get_template_part('content-blog', get_post_format()); } ?>
