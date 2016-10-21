@@ -152,7 +152,19 @@ class ACFTC_Core {
 
 		}
 
-		$parent_field_group->render_field_group();
+		if ( !empty( $parent_field_group->fields ) ) {
+
+			$parent_field_group->render_field_group();
+
+			// Upgrade to TC Pro notice
+			echo '<div class="acftc-pro-notice"><a class="acftc-pro-notice__link" href="https://hookturn.io/downloads/acf-theme-code-pro/?utm_source=acftcfree" target="_blank">Upgrade to <strong>ACF Theme Code Pro</strong>.</a></div>';
+
+		} else {
+
+			echo '<div class="acftc-intro-notice"><p>Create some fields and publish the field group to generate theme code.</p></div>';
+
+		}
+
 	}
 
 

@@ -1,9 +1,9 @@
 === ACF Theme Code ===
-Contributors: aaronrutley, ben-pearson
+Contributors: aaronrutley, benpearson
 Tags: acf,advanced custom fields,php,automation
 Requires at least: 4.5.3
 Tested up to: 4.6
-Stable tag: 1.0.0
+Stable tag: 1.2.0
 License: GPL2+
 
 ACF Theme Code will automatically generate the code needed to implement Advanced Custom Fields in your themes!
@@ -15,6 +15,8 @@ When you publish, edit or update an ACF Field Group, the code required to implem
 
 The code is based on the ACF documentation and it's automatically updated to match the fields you have created.
 Use the clipboard icon to easily copy these code blocks and paste them into your theme to get you started and save loads of time!
+
+[youtube https://www.youtube.com/watch?v=g9APGNJMy7k]
 
 = Features include: =
 * Easily copy the code into your theme
@@ -53,6 +55,9 @@ Use the clipboard icon to easily copy these code blocks and paste them into your
 * ACF version 4.4.7 or higher
 * ACF Pro version 5.4 or higher
 
+= Thankyou =
+Thanks to all of our beta testers including Elliot Condon, Phil Smart, Richard Johnston & James Bundey!
+
 == Installation ==
 
 1. Upload ACF Theme Code to /wp-content/plugins/
@@ -76,6 +81,13 @@ We're open to suggestions and keen to improve the code generated based on commun
 1. When you publish, edit or update an ACF Field Group, the code required to implement each field is displayed for you in the Theme Code section. Use the clipboard icon to easily copy these code blocks and paste them into your theme.
 
 == Changelog ==
+
+= 1.2.0 =
+* Core: Quicklinks feature with anchor links to the relevant theme code block
+* Core: Notice updates & various bug fixes
+
+= 1.1.2 =
+* Fix: Use the_sub_field method for nested File fields with return format URL
 
 = 1.1.1 =
 * Field: Post Object field now works correctly for ACF 4
