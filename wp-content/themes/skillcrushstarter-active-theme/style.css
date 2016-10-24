@@ -194,10 +194,8 @@ ol {
 }
 
 #page {
-	/* testing this out for responsiveness - Still a TON of work to be done here */
 	max-width: 960px;
 	overflow: hidden;
-	/* end test */
 	width: 100%;
 	min-width: 320px;
 	margin: auto;
@@ -281,7 +279,7 @@ header.page-header {
 font-weight: bold;
 }
 
-.top-header.social-btns {
+.page-header .social-btns {
 	min-width: 100%;
 	text-align: center;
 	margin: 15px 0px;
@@ -357,7 +355,7 @@ font-weight: bold;
 	align-self: center;
 
 	}
-	.top-header.social-btns {
+	.page-header .social-btns {
 			text-align: right;
 			margin: 0px;
 	}
@@ -1118,6 +1116,12 @@ li.full {
 	text-decoration: none;
 }
 
+.home .btn:hover{
+	background: #58bcac;
+	border:	1px dotted #757575;
+	transition: all 0.3s ease-out;
+}
+
 /* Search Form Experiment - No results */
 .search-header{
 	padding: 20px 0;
@@ -1327,6 +1331,22 @@ li.full {
 
 @media screen and (max-width: 750px) {
 	
+	.home {
+		background: #BDB5B6;
+	}
+	
+	.home .content {
+		max-width: 80%;
+		margin: 0 auto;
+		padding: 2em 1.5em;
+		float: none;
+	}
+	.home .content h1 {
+		font-size: 28px;
+	}
+	.home .content p:last-of-type {
+		display: none;
+	}
 	.comment-form-author,
 	.comment-form-email,
 	.comment-form-url {
@@ -1349,18 +1369,20 @@ li.full {
 		opacity: 0.9;
 	}
 	.home .content {
-		width: 90%;
-		margin: 0 auto;
+		max-width: 90%;
+		margin: auto;
 		float: none;
 	}
 	.home .content h1 {
-		font-size: 28px;
+		font-size: 26px;
 	}
 	.home .content p {
-		display: none;
+		font-size: 16px;
 	}
 	.home .btn {
 		min-width: 100%;
+		font-size: 1em;
+		font-weight: 500;
 	}
 
 	div.footer-widgets {

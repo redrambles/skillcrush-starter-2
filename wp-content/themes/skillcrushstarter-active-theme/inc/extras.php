@@ -35,6 +35,21 @@ if ( is_home() ) {
 	 } // end check for if is_home
  } 
  
+ // Social iconv_mime_decode_headers
+ function skillcrushstarter_social_icons() {
+   $social_icons = "";
+   $social_icons .= '<div class="social-btns">';
+   $social_icons .=   '<a href="http://www.twitter.com" class="soc-icon tw"></a>';
+   $social_icons .=   '<a href="" class="soc-icon fb"></a>';
+   $social_icons .=   '<a href="" class="soc-icon ln"></a>';
+   $social_icons .=   '<a href="" class="soc-icon db"></a>';
+   $social_icons .=   '<a href="" class="soc-icon gh"></a>';
+   $social_icons .= '</div>';
+   
+   return $social_icons;
+ }
+ 
+ 
  // AJAXFor the 'show some love' button 
  function skillcrushstarter_show_some_love() {
    

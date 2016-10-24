@@ -17,16 +17,10 @@ get_header(); ?>
 				<h1><?php the_title(); ?></h1>
 
 				<?php the_content(); ?>
-
-				<!-- <div class="social-btns">
-					<a href="http://www.twitter.com" class="soc-icon tw"></a>
-					<a href="" class="soc-icon fb"></a>
-					<a href="" class="soc-icon ln"></a>
-					<a href="" class="soc-icon db"></a>
-					<a href="" class="soc-icon gh"></a>
-				</div> -->
 				
-				<a href="<?php echo esc_attr( site_url('/blog/') ); ?>" class="btn">View My Blog</a>
+				<?php //echo skillcrushstarter_social_icons(); ?>
+				
+				<a href="<?php echo esc_attr( site_url('/blog/') ); ?>" class="btn">Come on in, there's coffee</a>
 			<?php endwhile; ?>
 		</div>
 	</div>
