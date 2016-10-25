@@ -689,13 +689,17 @@ section.single-page {
 /* Sidebar Popular Posts */
 /* Styling option from WPP author */
 
-#sidebar .popular-posts {
+#sidebar .popular-posts,
+#sidebar .popular-posts  p {
 	padding-left: 10px;
+}
+#sidebar .popular-posts  p {
+	margin-left: 10px;
 }
 #sidebar .popular-posts h2 {
 	font: 600 14px 'Open Sans';
 	color: #45ac9d;
-	margin: 0px 0px 20px 30px;
+	margin: 0px 0px 20px 22px;
 }
 #sidebar ol.wpp-list {
     list-style-type: none;
