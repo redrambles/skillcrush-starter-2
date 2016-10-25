@@ -113,11 +113,28 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
 }
 
 @media only screen and (max-width: 600px) {
-  .archives-widget-left {
-    width: 100%;
+  .archive-title {
+    font-size: 2em;
+  }
+  .archive-top p {
+    text-align: center;
   }
 
-  .archives-widget-right {
+  .archive-widgets div {
     width: 100%;
+    padding: 1.5em;
+    margin: 0;
+  }
+  .archives-authors-section,
+  .archives-by-month-section,
+  .archives-authors-section ul li {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .archives-by-month-section p a {
+    display: block;
+  }
+  .archives-by-month-section p a:after {
+    content: " ";
   }
 }

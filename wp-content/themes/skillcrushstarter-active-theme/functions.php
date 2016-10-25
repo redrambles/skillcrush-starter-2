@@ -137,7 +137,7 @@ add_action( 'init', 'skillcrushstarter_custom_post_types' );
 function skillcrushstarter_scripts() {
 		wp_enqueue_style( 'normalize', get_stylesheet_directory_uri(). '/css/normalize.css' );
     wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'normalize' ) );
-    wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/inc/custom-archive.css' );
+    wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/css/custom-archive.css', array('style') );
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style('skillcrushstarter-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,600');
 
