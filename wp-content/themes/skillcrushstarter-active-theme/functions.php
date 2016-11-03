@@ -144,7 +144,8 @@ function skillcrushstarter_scripts() {
      	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+	// For code snippets
+	wp_enqueue_script( 'code-snippets', get_stylesheet_directory_uri() . '/js/code-snippets.js', array( 'jquery'), '1.0.0', false );
 	// ajax
 		wp_enqueue_script( 'ajax-heart', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0', true );
 		wp_localize_script( 'ajax-heart', 'ajaxHeart', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );

@@ -13,7 +13,9 @@ get_header(); ?>
 	<div class="main-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php $download = get_field('download'); ?>
+		<?php 
+			$download = get_field('download'); 
+		?>
 
 			<?php the_post_thumbnail(); ?>
 

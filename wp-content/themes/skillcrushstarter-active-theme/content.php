@@ -8,14 +8,56 @@
 				
 			</div>
 
-			<h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><?php the_title(); ?></h2>
 			
 		</header>
 
 		<div class="entry-summary">
 			
-			<?php the_content(); ?>
-
+			<?php the_content(); 
+			
+			if ( function_exists( 'get_field' ) ) {
+				// For Code Snippets - Custom Fields - if they exist
+				$snippet_1_title = get_field('snippet_1_title');
+				$snippet_1 = get_field('snippet_1');
+				$snippet_2_title = get_field('snippet_2_title');
+				$snippet_2 = get_field('snippet_2');
+				$snippet_3_title = get_field('snippet_3_title');			
+				$snippet_3 = get_field('snippet_3');
+				
+				
+				if ( !empty( $snippet_1 ) ) { ?>
+					<div class="snippet-block">
+						<h3 class="code-button"><?php echo $snippet_1_title; ?></h3>
+						<div class="snippet">
+							<?php echo $snippet_1; ?>
+						</div>
+					</div>
+				
+				<?php } 
+				
+				if ( !empty( $snippet_2 ) ) { ?>
+					
+						<div class="snippet-block">
+							<h3 class="code-button"><?php echo $snippet_2_title; ?></h3>
+							<div class="snippet">
+								<?php echo $snippet_2; ?>
+							</div>
+						</div>
+						
+				<?php } 
+				if ( !empty( $snippet_3) ) { ?>
+				
+					<div class="snippet-block">
+						<h3 class="code-button"><?php echo $snippet_3_title; ?></h3>
+						<div class="snippet">
+							<?php echo $snippet_3; ?>
+						</div>
+					</div>
+		
+			<?php 
+				} 
+			} // ACF check?>
 		</div>
 
 		<footer class="entry-footer">

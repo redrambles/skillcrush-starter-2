@@ -491,7 +491,7 @@ margin: 2% 0%;
 }
 .entry-title {
 	margin: 0.25em 0 0.75em;
-	font: bold 1.47em/1.4 'Montserrat', 'Open Sans' sans-serif;
+	font: bold 1.47em/1.4 'Montserrat', 'Open Sans', sans-serif;
 	letter-spacing: -0.034em;
 }
 .entry-title a {
@@ -912,6 +912,7 @@ a.download-button {
 a.download-button:hover {
 	background-color: #45ac9d;
 	color: white;
+	cursor: pointer;
 }
 
 /* 7.1 Comments */
@@ -1062,6 +1063,32 @@ li.full {
 	margin-bottom: 20px;
 	font-size: 90%;
 }
+
+/* 7.3 Single posts with collapsible Code Snippets */
+
+h3.code-button {
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: lemonchiffon;
+    border: 1px solid #BFBFBF;
+    color: #605f5f;
+    -webkit-transition: all 450ms linear;
+    -moz-transition: all 450ms linear;
+    -ms-transition: all 450ms linear;
+    -o-transition: all 450ms linear;
+    transition: all 450ms linear;
+}
+
+h3.code-button:hover {
+	border: 1px solid #605f5f;
+	color: #3B3B3B;
+	cursor: pointer;
+}
+
+
 
 /**********************************
 			8.0 HOMEPAGE - FRONT PAGE
