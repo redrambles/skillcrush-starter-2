@@ -4,12 +4,13 @@
 		<header class="entry-header">
 			<div class="entry-meta">
 				<h3 class="entry-time"><?php the_time('F j, Y');?><?php //echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ); _e( ' ago.' );?></h3>
-				
-				
 			</div>
 
-			<h2 class="entry-title"><?php the_title(); ?></h2>
-			
+			<?php if ( is_home() ) { ?>
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<?php } else { ?>
+				<h2 class="entry-title"><?php the_title(); ?></h2>
+			<?php } ?>
 		</header>
 
 		<div class="entry-summary">
