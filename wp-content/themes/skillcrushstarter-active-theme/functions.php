@@ -140,6 +140,10 @@ function skillcrushstarter_scripts() {
     wp_enqueue_style( 'custom-archive-css', get_stylesheet_directory_uri(). '/css/custom-archive.css', array('style') );
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style('skillcrushstarter-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,600');
+		
+		if ( is_404() ){
+			wp_enqueue_style( '404-css', get_stylesheet_directory_uri(). '/css/404.css', array( 'style' ) );
+		}
 
      	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
