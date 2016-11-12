@@ -26,7 +26,7 @@ get_header(); ?>
 					$size = "full-page"; ?>
 
 						<div class="slide">
-							<?php	echo wp_get_attachment_image( $slider_image, $size ); ?>
+							<a href="<?php the_permalink(); ?>"><?php	echo wp_get_attachment_image( $slider_image, $size ); ?></a>
 						</div>
 						
 					<?php
