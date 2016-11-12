@@ -894,6 +894,12 @@ section.single-page {
 .single .post-entry {
 	border-bottom: none;
 }
+
+.single .main-content .attachment-post-thumbnail {
+	display: block;
+	margin: 0 auto 20px;
+}
+
 a.download-button {
     display: block;
     text-align: center;
