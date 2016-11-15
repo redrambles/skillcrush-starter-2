@@ -297,6 +297,14 @@ function skillcrushstarter_body_classes( $classes ) {
     return $classes;
 }
 
+// TEST TEST - WORKS (to use the filter in red-cta-widget - will overwrite anything written in Appearance -> Widgets)
+// function red_widget_title( $title ){
+// 	$title = "BARF";
+// 	return $title;
+// }
+// add_filter('widget_title', 'red_widget_title');
+
+
 // called in single.php with 'do_action'
 // function red_cta_below_posts() {	
 // 	

@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-entry' ); ?> > <!-- Added post_class for theme check  and added several semi-colons to template tags-->
 	
-<?php if( is_home() ){ // if this is the first post on the blog page - pull in the featured image ?>
+<?php if( is_home() && has_post_thumbnail() ){ // if this is the first post on the blog page - pull in the featured image ?>
 	<figure class="blog-index-img"><?php the_post_thumbnail( 'blog-page' ); ?></figure>
 <?php } ?>
 	<div class="entry-wrap">
