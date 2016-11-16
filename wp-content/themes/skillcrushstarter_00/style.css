@@ -87,5 +87,34 @@ html[xmlns] .clearfix {
 /** end CSS reset **/
 
 /** theme styles start here! **/
+.page-header {
+	overflow: hidden;
+}
+#page {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 
-
+#sidebar {
+	width: 30%;
+	float: left;
+	padding: 1em;
+}
+.ann-pic img {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0px auto 20px;
+	border-radius: 100%;
+}
+.main-content {
+	width: 70%;
+	float: left;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}

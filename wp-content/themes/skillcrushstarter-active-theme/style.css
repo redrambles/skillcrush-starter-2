@@ -1224,6 +1224,7 @@ h3.code-button:hover {
 }
 .footer-widget-area {
 	overflow: hidden;
+	clear: both;
 	background-color: #585757;
 	padding: 1em;
 }
@@ -1343,8 +1344,13 @@ h3.code-button:hover {
  }
  
  /* 11.3 Theme check additions  - Todo	*/
+
  .wp-caption-text {
- }
+	 margin-top: 0;
+	 padding: 0.5em;
+	 font-size: 0.8em;
+	 font-style: italic;
+	}
  .sticky {
  }
  .gallery-caption {
