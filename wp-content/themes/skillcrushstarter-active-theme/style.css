@@ -914,7 +914,8 @@ a.download-button {
     display: block;
     text-align: center;
     margin: 0 auto;
-    width: 30%;
+    width: 200px;
+		max-width: 50%;
     padding: 5px 10px;
     background-color: lemonchiffon;
     border: 1px solid #BFBFBF;
@@ -1004,6 +1005,9 @@ a.download-button:hover {
 	font: 16px 'Open Sans', Arial, sans-serif;
 	padding: 5px 10px;
 }
+.comments-area .comment-form-comment {
+	margin: 0;
+}
 .comments-area .comment-form input[type="submit"] {
 	background: #45ac9d;
 	width: 206px;
@@ -1035,13 +1039,73 @@ a.download-button:hover {
 	margin: 0;
 	font: 16px 'OpenSans', Arial, sans-serif;
 }
+.comments-area input#author, 
+.comments-area input#email {
+    width: 100%;
+}
+
 .comment-form-author,
 .comment-form-email {
-	width: 50%;
+	width: 49%;
 	float: left;
+}
+.comment-form-email{
+	margin-left: 2%;
 }
 .form-allowed-tags {
 	display: none;
+}
+/* We don't want the website field */
+.comment-form-url,
+.comment-notes {
+	display: none;
+}
+
+/*** Reorder Default Fields for Comment Form - as per design specs - if this isn't desired - comment out lines below ***/
+.comment-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; 
+  flex-wrap: wrap;
+}
+.comment-form p{	
+	-webkit-flex: 1 0 auto;       
+	-ms-flex: 1 0 auto;           
+	flex: 1 0 auto;              
+  margin: 0;
+}
+.comment-form .comment-form-comment {
+	min-width: 100%;
+}
+input#author,
+input#email,
+textarea#comment {
+	width: 100%;
+}
+  .comment-form > :nth-child(1) { order:5; display:none }
+  body:not(.logged-in) .comment-form > :nth-child(2) { order: 4; }
+  .comment-form > :nth-child(3) { order: 1; }
+  .comment-form > :nth-child(4) { order: 2; }
+	.comment-form > :nth-child(5) { order: 3; display: none; }
+	.comment-form > :nth-child(6) { order: 6; }
+
+@media (min-width: 650px) {
+	.comment-form .comment-form-author {
+		display: block;
+		width: 48%;
+		margin-right: 2%;
+		float: left;
+	}
+	input#author,
+	input#email {
+		width: 100%;
+	}
+	.comment-form .comment-form-email {
+		display: block;
+		width: 48%;
+		float: left;
+	}
+	
 }
 
 /* 7.2 Related Posts - with ACF */
@@ -1384,12 +1448,12 @@ h3.code-button:hover {
  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	.index-page {
 		display: block;
 	}
 	.main-content {
-	    padding: 40px;
+	    padding: 5%;
 	    float: none;
 	    width: 100%;
 	}
@@ -1462,8 +1526,8 @@ h3.code-button:hover {
 	}
 	.comment-form-author,
 	.comment-form-email,
-	.comment-form-url {
-		width: 100%;
+	.comment-form-comment {
+		width: 98%;
 		float: none;
 		margin: 0 auto;
 		padding-left: 0;
@@ -1531,3 +1595,5 @@ h3.code-button:hover {
 	 display: none;
  }
 }
+
+
