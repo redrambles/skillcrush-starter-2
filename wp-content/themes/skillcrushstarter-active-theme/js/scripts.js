@@ -27,3 +27,11 @@
     })
 
 })( jQuery );
+
+// To expand the search box on focus in small screens
+jQuery(document).ready(function($) {
+  $('input.search-box-text').click(function () {
+  $('.search-box-text').toggleClass('expanded');
+  $('.input-btn').toggleClass('expanded');
+  })
+});

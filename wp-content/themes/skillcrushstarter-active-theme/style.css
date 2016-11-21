@@ -186,7 +186,7 @@ ol {
 	max-width: 960px;
 	overflow: hidden;
 	width: 100%;
-	min-width: 320px;
+	/*min-width: 320px;*/
 	margin: auto;
 }
 .page-header {
@@ -224,6 +224,8 @@ ol {
 header.page-header { 
 	padding-top: 20px;
 	padding-bottom: 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex; 
 	flex-direction: column; 
 	flex-wrap: wrap;
@@ -236,6 +238,8 @@ header.page-header {
 }
 .top-nav ul { 
 	margin: 20px 0px 0px 0px; 
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex; 
 	flex-direction: column; 
 }
@@ -478,6 +482,8 @@ margin: 2% 0%;
 
 /* 4.1 Main Content */
 .index-page {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -898,6 +904,8 @@ color: #3b3b3b;
 ***********************************/
 
 section.single-page {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -1451,6 +1459,7 @@ h3.code-button:hover {
 @media screen and (max-width: 1000px) {
 	.index-page {
 		display: block;
+		max-width: 100%;
 	}
 	.main-content {
 	    padding: 5%;
@@ -1469,6 +1478,8 @@ h3.code-button:hover {
 	#sidebar {
 	    padding: 20px;
 	    width: 100%;
+			max-width: 100%;
+			float: none;
 	    text-align: center;
 	}
 	#sidebar .widget h2 {
@@ -1537,7 +1548,7 @@ h3.code-button:hover {
 	}
 }
 
-@media (min-width: 690px){
+@media (min-width: 690px){	
  .top-nav ul { 
 	 flex-direction: row; 
 	 justify-content: space-around; 
@@ -1562,6 +1573,28 @@ h3.code-button:hover {
 }
 
 @media screen and (max-width: 550px) {
+	#sidebar .widget_search input.search-box-text {
+		min-width: 150px;
+		width: 150px;
+		transition: 600ms ease;
+	}
+
+	#sidebar .widget_search input.search-box-text.expanded {
+		width: 220px;
+		max-width: 88%;
+		height: 45px;
+	}
+	#sidebar .widget_search input[type="submit"] {
+		width: 36px;
+		max-width: 11%;
+		transition: 600ms ease;
+	}
+	#sidebar .widget_search input.input-btn.expanded {
+			height: 45px;
+    	background-position-y: 12px;
+			vertical-align: middle;
+			
+	}
  .home .main-content {
 	 padding: 0;
 	 margin-top: 40px;
