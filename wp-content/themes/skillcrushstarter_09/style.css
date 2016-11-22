@@ -138,9 +138,6 @@ html[xmlns] .clearfix {
 header, footer, section, aside, time, article {
 	display: block;
 }
-a {
-	text-decoration: none;
-}
 html,
 body {
 	height: 100%;
@@ -149,11 +146,65 @@ body {
 	background: #fff;
 	border-top: 6px solid #45ac9d;
 	color: #3b3b3b;
-	font: 17px/1.65 'OpenSans', Arial, sans-serif;
+	font: 17px/1.65 'Open Sans', Arial, sans-serif;
 	letter-spacing: -0.01em;
 }
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+embed,
+iframe,
+object,
+video {
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	vertical-align: middle;
+}
+a {
+	text-decoration: none;
+	color: #45ac9d;
+}
+p {
+	margin: 30px 0;
+}
+p:first-child {
+	margin: 20px 0;
+}
+h2 {
+	margin: 20px 0 10px 0;
+}
+em {
+	font-style: italic;
+}
+b,
+strong {
+	font-weight: 700;
+}
+ul, ol {
+	margin: 0 0 1.6em 1.3333em;
+}
+ ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+/* Hide content visually but make available to screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	/* many screen reader and browser combinations announce broken words as they would appear visually */
+	word-wrap: normal !important;
+}
 #page {
-	width: 960px;
+	max-width: 960px;
+	overflow: hidden;
+	width: 100%;
 	margin: auto;
 }
 .page-header {
@@ -184,10 +235,10 @@ body {
 	float: right;
 	padding-top: 22px;
 }
-.page-header .top-nav .menu ul li {
+.page-header .top-nav ul li {
 	display: inline;
 }
-.page-header .top-nav .menu ul li a {
+.page-header .top-nav ul li a {
 	color: inherit;
 	font-size: 14px;
 	line-height: normal;
@@ -216,13 +267,33 @@ body {
 }
 #sidebar p {
 	font: 14px/28px 'Open Sans';
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 }
 #sidebar .widget {
-	padding: 28px 31px;
+	padding: 20px 31px 0px;
+}
+#sidebar .widget_search {
+	padding: 20px 31px;
+}
+#sidebar .widget h2 {
+	font: 600 14px 'Open Sans';
+	color: #45ac9d;
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+#sidebar .widget ul li, 
+#sidebar .widget ol li {
+	font: 600 14px 'Open Sans';
+	color: #3b3b3b;
+	margin-bottom: 15px;
+}
+#sidebar .widget ul li a,
+#sidebar .widget ol li a{
+	color: #3b3b3b;
 }
 #sidebar .widget_text {
 	border-bottom: 1px solid #BFBFBF;
+	margin-bottom: 20px;
 }
 #sidebar .widget_text img {
 	max-width: 175px;
@@ -260,10 +331,10 @@ body {
 	margin-left: -5px;
 	vertical-align: middle;
 }
-#sidebar .widget_categories {
+/*#sidebar .widget_categories {
 	padding: 28px 31px 0 31px;
-}
-#sidebar .widget_categories h2,
+}*/
+/*#sidebar .widget_categories h2,
 #sidebar .widget_archive h2 {
 	font: 600 14px 'Open Sans';
 	color: #45ac9d;
@@ -278,7 +349,7 @@ body {
 #sidebar .widget_categories ul li a,
 #sidebar .widget_archive ul li a {
 	color: #3b3b3b;
-}
+}*/
 
 /* BLOG styles */
 .post-entry {
@@ -406,10 +477,10 @@ body {
 	margin-bottom: 40px;
 	text-align: center;
 }
-#navigation .left {
+#navigation .prev {
 	float: left;
 }
-#navigation .right {
+#navigation .next {
 	float: right;
 }
 #navigation .left a,

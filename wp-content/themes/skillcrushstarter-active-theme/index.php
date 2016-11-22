@@ -43,14 +43,12 @@ get_header(); ?>
 to allow the both the content and the sidebar to have equal height - making the border follow all the way down. Problem: looks
 terrible when browser size is reduced - will have to look into proper use of flex - should probably fall back with a float and
 build on responsiveness. -->
-
-	<?php //if ( have_posts() ): ?>
-		<div id="navigation" class="container"> <!-- Here I added the 'span' as it was present in the other themes but not this one -->
-	        <div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
-	        <div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
-	  </div>
-	<?php //endif; ?>
-
-
-
+<?php global $wp_query;
+$max = $wp_query->max_num_pages;
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+<div id="navigation" class="container">
+	<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
+	<div class="middle-pages <?php if ( $paged == 1 )  { echo "middle-right"; } if ( $paged == $max ) { echo "middle-left"; } ?>"><?php echo "Page " . $paged . " of " . $max; ?></div> <?php //echo $paged, $max; echo $paged = $max ? echo 'true' : echo 'false'; ?>
+	<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
+</div>
 <?php get_footer(); ?>

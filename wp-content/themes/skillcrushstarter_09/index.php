@@ -29,9 +29,16 @@ get_header(); ?>
 
 	<?php if ( have_posts() ): ?>
 		<div id="navigation" class="container">
-	        <div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
-	        <div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
+			<?php the_posts_pagination( array(
+		 'mid_size' => 2,
+		 'prev_text' => __( '<span>Newer Posts</span>', 'textdomain' ),
+		 'next_text' => __( '<span>Older Posts</span>', 'textdomain' ),
+		 'screen_reader_text' => ( '' )
+	) ); ?> 
+	        <!-- <div class="left"><?php //next_posts_link('&larr; <span>Older Posts</span>'); ?></div> -->
+	        <!-- <div class="right"><?php //previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div> -->
 	  </div>
+
 	<?php endif; ?>
 </section>
 
