@@ -398,6 +398,10 @@ header.page-header {
 #isotope-section div a img {
 	max-width: 100%;
 }
+.article-preview-image img {
+	display: block;
+	margin: 0 auto;
+}
 .page-template-custom-masonry p {
 	margin: 10px;
 }

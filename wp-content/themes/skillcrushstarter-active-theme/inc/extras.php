@@ -49,7 +49,7 @@ if ( is_home() ) {
    return $social_icons;
  }
  
- // Pagination 
+ // Custom Pagination 
  function skillcrushstarter_custom_pagination() {
      global $wp_query;
      $max = $wp_query->max_num_pages; 
