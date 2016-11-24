@@ -20,21 +20,20 @@ get_header(); ?>
 <?php echo skillcrushstarter_blog_intro(); ?>
 
 <section class="index-page">
-	<div class="main-content">
-
+	
 <?php global $paged; ?>
 		<?php if ( have_posts() ): ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) ){
-					// if this is the first blog entry on the first blog page - display full content
-					get_template_part('content', get_post_format());
-				} else {
-					// otherwise display excerpt
-			    get_template_part('content-blog', get_post_format()); } ?>
-			<?php endwhile; ?>
-		<?php endif; ?>
-
-	</div>
+			<div class="main-content">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) ){
+							// if this is the first blog entry on the first blog page - display full content
+							get_template_part('content', get_post_format());
+						} else {
+							// otherwise display excerpt
+					    get_template_part('content-blog', get_post_format()); } ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div><!-- .main-content -->
 
 	<?php get_sidebar(); ?>
 
