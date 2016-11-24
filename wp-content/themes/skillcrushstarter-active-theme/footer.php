@@ -49,10 +49,8 @@
 			</footer><!-- #colophon -->
 			
 			<div class="social-links-footer">
-				<p class="get-in-touch">
-					Want to get in touch? Let's grab a coffee and talk development: <span><a href="mailto:a.cascarano@gmail.com">a.cascarano@gmail.com</a></span>
-				</p>
-				<?php echo skillcrushstarter_social_icons(); ?> 
+				<?php echo skillcrushstarter_display_footer_details(); ?><!-- in customizer -->
+				<?php echo skillcrushstarter_social_icons(); ?>
 			</div>
 			
 		<?php } ?>

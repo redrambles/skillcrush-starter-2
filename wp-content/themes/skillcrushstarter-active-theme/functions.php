@@ -328,7 +328,8 @@ add_filter('get_the_archive_title', function ($title) {
  *
  * Ann addition
  */
-require get_template_directory() . '/inc/custom-archives-functions.php';
-require get_template_directory() . '/inc/admin/admin-functions.php';
-require get_template_directory() . '/inc/admin/admin-extras.php';
-require get_template_directory() . '/inc/extras.php';
+require get_stylesheet_directory() . '/inc/custom-archives-functions.php';
+require get_stylesheet_directory() . '/inc/admin/admin-functions.php';
+require get_stylesheet_directory() . '/inc/admin/admin-extras.php';
+require get_stylesheet_directory() . '/inc/extras.php';
+include get_stylesheet_directory() . '/inc/customizer.php';
