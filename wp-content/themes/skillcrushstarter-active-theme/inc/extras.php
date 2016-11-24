@@ -35,7 +35,7 @@ if ( is_home() ) {
 	 } // end check for if is_home
  } 
  
- // Social iconv_mime_decode_headers
+ // Social icons
  function skillcrushstarter_social_icons() {
    $social_icons = "";
    $social_icons .= '<div class="social-btns">';
@@ -43,7 +43,7 @@ if ( is_home() ) {
    $social_icons .=   '<a href="" class="soc-icon fb"></a>';
    $social_icons .=   '<a href="" class="soc-icon ln"></a>';
    $social_icons .=   '<a href="" class="soc-icon db"></a>';
-   $social_icons .=   '<a href="" class="soc-icon gh"></a>';
+   $social_icons .=   '<a href="http://www.github.com/redrambles" class="soc-icon gh"></a>';
    $social_icons .= '</div>';
    
    return $social_icons;
@@ -73,7 +73,7 @@ function ajax_heart_add_love() {
     die();
 }
 
-// Remove the extra 10px around image captions - credit Justin trader_cdladvanceblock
+// Remove the extra 10px around image captions - credit Justin Tadlock
 // CAPTION remove the extra 10 px of horror
 add_filter( 'img_caption_shortcode', 'cleaner_caption', 10, 3 );
 

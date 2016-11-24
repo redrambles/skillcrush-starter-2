@@ -15,7 +15,6 @@
 
 		<?php if (!is_front_page() ) { ?>
 			<!-- Ann addition -->
-
 			<!-- Testing Footer Widget Area  -->
 			<div class="footer-widget-area">
 				<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
@@ -48,6 +47,14 @@
 					<?php printf( __( 'Theme: %1$s by %2$s.', 'skillcrushstarter' ), 'skillcrushstarter', '<a href="http://www.skillcrush.com">Skillcrush.com</a>' ); ?>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
+			
+			<div class="social-links-footer">
+				<p class="get-in-touch">
+					Want to get in touch? Let's grab a coffee and talk development: <span><a href="mailto:a.cascarano@gmail.com">a.cascarano@gmail.com</a></span>
+				</p>
+				<?php echo skillcrushstarter_social_icons(); ?> 
+			</div>
+			
 		<?php } ?>
 
 	</div><!-- #page -->

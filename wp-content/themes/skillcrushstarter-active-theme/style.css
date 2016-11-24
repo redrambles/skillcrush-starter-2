@@ -1312,6 +1312,19 @@ h3.code-button:hover {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
+.social-links-footer {
+	text-align: center;
+	margin: 2.5em 0 2em;
+}
+.get-in-touch {
+	font-size: 0.95em;
+	color: #3B3B3B;
+	padding-bottom: 20px;
+}
+.get-in-touch a{
+	color: #595959;
+	font-weight: 700;
+}
 .site-info a {
 	color: #fff;
 }

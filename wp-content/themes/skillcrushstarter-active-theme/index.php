@@ -19,9 +19,6 @@ get_header(); ?>
 <!-- If this is the blog page, display the content of the editor at the top - if the user has entered something there. -->
 <?php echo skillcrushstarter_blog_intro(); ?>
 
-<pre><?php //print_r($wp_query); exit; ?></pre>
-<pre><?php //print_r($wp_query->posts); exit; ?></pre>
-
 <section class="index-page">
 	<div class="main-content">
 
@@ -29,8 +26,10 @@ get_header(); ?>
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) ){
+					// if this is the first blog entry on the first blog page - display full content
 					get_template_part('content', get_post_format());
 				} else {
+					// otherwise display excerpt
 			    get_template_part('content-blog', get_post_format()); } ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
@@ -39,16 +38,13 @@ get_header(); ?>
 
 	<?php get_sidebar(); ?>
 
-</section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element
-to allow the both the content and the sidebar to have equal height - making the border follow all the way down. Problem: looks
-terrible when browser size is reduced - will have to look into proper use of flex - should probably fall back with a float and
-build on responsiveness. -->
+</section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element to allow the both the content and the sidebar to have equal height - making the border follow all the way down. -->
 <?php global $wp_query;
-$max = $wp_query->max_num_pages;
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
-<div id="navigation" class="container">
-	<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
-	<div class="middle-pages <?php if ( $paged == 1 )  { echo "middle-right"; } if ( $paged == $max ) { echo "middle-left"; } ?>"><?php echo "Page " . $paged . " of " . $max; ?></div> <?php //echo $paged, $max; echo $paged = $max ? echo 'true' : echo 'false'; ?>
-	<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
-</div>
+	$max = $wp_query->max_num_pages;
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+		<div id="navigation" class="container">
+			<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
+			<div class="middle-pages <?php if ( $paged == 1 )  { echo "middle-right"; } if ( $paged == $max ) { echo "middle-left"; } ?>"><?php echo "Page " . $paged . " of " . $max; ?></div> 
+			<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
+	</div>
 <?php get_footer(); ?>
