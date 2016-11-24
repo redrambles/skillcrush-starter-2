@@ -39,12 +39,11 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 
 </section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element to allow the both the content and the sidebar to have equal height - making the border follow all the way down. -->
-<?php global $wp_query;
-	$max = $wp_query->max_num_pages;
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
-		<div id="navigation" class="container">
-			<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
-			<div class="middle-pages <?php if ( $paged == 1 )  { echo "middle-right"; } if ( $paged == $max ) { echo "middle-left"; } ?>"><?php echo "Page " . $paged . " of " . $max; ?></div> 
-			<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
-	</div>
+
+<div id="navigation" class="container">
+	<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
+		<?php echo skillcrushstarter_custom_pagination(); ?>
+	<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
+</div>
+
 <?php get_footer(); ?>

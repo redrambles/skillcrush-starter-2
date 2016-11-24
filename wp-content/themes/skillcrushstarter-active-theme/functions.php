@@ -297,6 +297,11 @@ function skillcrushstarter_body_classes( $classes ) {
     return $classes;
 }
 
+// Remove the bit before the ':' in the get_the_archive_title - so that we get 'October 2016' instead of Month: October 2016
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});
+
 // TEST TEST - WORKS (to use the filter in red-cta-widget - will overwrite anything written in Appearance -> Widgets)
 // function red_widget_title( $title ){
 // 	$title = "BARF";

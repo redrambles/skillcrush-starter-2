@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Category pages
+ * The template for displaying Archive pages
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,7 +14,7 @@ get_header(); ?>
 <section class="category-page">
 	<?php if ( have_posts() ): ?>
 		<header class="page-header">
-			<h1 class="page-title"><?php printf( __( 'Posts categorized as <span>%s</span>', 'skillcrushstarter' ), single_cat_title( '', false ) ); ?></h1>
+			<h1 class="page-title">Archive Results for <span><?php the_archive_title(); ?></span></h1>
 		</header>
 	<?php endif; ?>
 
@@ -31,6 +31,7 @@ get_header(); ?>
 	</div>
 
 	<?php get_sidebar(); ?>
+
 
 </section>
 

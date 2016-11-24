@@ -49,6 +49,20 @@ if ( is_home() ) {
    return $social_icons;
  }
  
+ // Pagination 
+ function skillcrushstarter_custom_pagination() {
+     global $wp_query;
+     $max = $wp_query->max_num_pages; 
+     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+     $class = "";
+     $output = "";
+     if ( $paged == 1 )  { $class = "middle-right"; } if ( $paged == $max ) { $class = "middle-left"; }
+
+     $output .= '<div class="middle-pages '. $class . '">';
+     $output .= 'Page ' . $paged . ' of ' . $max . '</div>'; 
+     
+     return $output;   
+ }
  
  // AJAXFor the 'show some love' button 
  function skillcrushstarter_show_some_love() {
