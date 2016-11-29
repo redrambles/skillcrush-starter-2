@@ -192,7 +192,6 @@ function skillcrushstarter_login_url() {
 }
 add_filter('login_headerurl', 'skillcrushstarter_login_url');
 
-
 // Change the tooltip for login page logo
 function skillcrushstarter_login_url_text() {
     return 'Hi! I\'m Ann. :)';
@@ -221,22 +220,13 @@ function custom_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
-// add_filter( 'excerpt_more', 'new_excerpt_more' );
-// function new_excerpt_more( $more ) {
-//     return '... <a href="' . get_permalink() . '">More</a>';
-// }
-
 // Make the excerpt length smaller so that it fits my blog page design idea
 function my_custom_excerpt_length( $length ) {
      return 25;
 }
 add_filter( 'excerpt_length', 'my_custom_excerpt_length', 999 );
 
-
-
 // Remove automatic styling for the content area of the front-page that is messing with our social icons (otherwise have to line them up side by side)
-add_filter( 'the_content', 'skillcrushstarter_no_wpautop_front_page', 9 );
-
 function skillcrushstarter_no_wpautop_front_page( $content ) {
 
     if ( is_front_page() ) {
@@ -247,6 +237,7 @@ function skillcrushstarter_no_wpautop_front_page( $content ) {
         return $content;
     }
 }
+add_filter( 'the_content', 'skillcrushstarter_no_wpautop_front_page', 9 );
 
 //Adds custom classes to the array of post classes.
 function skillcrushstarter_post_classes( $classes ) {
@@ -279,14 +270,7 @@ function my_home_link_shortcode() {
 	return $string;
 }
 
-// Testing the addition of excerpts for pages
-// function skillcrushstarter_add_excerpt_for_pages() {
-// 	add_post_type_support( 'page', 'excerpt' );
-// }
-// add_action( 'init', 'skillcrushstarter_add_excerpt_for_pages' );
-// 
-
-// Testing the addition of a body class for the contact page
+// Add a body class for the contact page
 add_filter( 'body_class', 'skillcrushstarter_body_classes' );
 
 function skillcrushstarter_body_classes( $classes ) {
@@ -297,7 +281,7 @@ function skillcrushstarter_body_classes( $classes ) {
     return $classes;
 }
 
-// Remove the bit before the ':' in the get_the_archive_title - so that we get 'October 2016' instead of Month: October 2016
+// Remove the bit before the ':' in the archive titles - so that we get 'October 2016' instead of Month: October 2016
 add_filter('get_the_archive_title', function ($title) {
     return preg_replace('/^\w+: /', '', $title);
 });
@@ -309,25 +293,6 @@ add_filter('get_the_archive_title', function ($title) {
 // }
 // add_filter('widget_title', 'red_widget_title');
 
-
-// called in single.php with 'do_action'
-// function red_cta_below_posts() {	
-// 	
-// 	if ( is_singular( 'post' ) ) { 
-// 		
-// 	$output =	'<div class="cta-in-post">';
-// 			$output .= 'Call us at 555-5555 or email <a href="email@email.com">email@email.com</a>';
-// 		$output .= '</div>';
-// 		echo $output;
-// 	}
-// }
-// add_action( 'red_after_content', 'red_cta_below_posts' );
-
-/**
- * Custom archive template
- *
- * Ann addition
- */
 require get_stylesheet_directory() . '/inc/custom-archives-functions.php';
 require get_stylesheet_directory() . '/inc/admin/admin-functions.php';
 require get_stylesheet_directory() . '/inc/admin/admin-extras.php';
