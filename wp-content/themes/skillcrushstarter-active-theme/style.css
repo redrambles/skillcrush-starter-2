@@ -675,9 +675,9 @@ margin: 2% 0%;
 #sidebar .widget {
 	padding: 0px 31px 20px;
 }
-#sidebar .widget_text {
+/*#sidebar .widget_text {
 	border-bottom: 1px solid #BFBFBF;
-}
+}*/
 #sidebar .widget_text img {
 	max-width: 175px;
 	margin: auto;
@@ -1465,7 +1465,14 @@ h3.code-button:hover {
  	padding: 20px 0px 50px;
  }
  
- /* 11.3 Theme check additions  - Todo	*/
+ 
+ /* 11.3 OMDb API integration	*/
+ 
+ .movie_elements {
+	 font-weight: 700;
+ }
+ 
+ /* 11.4 Theme check additions  - Todo	*/
 
  .wp-caption-text {
 	 margin-top: 0;

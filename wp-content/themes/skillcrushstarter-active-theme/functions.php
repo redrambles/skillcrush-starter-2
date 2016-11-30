@@ -239,19 +239,25 @@ function skillcrushstarter_no_wpautop_front_page( $content ) {
 }
 add_filter( 'the_content', 'skillcrushstarter_no_wpautop_front_page', 9 );
 
-//Adds custom classes to the array of post classes.
-function skillcrushstarter_post_classes( $classes ) {
+// Use ACF Pro to Generate an Options page
 
-    if ( ! has_post_thumbnail() ) {
-        $classes[] = 'without-featured-image';
-    } else {
-        $classes[] = 'with-featured-image';
-    }
+if( function_exists('acf_add_options_page') ) {
 
-    return $classes;
+	acf_add_options_page(array(
+		'page_title' => 'Options',
+		'menu_title' => 'Options',
+		'menu_slug' => 'skillcrushstarter-options',
+		'capability' => 'edit_posts',
+		'redirect' => false
+	));
+	
+	acf_add_options_sub_page(array(
+	'page_title' 	=> 'Movie API Settings',
+	'menu_title'	=> 'Movie API',
+	'parent_slug'	=> 'skillcrushstarter-options',
+));
+
 }
-add_filter( 'post_class', 'skillcrushstarter_post_classes' );
-
 
 // Sweet admin notice
 // add_action( 'admin_notices', 'admin_notice_of_happiness' );
@@ -262,13 +268,16 @@ add_filter( 'post_class', 'skillcrushstarter_post_classes' );
 // }
 
 // shortcode: [home]
-add_shortcode('home', 'my_home_link_shortcode');
+// add_shortcode('home', 'my_home_link_shortcode');
+// 
+// function my_home_link_shortcode() {
+// 
+// 	$string = '<a href= class="home-link"' . get_home_url() .'">Home Page</a>';
+// 	return $string;
+// }
 
-function my_home_link_shortcode() {
-
-	$string = '<a href= class="home-link"' . get_home_url() .'">Home Page</a>';
-	return $string;
-}
+// Permit shortcodes in text widget
+add_filter('widget_text', 'do_shortcode');
 
 // Add a body class for the contact page
 add_filter( 'body_class', 'skillcrushstarter_body_classes' );

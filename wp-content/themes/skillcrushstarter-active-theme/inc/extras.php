@@ -132,3 +132,39 @@ function cleaner_caption( $output, $attr, $content ) {
 	/* Return the formatted, clean caption. */
 	return $output;
 }
+
+
+// Connect with Open Movie API for a 'Currently Watching' feature using an Options page and ACF Pro - to use in Text Widget
+// shortcode: [currently_watching]
+add_shortcode('currently_watching', 'my_currently_watching_shortcode');
+
+function my_currently_watching_shortcode() {
+  ob_start(); 
+  $movie_title = get_field('movie_title', 'option'); 
+  $movie_comment = get_field('movie_comment', 'option');
+    if ( !function_exists('get_field') || "" == $movie_title ) {
+      return false;
+    }
+    
+      $api_url = 'http://www.omdbapi.com/?t=';
+      $api_url .= $movie_title;
+      $api_url .= '&y=&plot=short&r=json';
+      $response = wp_remote_get( $api_url );
+
+      // Is the API up?
+      if ( ! 200 == wp_remote_retrieve_response_code( $response ) ) {
+        return false;
+      }
+      $test = json_decode( wp_remote_retrieve_body( $response ), true );
+      
+      //print_r( $test );
+      $output = '<h2 class = "widget-title movie_title_header"> Recently Watched: </h2>';
+      $output .= '<p><span class="movie_elements"> Title:</span> '.$test["Title"].'</p>';
+      $output .= '<p><span class="movie_elements">Year:</span> '.$test["Year"].'</p>';
+      $output .= '<p><span class="movie_elements"> IMDB Rating:</span> '.$test["imdbRating"].'</p>';
+      if ( $movie_comment ) {
+        $output .= '<p><span class="movie_elements"> Thoughts: </span>'.$movie_comment.'</p>';
+      }
+      echo $output;
+      return ob_get_clean();
+}
