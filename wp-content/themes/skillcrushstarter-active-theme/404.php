@@ -20,14 +20,11 @@ get_header(); ?>
 		<div class="text_404">
 			<h2>Oops! Looks like we took a wrong turn!</h2>
 			<p> Would you like to try a search?</p>
+		  <div class="search-404">
+		    <?php get_search_form(); ?>
+		  </div>
 		</div>
-    
-  <div class="search-404">
-    <?php get_search_form(); ?>
-  </div>
 
-	 <figure class="image_404">
-		</figure>
 		<div class="recentposts_404">
 			<h2><a href="<?php echo esc_attr( site_url('/blog') );?>">Recent Posts</a></h2>
 				<ul>
@@ -40,22 +37,6 @@ get_header(); ?>
 				?>
 				</ul>
 		</div>
-		<!-- <div class="recentwork_404">
-			<h2><a href="<?php //echo esc_attr( site_url('/case-studies') );?>">Recent Work</a></h2>
-				<ul>
-				<?php
-					// $args = array( 'numberposts' => '5', 'post_type' => 'case_studies', 'order' => 'ASC' );
-					// $recent_posts = wp_get_recent_posts( $args );
-					// foreach( $recent_posts as $recent ){
-					// 	echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-					//}
-				?>
-				</ul>
-		</div> -->
-	<!-- <div class="search_404">
-			<h2>Looking for something else?</h2>
-			<?php //get_search_form();?>
-	</div>  -->
 </div>
 
 <?php get_footer(); ?>

@@ -1472,7 +1472,23 @@ h3.code-button:hover {
 	 font-weight: 700;
  }
  
- /* 11.4 Theme check additions  - Todo	*/
+ /* 11.4 404 page */
+ 
+ .recentposts_404 {
+	 width: 50%;
+	 float: left;
+	 text-align: center;
+ }
+ .recentposts_404 ul {
+	 list-style-type: none;
+	 margin-left: 0;
+	 padding-left: 0;
+ }
+ .recentposts_404 ul {
+	 margin-left: 0;
+ }
+ 
+ /* 11.5 Theme check additions  - Todo	*/
 
  .wp-caption-text {
 	 margin-top: 0;

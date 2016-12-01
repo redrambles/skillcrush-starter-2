@@ -20,7 +20,6 @@ get_header(); ?>
 <?php echo skillcrushstarter_blog_intro(); ?>
 
 <section class="index-page">
-	
 <?php global $paged; ?>
 		<?php if ( have_posts() ): ?>
 			<div class="main-content">
