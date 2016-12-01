@@ -18,7 +18,13 @@ get_header(); ?>
 
 				<?php the_content(); ?>
 				
-				<?php //echo skillcrushstarter_social_icons(); ?>
+				<?php 
+				// for a 'manual' menu method
+				// if ( has_nav_menu ( 'secondary' ) ) { ?>
+					<!-- <nav class="social-media-navigation" role="navigation"> -->
+						<?php //wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'social-media-menu', 'link_before'=> '<span class="screen-reader-text">', 'link_after' => '</span>', ) ); ?>
+					<!-- </nav> -->
+					<?php //} ?>
 				
 				<a href="<?php echo esc_attr( site_url('/blog/') ); ?>" class="btn">Come on in, there's coffee</a>
 			<?php endwhile; ?>

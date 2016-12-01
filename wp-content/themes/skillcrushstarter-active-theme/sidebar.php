@@ -18,11 +18,12 @@
 
 	 //} else { // if this is NOT a page, go ahead and display the regular sidebar ?>
 
-		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-		<nav role="navigation" class="navigation site-navigation secondary-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-		</nav>
-		<?php endif; ?>
+	 <?php //if ( has_nav_menu ( 'secondary' ) ) { ?>
+		 <!-- <nav class="social-media-navigation" role="navigation"> -->
+			 <?php //wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'social-media-menu', 'link_before'     => '<span class="screen-reader-text">', 'link_after'      => '</span>', 
+		 //) ); ?>
+		 <!-- </nav> -->
+		 <?php //} ?>
 
 		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">

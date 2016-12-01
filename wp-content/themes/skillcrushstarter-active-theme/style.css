@@ -25,8 +25,9 @@ Text Domain: skillcrushstarter-active-theme
 8.0 HOMEPAGE / FRONT PAGE
 9.0 FOOTER
 10.0 ALIGNMENTS
-11.0 MISC
-12.0 MEDIA QUERIES
+11.0 SOCIAL NAVIGATION
+12.0 MISC
+13.0 MEDIA QUERIES
 
 ***********************************/
 
@@ -299,6 +300,7 @@ header.page-header {
 .soc-icon.gh {
 	background: url(img/github-icon.png) no-repeat center 0;
 }
+
 
 /**********************************
 			3.0 STATIC PAGE STYLES
@@ -1410,12 +1412,54 @@ h3.code-button:hover {
  	margin-top: 0.4em;
  	margin-bottom: 1.6em;
  }
+ 
+ /**********************************
+ 			11.0 SOCIAL NAVIGATION
+ ***********************************/
+ 
+ .social-media-navigation ul {
+    text-align: center;
+    list-style: none;  
+		float: left; 
+		margin: 0 0 20px;
+}
+
+.social-media-navigation ul li {
+    position: relative;
+    display:  inline-block;
+    background: rgba(0,0,0,0.8);
+    margin: 0px 4px 0px 0px;
+    width: 23px;
+    text-align: center;
+    font-size: 0.6em;
+    border-radius: 100%; 
+    -webkit-border-radius: 100%; 
+    -moz-border-radius: 100%;    
+}
+
+.social-media-navigation li a:before {
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+    font-family: 'Fontawesome';
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    content: '\f0c0';
+}
+
+.social-media-navigation li a[href*="facebook.com"]::before { content: '\f09a'; }
+.social-media-navigation li a[href*="twitter.com"]::before { content: '\f099'; }
+.social-media-navigation li a[href*="dribbble.com"]::before { content: '\f17d'; }
+.social-media-navigation li a[href*="github.com"]::before { content: '\f09b'; }
+.social-media-navigation li a[href*="linkedin.com"]::before { content: '\f0e1'; }
+
 
  /**********************************
-			 11.0 MISC
+			 12.0 MISC
  ***********************************/
 
- /* 11.1 Show some love ajax button */
+ /* 12.1 Show some love ajax button */
  .love-button img {
      margin: 0 6px;
      opacity: 0.7;
@@ -1427,7 +1471,7 @@ h3.code-button:hover {
  		transform: scale(1.2);
  }
 
- /* 11.2 Search Form Experiment - No results */
+ /* 12.2 Search Form Experiment - No results */
  .search-header {
  	padding: 20px 0;
  	border-bottom: 1px solid #a6a6a6;
@@ -1466,29 +1510,13 @@ h3.code-button:hover {
  }
  
  
- /* 11.3 OMDb API integration	*/
+ /* 12.3 OMDb API integration	*/
  
  .movie_elements {
 	 font-weight: 700;
  }
- 
- /* 11.4 404 page */
- 
- .recentposts_404 {
-	 width: 50%;
-	 float: left;
-	 text-align: center;
- }
- .recentposts_404 ul {
-	 list-style-type: none;
-	 margin-left: 0;
-	 padding-left: 0;
- }
- .recentposts_404 ul {
-	 margin-left: 0;
- }
- 
- /* 11.5 Theme check additions  - Todo	*/
+  
+ /* 12.5 Theme check additions  - Todo	*/
 
  .wp-caption-text {
 	 margin-top: 0;
@@ -1504,7 +1532,7 @@ h3.code-button:hover {
  }
 
  /**********************************
-			 12.0 MEDIA QUERIES
+			 13.0 MEDIA QUERIES
  ***********************************/
 
 @media (min-width: 1025px) {
