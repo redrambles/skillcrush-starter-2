@@ -139,24 +139,24 @@ function cleaner_caption( $output, $attr, $content ) {
 add_shortcode('recently_watched', 'my_recently_watched_shortcode');
 
 function my_recently_watched_shortcode() {
-  ob_start(); 
-  $movie_title = get_field('movie_title', 'option'); 
-  $movie_comment = get_field('movie_comment', 'option');
+
+    $movie_title = get_field('movie_title', 'option'); 
+    $movie_comment = get_field('movie_comment', 'option');
+    $api_url = 'http://www.omdbapi.com/?t=';
+    $api_url .= $movie_title;
+    $api_url .= '&y=&plot=short&r=json';
+    $response = wp_remote_get( $api_url );
+
     if ( !function_exists('get_field') || "" == $movie_title ) {
       return false;
     }
-    
-      $api_url = 'http://www.omdbapi.com/?t=';
-      $api_url .= $movie_title;
-      $api_url .= '&y=&plot=short&r=json';
-      $response = wp_remote_get( $api_url );
-
-      // Is the API up?
+      // Is the API up? Do you have internet connection?
       if ( ! 200 == wp_remote_retrieve_response_code( $response ) ) {
         return false;
       }
       $movie = json_decode( wp_remote_retrieve_body( $response ), true );
       
+      ob_start(); 
       //print_r( $movie );
       $output = '<h2 class = "widget-title movie_title_header"> Recently Watched </h2>';
       $output .= '<p><span class="movie_elements"> Title:</span> '.$movie["Title"].'</p>';
