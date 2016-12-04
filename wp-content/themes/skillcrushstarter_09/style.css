@@ -246,6 +246,58 @@ ol {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+/* Ann Additions for Sub Menu Items */
+.page-header .top-nav {
+    width: 48%;
+		margin-left: 2%;
+    float: right;
+		padding-top: 0;
+}
+ul.menu {
+    overflow: auto;
+		margin: 0;
+}
+.page-header .top-logo {
+    color: inherit;
+    float: left;
+    width: 50%;
+}
+.page-header .top-nav ul li {
+    /* display: inline; */
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+.page-header .top-nav ul li a,
+.page-header .top-nav ul.submenu li {
+	margin: 0;
+}
+.page-header .top-nav ul li:first-child {
+  margin-left:0;
+ }
+.page-header .top-nav .sub-menu li {
+  display: none;
+	position: relative;
+}
+.page-header .top-nav ul li.menu-item-has-children:hover .sub-menu li {
+  display: block;
+	margin-left: 0;
+}
+.page-header .top-nav li.menu-item-has-children:hover ul.sub-menu {
+	margin: 0;
+	position: absolute;
+	width: 100px;	
+}
+.page-header .top-nav li.menu-item-has-children:hover ul.sub-menu a{
+	padding: 3px 4px;
+	display: block;
+	margin-bottom: 3px;
+	border: 1px solid #CFCFCF;
+	z-index: 1;
+}
+.page-header .top-nav li.menu-item-has-children:hover ul.sub-menu a:hover {
+	background-color: lightgray;
+}
 .main-content {
 	padding: 55px 47px 0 0;
 	float: left;
