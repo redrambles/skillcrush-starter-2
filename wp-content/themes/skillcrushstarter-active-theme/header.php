@@ -25,11 +25,13 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header class="page-header container">
-			<a href="<?php echo site_url(); ?>" class="top-logo">
-				<span class="title"><?php bloginfo('name'); ?></span>
-				<!-- <img src="<?php //echo get_template_directory_uri()?>/img/facebook-icon.png" width="25" height="25" alt="" /> -->
-				<span class="sub-title"><?php bloginfo('description'); ?></span>
-			</a>
+			<div class="logo-container">
+				<a href="<?php echo site_url(); ?>" class="top-logo">
+					<span class="title"><?php bloginfo('name'); ?></span>
+					<!-- <img src="<?php //echo get_template_directory_uri()?>/img/facebook-icon.png" width="25" height="25" alt="" /> -->
+					<span class="sub-title"><?php bloginfo('description'); ?></span>
+				</a>
+			</div>
 			<nav class="top-nav">
 				<?php wp_nav_menu(array('theme_location' => 'primary-menu')); ?> 
 			</nav>
