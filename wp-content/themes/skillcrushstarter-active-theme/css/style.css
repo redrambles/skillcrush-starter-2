@@ -1571,14 +1571,14 @@ h3.code-button:hover {
   .page-header .top-nav li.menu-item-has-children:hover .sub-menu {
   	position: relative;
   	max-width: 120px;	
- 	display: block;
- 	flex-direction: column;
+ 		display: block;
+ 		flex-direction: column;
   }
  .page-header .top-nav li.menu-item-has-children:hover .sub-menu {
    display: block;
- 	position: absolute;
- 	top: 100px;
- 	z-index: 2;
+ 		position: absolute;
+ 		top: 100px;
+ 		z-index: 2;
  }
  .page-header .top-nav li.menu-item-has-children:hover .social-btns {
  	opacity: 0.3;
@@ -1588,7 +1588,7 @@ h3.code-button:hover {
  		transition: 600ms ease-in-out;
  }
  .page-header .top-nav li.menu-item-has-children:hover .sub-menu a {
- 	padding: 3px 4px;
+ 	padding: 4px 6px;
  	display: block;
  	margin-bottom: 3px;
  	border: 1px solid #CFCFCF;
