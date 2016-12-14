@@ -1577,8 +1577,11 @@ h3.code-button:hover {
  .page-header .top-nav li.menu-item-has-children:hover .sub-menu {
    display: block;
  	position: absolute;
- 	top: 100px;
+ 	top: 65px;
  	z-index: 2;
+ }
+ .logged-in .page-header .top-nav li.menu-item-has-children:hover .sub-menu {
+	 top: 100px;
  }
  .page-header .top-nav li.menu-item-has-children:hover .social-btns {
  	opacity: 0.3;
