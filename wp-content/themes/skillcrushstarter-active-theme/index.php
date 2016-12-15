@@ -38,7 +38,7 @@ get_header(); ?>
 
 </section> <!-- I closed the section here instead of encompassing the navigation - which allowed me to use 'display:flex' on the element to allow the both the content and the sidebar to have equal height - making the border follow all the way down. -->
 
-<div id="navigation" class="container">
+<div id="navigation" class="navigation container">
 	<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
 		<?php echo skillcrushstarter_custom_pagination(); ?>
 	<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>

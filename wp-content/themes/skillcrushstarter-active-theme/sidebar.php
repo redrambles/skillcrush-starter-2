@@ -7,7 +7,7 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-<div id="sidebar">
+<div id="sidebar" class="sidebar">
 
 	<?php //if ( is_page() ) { // if this is a page, go ahead and display the second widget area (sidebar2) in the sidebar, provided there are widgets in it
 		//if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
