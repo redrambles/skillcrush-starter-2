@@ -1,6 +1,7 @@
 <article id="post-<?php the_ID(); ?>" class="post-entry">
 	<div class="entry-wrap">
 		<header class="entry-header">
+			<?php the_post_thumbnail(); ?>
 			<div class="entry-meta">
 		        <h3 class="entry-time"><?php the_date(); ?></h3>
 		    </div>
