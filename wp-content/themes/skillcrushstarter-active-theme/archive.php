@@ -35,7 +35,7 @@ get_header(); ?>
 
 </section>
 
-<div id="navigation" class="container">
+<div id="navigation" class="navigation container">
 	<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
 		<?php echo skillcrushstarter_custom_pagination(); ?>
 	<div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>

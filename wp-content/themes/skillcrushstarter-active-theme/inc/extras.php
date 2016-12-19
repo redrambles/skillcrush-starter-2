@@ -146,7 +146,8 @@ function my_recently_watched_shortcode() {
     $api_url .= $movie_title;
     $api_url .= '&y=&plot=short&r=json';
     $response = wp_remote_get( $api_url );
-
+    
+    // If we don't have ACF active or we don't have something entered in the movie title field - bail.
     if ( !function_exists('get_field') || "" == $movie_title ) {
       return false;
     }
@@ -154,6 +155,7 @@ function my_recently_watched_shortcode() {
       if ( ! 200 == wp_remote_retrieve_response_code( $response ) ) {
         return false;
       }
+      // Ok! We've got ACF, we've got a movie title, we've got a working API connection - let's do it!
       $movie = json_decode( wp_remote_retrieve_body( $response ), true );
       
       ob_start(); 
