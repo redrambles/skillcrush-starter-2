@@ -68,7 +68,7 @@ get_header(); ?>
 		//  } // end ACF check
 		//  ?>
 	<!-- </section> -->
-	<div id="navigation" class="container">
+	<div id="navigation" class="container navigation">
 		<?php // testing - this should be used in the loop - according to the Codex - but it seems to work anyways
 			// if ( is_attachment() ) :
 			// 	previous_post_link( '%link', __( '<span>Published In</span>', 'skillcrushstarter' ) );
