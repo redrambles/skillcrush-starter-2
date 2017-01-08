@@ -9,6 +9,19 @@ wp-content/plugins/backupwordpress/
 wp-content/debug.log
 phpinfo.php
 
+# other theme version used for testing
+wp-content/themes/skillcrushstarter_00
+wp-content/themes/skillcrushstarter_04
+wp-content/themes/skillcrushstarter_08
+wp-content/themes/skillcrushstarter_09
+wp-content/themes/skillcrushstarter_09_modified
+wp-content/themes/skillcrushstarter-02-blog-page/
+wp-content/themes/skillcrushstarter-03-sidebar
+wp-content/themes/skillcrushstarter-06-blog
+wp-content/themes/skillcrushstarter-header-footer
+wp-content/themes/skillcrushstarter-newer-older
+
+
 # build stuff
 npm-debug.log
 wp-content/themes/skillcrushstarter-active-theme/node_modules
