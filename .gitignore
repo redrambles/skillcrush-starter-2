@@ -8,6 +8,7 @@ wp-content/backupwordpress-ce0efcf332-backups/
 wp-content/plugins/backupwordpress/
 wp-content/debug.log
 phpinfo.php
+debug.sql
 
 # other theme version used for testing
 wp-content/themes/skillcrushstarter_00
