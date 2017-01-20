@@ -1,0 +1,42 @@
+/* Related Posts Styles */
+
+.related-posts {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 2em;
+  border: 1px solid #ededed;
+}
+
+.related-posts a {
+  display: block;
+  margin-bottom: 2em;
+  background: #FFFACD;
+  color: #3B3B3B;
+  text-decoration: none;
+  border: 1px solid #CFCFCF;
+}
+
+a.get-related-posts {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1em 2em;
+}
+
+.get-related-posts:hover,
+.get-related-posts:focus {
+  color: #fff;
+  background: #45ac9d;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* AJAX Spinner */
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.ajax-loader{
+  display: none;
+  text-align: center;
+  padding: .7em;
+}
