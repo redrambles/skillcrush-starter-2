@@ -122,7 +122,7 @@ header, footer, section, aside, time, article {
 }
 html,
 body {
-	height: 100%; /* Might need to change this to 'min-height' for front page image */
+	min-height: 100%; /* Might need to change this to 'min-height' for front page image */
 }
 body {
 	background: #fff;
@@ -1247,7 +1247,7 @@ h3.code-button:hover {
 .home .main-content {
 	width: 100%;
 	float: none;
-	overflow: hidden;
+	overflow: auto;
 }
 .home .content {
 	width: 550px;
@@ -1802,12 +1802,6 @@ h3.code-button:hover {
 /*.blog {
 	background-color: tomato;
 }*/
-
-
-
-
-
-
 
 
 
