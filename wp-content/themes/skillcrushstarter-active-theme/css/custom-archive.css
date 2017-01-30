@@ -64,7 +64,7 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
 }
 .archives-latest-section ol {
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 0;
   margin-bottom: 0;
 }
@@ -124,6 +124,14 @@ Custom CSS for the Custom Archive page template (custom-archive.php)
     width: 100%;
     padding: 1.5em;
     margin: 0;
+  }
+  .archives-latest-section ol {
+    font-size: 1em;
+  }
+  .latest-posts {
+      border: 0;
+      padding: 0 20px;
+      background-color: rgba(238, 238, 238, 0.11);
   }
   .archives-authors-section,
   .archives-by-month-section,
