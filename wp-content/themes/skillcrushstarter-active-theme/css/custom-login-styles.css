@@ -1,0 +1,79 @@
+/*
+* Custom styles for login page
+*/
+
+body.login {
+	background: url('../img/Skillcrush_Computer_int.png') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 100%;
+}
+
+.login h1 a {
+  background-image: url('../img/logo-hannigan.png');
+	background-size: 105px;
+	height: 105px;
+	width: 105px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.login #login {
+	width: 420px;
+	padding: 8% 2% 0;
+	max-width: 80%;
+}
+
+.login #backtoblog {
+	display: none;
+}
+
+.login #nav {
+	color: #333333;
+	text-align: center;
+}
+
+.login label {
+  font-size: 13px;
+  color: #555555;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background: #ffffff;
+  border-color:#dddddd;
+  -webkit-border-radius: 4px;
+}
+
+.login .button-primary {
+  width: 120px;
+  float:right;
+  background:#45ac9d;
+	border-color:#45ac9d;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.login .button-primary:hover,
+.login .button-primary:active,
+.login .button-primary:focus { 
+	background:#327A70;
+  -webkit-border-radius: 4px;
+  border: 1px solid #327A70;
+	-webkit-transition: all 225ms linear;
+	box-shadow: none;
+}
+
+.login .message {
+	border-left: 4px solid #45ac9d;
+}
+
+.login #login_error,
+.login .message {
+	margin-top: 20px;    
+}
+
+
+
