@@ -180,8 +180,8 @@ function skillcrushstarter_scripts() {
       wp_enqueue_script( 'masonry_script', get_stylesheet_directory_uri() . '/js/masonry_script.js', array( 'masonry' ), true );
 		}
 			// slick slider
-			global $post_type;
- 			if( 'slider' == $post_type ){
+			// global $post_type;
+ 			if( is_page('slider-page') ){
 				wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', 'jquery', '1.4.1' );
 				wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
 				wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css', '', '1.4.1' );
