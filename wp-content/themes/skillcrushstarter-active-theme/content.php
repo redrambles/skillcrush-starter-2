@@ -20,7 +20,7 @@
 			
 			<?php the_content(); 
 			
-			if ( function_exists( 'get_field' ) ) {
+			if ( function_exists( 'get_field' ) && !( is_home() ) ) {
 				// For Code Snippets - Custom Fields - if they exist
 				$snippet_1_title = get_field('snippet_1_title');
 				$snippet_1 = get_field('snippet_1');
