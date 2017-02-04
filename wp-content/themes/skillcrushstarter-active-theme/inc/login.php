@@ -3,7 +3,7 @@
 
 /* Load CSS for custom login page */
 function skillcrushstarter_custom_login() {
-   wp_enqueue_style( 'login_styles', get_template_directory_uri() . '/css/custom-login-styles.css' );
+   wp_enqueue_style( 'login_styles', get_stylesheet_directory_uri() . '/css/custom-login-styles.css' );
 }
 add_action( 'login_enqueue_scripts', 'skillcrushstarter_custom_login');
 
