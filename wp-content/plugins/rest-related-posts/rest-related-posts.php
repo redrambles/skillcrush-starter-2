@@ -78,7 +78,7 @@ function related_post_structure() {
 
 add_filter( 'the_content', __NAMESPACE__ . '\\related_posts' );
 
-// Display the related posts right after the post content 
+// Display the related posts right after the post content on single posts only
 function related_posts( $content ) {
   
   if ( is_single() && is_main_query() ) {
