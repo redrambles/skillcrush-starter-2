@@ -727,12 +727,12 @@ margin: 2% 0%;
 	text-align: center;
 }
 .sidebar .widget_calendar a {
-	color: #45ac9d;
+color: #45ac9d;
 	display: block;
 	padding: .5em;
 	transition: all 150ms linear;
 }
-.sidebar .widget_calendar a:hover:not(.pad) {
+.sidebar .widget_calendar a:hover {
 	background-color: #cdd8d7;
 	color: #378579;
 }
@@ -750,7 +750,7 @@ margin: 2% 0%;
 	 background: #45ac9d;
 	 margin-bottom: 20px;
 }
-.sidebar .calendar_wrap tbody td:hover {
+.sidebar .calendar_wrap tbody td:hover:not(.pad) {
     background-color: #cdd8d7;
 }
 .sidebar .calendar_wrap tbody td {

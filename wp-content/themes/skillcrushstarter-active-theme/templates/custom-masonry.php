@@ -39,10 +39,11 @@ get_header(); ?>
             'key' => '_thumbnail_id'
           )
         ), 
-        'order' => 'ASC',
+        'order' => 'DESC',
       ); 
       
       $my_query = new WP_Query($args);     
+      $size = 'medium';
      
       if ( $my_query->have_posts() ) : while ( $my_query-> have_posts() ) : $my_query->the_post();
         $termsArray = get_the_terms( $post->ID, "category" );  //Get the terms in the category taxonomy for this particular item
@@ -55,7 +56,7 @@ get_header(); ?>
         
         <?php if (has_post_thumbnail()) : ?>
             <figure class="article-preview-image">          
-                <?php the_post_thumbnail(''); ?>    
+                <?php the_post_thumbnail($size); ?>    
             </figure>
         <?php endif; ?>
         
