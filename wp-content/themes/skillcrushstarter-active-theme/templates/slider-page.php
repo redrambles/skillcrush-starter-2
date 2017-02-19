@@ -23,7 +23,7 @@ get_header(); ?>
 			<div class="slick-slider clearfix">
 				<?php if ( $my_query->have_posts() ) : while ( $my_query->have_posts() ) : $my_query->the_post();
 					$slider_image = get_field('slider_image');
-					$size = "full-page"; ?>
+					$size = "filter-page"; ?>
 
 						<div class="slide">
 							<a href="<?php the_permalink(); ?>"><?php	echo wp_get_attachment_image( $slider_image, $size ); ?></a>
