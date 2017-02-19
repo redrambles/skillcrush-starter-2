@@ -158,7 +158,7 @@ function skillcrushstarter_scripts() {
 			wp_enqueue_style( '404-css', get_stylesheet_directory_uri(). '/css/404.css', array( 'style' ) );
 		}
 
-     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 		// For code snippets - just not on blog page it takes too long to load
@@ -184,9 +184,11 @@ function skillcrushstarter_scripts() {
 			// slick slider
 			// global $post_type;
  			if( is_page('slider-page') ){
-				wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', 'jquery', '1.4.1' );
+				wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', 'jquery', '1.3.1' );
 				wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
-				wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css', '', '1.4.1' );
+				wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', '', '1.6.0' );
+				wp_enqueue_style( 'slick-theme-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css', array( 'slick-css' ), '1.6.0' );
+
 			}
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );

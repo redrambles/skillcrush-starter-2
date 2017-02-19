@@ -14,7 +14,8 @@ jQuery(document).ready(function($){
 	$('.slick-slider').slick({ //This would be a great idea for a 'scroll' of blog posts - each image linking to the single blog page
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 3,
+	dots: true
 });
 			
 });
