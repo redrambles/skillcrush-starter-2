@@ -22,8 +22,9 @@ function skillcrushstarter_quote_footer(){ ?>
 function skillcrushstarter_blog_intro(){
 if ( is_home() ) { 
 	$page_for_posts_id = get_option('page_for_posts');
+  $blog_content = get_post_field( 'post_content', $page_for_posts_id);
 	// don't print unnecessary markup - check for content first
-	if ( !empty (get_post_field( 'post_content', $page_for_posts_id ) ) ) {
+	if ( !empty ($blog_content ) )  {
     
     $output = "";
 		$output .= '<div class="blog-intro">';

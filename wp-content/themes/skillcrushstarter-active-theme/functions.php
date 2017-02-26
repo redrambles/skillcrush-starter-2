@@ -253,6 +253,33 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+// Add an author metadata field to media, so that they can be credited if necessary / desired
+function red_media_attachment_field_to_edit( $form_fields, $post ){
+
+	// https://codex.wordpress.org/Function_Reference/wp_get_attachment_metadata
+	$media_author = get_post_meta( $post->ID, 'media_author', true );
+
+	$form_fields['media_author'] = array(
+	'value' => $media_author ? $media_author : '',
+	'label' => __( 'Author' )
+	); 
+	return $form_fields;
+}
+add_filter( 'attachment_fields_to_edit', 'red_media_attachment_field_to_edit', 10, 2 );
+
+// Save the author media metadata field to the database
+function red_media_edit_attachment( $attachment_id ){
+	if ( isset( $_REQUEST['attachments'][$attachment_id]['media_author'] ) ) {
+
+	$media_author = $_REQUEST['attachments'][$attachment_id]['media_author'];
+
+	update_post_meta( $attachment_id, 'media_author', $media_author );
+	}
+}
+add_action( 'edit_attachment', 'red_media_edit_attachment' );
+
+
+
 // Sweet admin notice
 // add_action( 'admin_notices', 'admin_notice_of_happiness' );
 // function admin_notice_of_happiness() {
