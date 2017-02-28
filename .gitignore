@@ -9,6 +9,7 @@ wp-content/plugins/backupwordpress/
 wp-content/debug.log
 phpinfo.php
 debug.sql
+skill-db.sql
 
 # other theme version used for testing
 wp-content/themes/skillcrushstarter_00
