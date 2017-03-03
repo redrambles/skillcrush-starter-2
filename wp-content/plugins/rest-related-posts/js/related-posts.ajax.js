@@ -3,7 +3,7 @@
 **/
 
 (function($){
-  $('.get-related-posts').on( 'click', function(event) {
+  $('.get-related-posts').one( 'click', function(event) {
     event.preventDefault();
     var json_url = postdata.json_url; // this is defined in rest-related-posts.php
     var post_id = postdata.post_id;
