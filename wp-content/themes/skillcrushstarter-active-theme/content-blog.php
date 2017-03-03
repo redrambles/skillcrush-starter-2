@@ -1,5 +1,5 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-entry' ); ?> > <!-- Added post_class for theme check - included 'post-entry' -->
-	<figure class="blog-index-img"><?php the_post_thumbnail( 'blog-page' ); ?></figure>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-entry'); ?>> 
+	<figure class="blog-index-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-page' ); ?></a></figure>
 	<div class="entry-wrap">
 		<header class="entry-header">
 			<div class="entry-meta">
