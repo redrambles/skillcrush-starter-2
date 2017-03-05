@@ -161,12 +161,17 @@ function skillcrushstarter_scripts() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	// For Bill Murray template page 
+	if ( is_page( 'murray' ) ) {
+		wp_enqueue_style('murray-google-fonts', '//fonts.googleapis.com/css?family=Bungee+Shade|Libre+Baskerville|Lora');
+	}
 		// For code snippets - just not on blog page it takes too long to load
 		if ( !is_home() ) {
 		wp_enqueue_script( 'code-snippets', get_stylesheet_directory_uri() . '/js/code-snippets.js', array( 'jquery'), '1.0.0', true );
 		}
 	// ajax
-		wp_enqueue_script( 'ajax-heart', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'ajax-heart', get_stylesheet_directory_uri() . '/js/ajax.js', array( 'jquery' ), '1.0.0', true );
 		wp_localize_script( 'ajax-heart', 'ajaxHeart', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 	// isotope + masonry used on blog-grid page
@@ -181,15 +186,16 @@ function skillcrushstarter_scripts() {
       wp_enqueue_script('masonry');
       wp_enqueue_script( 'masonry_script', get_stylesheet_directory_uri() . '/js/masonry_script.js', array( 'masonry' ), true );
 		}
-			// slick slider
-			// global $post_type;
- 			if( is_page('slider-page') ){
-				wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', 'jquery', '1.3.1' );
-				wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
-				wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', '', '1.6.0' );
-				wp_enqueue_style( 'slick-theme-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css', array( 'slick-css' ), '1.6.0' );
-
-			}
+		// slick slider
+		if( is_page('slider-page') ){
+			wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', 'jquery', '1.3.1' );
+			wp_enqueue_script( 'slick-activate', trailingslashit( get_stylesheet_directory_uri() ) . 'js/slidorama.js', 'jquery', '20160121', true );
+			wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', '', '1.6.0' );
+			wp_enqueue_style( 'slick-theme-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css', array( 'slick-css' ), '1.6.0' );
+		}
+		// misc scripts
+		wp_enqueue_script( 'misc-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0', true );
+		
 }
 add_action( 'wp_enqueue_scripts', 'skillcrushstarter_scripts' );
 

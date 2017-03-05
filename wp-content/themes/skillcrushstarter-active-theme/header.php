@@ -38,5 +38,6 @@
 			<?php echo skillcrushstarter_social_icons(); ?>
 		</header>
 
-
+<?php if( !is_page( 'murray' ) ){ ?>
 		<div id="main" class="site-main">
+<?php } ?>

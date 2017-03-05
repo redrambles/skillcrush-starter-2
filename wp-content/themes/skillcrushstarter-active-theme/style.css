@@ -1580,6 +1580,236 @@ h3.code-button:hover {
 	 /* ToDo */
  }
 
+
+/* 12.6 Bill Murray Template Excercise */
+.page-template-murray #page {
+	max-width: 100%;
+	overflow: initial;
+}
+.page-template-murray .footer-widget-area,
+.page-template-murray .site-footer,
+.page-template-murray .social-links-footer  {
+	display: none;
+}
+.page-template-murray .page-header {
+	display: none;
+}
+.page-template-murray {
+  box-sizing: border-box; 
+}
+
+.page-template-murray *, .page-template-murray *:before, .page-template-murray *:after {
+  box-sizing: inherit; 
+}	
+
+.page-template-murray .clearfix:before,
+.page-template-murray .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ 
+}
+
+.page-template-murray .clearfix:after {
+  clear: both; 
+}
+
+.page-template-murray {
+  font-family: 'Lora', serif;
+  font-size: 20px; 
+}
+@media (min-width: 769px) {
+  .page-template-murray {
+    font-size: 28px; 
+	} 
+}
+.page-template-murray h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 2rem; 
+}
+@media (min-width: 1024px) {
+  .page-template-murray h1 {
+    font-size: 3.5rem; 
+	} 
+}
+.page-template-murray h2, 
+.page-template-murray h3, 
+.page-template-murray h4, 
+.page-template-murray h5, 
+.page-template-murray h6 {
+  font-family: 'Libre Baskerville', serif; 
+}
+.page-template-murray .hero {
+  background: #FFD31B;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+.page-template-murray .hero .hero-image-container {
+    display: inline-block; 
+}
+@media (min-width: 769px) {
+  .page-template-murray .hero h1 {
+    max-width: 80vw; 
+	} 
+}
+.page-template-murray .hero h1 a {
+  color: inherit;
+  text-decoration: none; 
+}
+.page-template-murray .round {
+  border-radius: 2000px;
+  overflow: hidden; 
+}
+.page-template-murray .murrays {
+  margin: 0;
+  padding: 0; 
+	overflow: auto;
+}
+.page-template-murray .murrays .murray {
+  list-style: none; 
+  float: left;
+  display: inline-block;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+	cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+  .page-template-murray .murrays .murray {
+    padding-bottom: 25%;
+    width: 25%; 
+	} 
+}
+@media (min-width: 1025px) {
+  .page-template-murray .murrays .murray {
+    padding-bottom: 16.66667%;
+    width: 16.66667%; 
+   } 
+ }
+.page-template-murray .murrays .murray .murray-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(84, 78, 27, 0.2) 0%, rgba(84, 78, 27, 0.5) 25%, rgba(84, 78, 27, 0.8) 100%);
+    transition: 350ms; 
+}
+  .page-template-murray .murrays .murray:hover .murray-inner,
+	.page-template-murray .murrays .murray:hover .murray-name {
+    opacity: 1;
+}
+.page-template-murray .murrays .murray:hover .murray-name {
+		transform: translateY(-50%);
+}
+.page-template-murray .murrays .murray .murray-name {
+    position: absolute;
+    bottom: 10%;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center; 
+		opacity: 0;
+		transform: translateY(50%);
+		transition: 350ms; 
+}
+.page-template-murray .video-container {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+}
+.page-template-murray .video-container .video-play {
+  cursor: pointer;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  border-radius: 300px;
+  background: rgba(195, 243, 20, 0.5);
+  text-indent: -9999px; 
+}
+.page-template-murray .video-container .video-play:hover {
+	background: #57661e;
+}
+.page-template-murray .video-container .video-play::after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 22.5px 0 22.5px 50px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+.page-template-murray .video-container iframe,
+.page-template-murray .video-container embed,
+.page-template-murray .video-container object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+@media (min-width: 1024px) {
+  .page-template-murray #text {
+    display: flex; 
+	} 
+}
+.page-template-murray #text .header {
+	  position: relative;
+	  padding: 20px; 
+}
+@media (min-width: 1024px) {
+  .page-template-murray #text .header {
+    width: 40%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 2;
+    padding: 50px 15px; 
+	}
+  .page-template-murray #text .header .inner-header {
+    position: sticky;
+    top: 50px; 
+	} 
+}
+@media (min-width: 1280px) {
+  .page-template-murray #text .header {
+    width: 25%; 
+	} 
+}
+.page-template-murray #text .long-text {
+  padding: 20px; 
+}
+@media (min-width: 1024px) {
+  .page-template-murray #text .long-text {
+    padding-left: 60px;
+    padding-right: 60px; 
+	} 
+}
+
  /**********************************
 			 13.0 MEDIA QUERIES
  ***********************************/
