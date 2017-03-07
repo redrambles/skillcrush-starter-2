@@ -140,9 +140,9 @@ function cleaner_caption( $output, $attr, $content ) {
 add_shortcode('recently_watched', 'my_recently_watched_shortcode');
 
 function my_recently_watched_shortcode() {
-
-    $movie_title = get_field('movie_title', 'option'); 
-    $movie_comment = get_field('movie_comment', 'option');
+    
+    $movie_title = get_option('options_movie_title');
+    $movie_comment = get_option('options_movie_comment');
     $api_url = 'http://www.omdbapi.com/?t=';
     $api_url .= $movie_title;
     $api_url .= '&y=&plot=short&r=json';
