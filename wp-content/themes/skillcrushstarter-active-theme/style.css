@@ -640,7 +640,6 @@ margin: 2% 0%;
 	-o-transition: opacity 200ms;
 	transition: opacity 200ms;
 }
-}
 .entry-footer .entry-terms {
 	color: #a6a6a6;
 	font-size: 0.82em;
@@ -1270,7 +1269,6 @@ h3.code-button:hover {
 	min-height: 100%;
 	max-height: 150vh;
 }
-
 .home .page-header {
 	display: none;
 }
@@ -1510,7 +1508,6 @@ h3.code-button:hover {
      opacity: 0.7;
      cursor: pointer;
  		transition: all .2s ease-in-out;
-		all 0.3s ease-out
  }
  .love-button img:hover {
      opacity: 1;
