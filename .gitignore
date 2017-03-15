@@ -12,6 +12,7 @@ debug.sql
 skill-db.sql
 
 # other theme version used for testing
+wp-content/themes/skillcrushstarter_new
 wp-content/themes/skillcrushstarter_00
 wp-content/themes/skillcrushstarter_04
 wp-content/themes/skillcrushstarter_08
