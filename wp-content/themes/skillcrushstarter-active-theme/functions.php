@@ -214,9 +214,9 @@ function skillcrush_comments($comment, $args, $depth) {
 	echo $comment;
 }
 
-// changes excerpt symbol
+// changes excerpt symbol - will be triggered after excerpt length is reached (default = 55 words)
 function custom_excerpt_more($more) {
-	return '...';
+	return '...<p class="more"><a href=". get_permalink(); .">Read more</a></p>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
