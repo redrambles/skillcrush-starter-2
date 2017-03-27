@@ -66,7 +66,7 @@ get_header(); ?>
       
     <div class="clearfix"></div>
     
-    <p class="more"><a href="<?php the_permalink(); ?>">Read More</a></p>
+    <!-- <p class="more"><a href="<?php the_permalink(); ?>">Read More</a></p> -->
 
     <div class="clearfix"></div>
   </div> <!--.ms-item -->
