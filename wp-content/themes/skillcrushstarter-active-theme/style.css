@@ -744,12 +744,12 @@ margin: 2% 0%;
 	vertical-align: middle;
 }
 .sidebar .widget h2 {
-	font: 600 14px 'Open Sans';
+	font: 600 14px 'Open Sans', sans-serif;
 	color: #45ac9d;
 	margin: 20px 0;
 }
 .sidebar .widget ul li {
-	font: 600 14px 'Open Sans';
+	font: 600 14px 'Open Sans', sans-serif;
 	color: #3b3b3b;
 	margin-bottom: 15px;
 }
@@ -807,7 +807,7 @@ color: #45ac9d;
 	margin-left: 10px;
 }
 .sidebar .popular-posts h2 {
-	font: 600 14px 'Open Sans';
+	font: 600 14px 'Open Sans', sans-serif;
 	color: #45ac9d;
 	margin: 0 0 20px 22px;
 }
@@ -822,7 +822,7 @@ color: #45ac9d;
 .sidebar .wpp-post-title,
 .sidebar .wpp-views {
 	color: #3b3b3b;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 	font-size: 0.9em;
 }
 .sidebar .wpp-views {
