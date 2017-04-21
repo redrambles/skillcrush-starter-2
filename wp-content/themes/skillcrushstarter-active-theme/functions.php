@@ -57,11 +57,11 @@ function skillcrushstarter_setup() {
 	// Let WordPress take care of outputting the title
 	add_theme_support( 'title-tag' );
 	// but change the separator from '-' to '|'
-	function skillcrushstarter_custom_title_seperator($sep) {
+	function skillcrushstarter_custom_title_separator($sep) {
 		$sep = '|';
 		return $sep;
 	}
-	add_filter('document_title_separator', 'skillcrushstarter_custom_title_seperator');
+	add_filter('document_title_separator', 'skillcrushstarter_custom_title_separator');
 
 	// Register Menus
 	register_nav_menus ( array (
@@ -123,7 +123,6 @@ add_action( 'widgets_init', 'skillcrushstarter_widgets_init' );
 /**
 * Register Custom Post Types
 **/
-
 function skillcrushstarter_custom_post_types() {
 
 	register_post_type('slider',
