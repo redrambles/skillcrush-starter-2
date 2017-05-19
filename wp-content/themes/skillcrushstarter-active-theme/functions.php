@@ -31,6 +31,11 @@ define( 'SKILLCRUSHSTARTER_THEME_TEMPLATE', get_template_directory() );
 define( 'SKILLCRUSHSTARTER_THEME_VERSION', trim( $skillcrushstarter_theme_data->Version ) );
 define( 'SKILLCRUSHSTARTER_THEME_NAME', $skillcrushstarter_theme_data->Name );
 
+
+/* To enable the use of Jetpack on staging site */
+if ( site_url() == 'http://redtesting2.staging.wpengine.com/' ) {
+add_filter( 'jetpack_development_mode', '__return_true' );
+}
 /**
  * Set the content width based on the theme's design and stylesheet.
  * In response to the theme checker
