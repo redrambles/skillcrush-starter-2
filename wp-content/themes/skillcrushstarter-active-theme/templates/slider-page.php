@@ -26,7 +26,7 @@ get_header(); ?>
 					$size = "filter-page"; ?>
 
 						<div class="slide">
-							<a href="<?php the_permalink(); ?>"><?php	echo wp_get_attachment_image( $slider_image, $size ); ?></a>
+							<?php	echo wp_get_attachment_image( $slider_image, $size ); ?>
 						</div>
 						
 					<?php
