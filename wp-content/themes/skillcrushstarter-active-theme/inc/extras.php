@@ -143,7 +143,7 @@ function my_recently_watched_shortcode() {
     
     $movie_title = get_option('options_movie_title');
     $movie_comment = get_option('options_movie_comment');
-    $api_url = 'http://www.omdbapi.com/?t=';
+    $api_url = 'http://www.omdbapi.com/?i=tt3896198&apikey=6af6885d&?t=';
     $api_url .= $movie_title;
     $api_url .= '&y=&plot=short&r=json';
     $response = wp_remote_get( $api_url );
