@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template part for displaying content
+ *
+ * @package WordPress
+ * @subpackage Skillcrushstarter
+ */
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-entry'); ?>>
 <?php if( is_home() && has_post_thumbnail() ){ // if this is the first post on the blog page - pull in the featured image ?>
 	<figure class="blog-index-img"><?php the_post_thumbnail( 'blog-page' ); ?></figure>

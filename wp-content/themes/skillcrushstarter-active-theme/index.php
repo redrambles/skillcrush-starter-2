@@ -23,15 +23,16 @@ get_header(); ?>
 <?php global $paged; ?>
 		<?php if ( have_posts() ): ?>
 			<div class="main-content">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) ){
+					<?php while ( have_posts() ) : the_post(); 
+					$show_excerpt = get_field('show_excerpt');
+						 if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) && ($show_excerpt == 'no') ){
 							// if this is the first blog entry on the first blog page - display full content
 							get_template_part('content', get_post_format());
 						} else {
 							// otherwise display excerpt
-					    get_template_part('content-blog', get_post_format()); } ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+					    get_template_part('content-blog', get_post_format()); } 
+					 endwhile; 
+				 endif; ?>
 			</div><!-- .main-content -->
 
 	<?php get_sidebar(); ?>

@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template part for displaying content on blog page
+ *
+ * @package WordPress
+ * @subpackage Skillcrushstarter
+ */
+?>
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-entry'); ?>> 
 	<figure class="blog-index-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-page' ); ?></a></figure>
 	<div class="entry-wrap">
