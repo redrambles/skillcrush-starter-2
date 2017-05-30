@@ -1525,6 +1525,10 @@ h3.code-button:hover {
  ***********************************/
 
  /* 12.1 Show some love ajax button */
+.love-me {
+	display: inline-block;
+}
+
  .love-button img {
      margin: 0 6px;
      opacity: 0.7;
