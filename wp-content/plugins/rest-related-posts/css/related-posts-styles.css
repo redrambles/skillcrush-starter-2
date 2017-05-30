@@ -2,7 +2,6 @@
 
 .related-posts {
   margin-top: 2em;
-  margin-bottom: 1em;
   padding: 2em;
   border: 1px solid #ededed;
   border: 1px solid #CFCFCF;
@@ -10,7 +9,7 @@
 
 .related-posts a {
   display: block;
-  margin-bottom: 2em;
+  /*margin-bottom: 2em;*/
   /*background: #FFFACD;*/
   color: #3B3B3B;
   text-decoration: none;
@@ -19,6 +18,10 @@
 .related-posts a.get-related-posts {
   background: #FFFACD;
   border: 1px solid #CFCFCF;
+}
+
+.related-post:last-of-type .related-excerpt p {
+  margin-bottom: 0;
 }
 
 a.get-related-posts {
@@ -40,12 +43,17 @@ a.get-related-posts {
   padding: 0.5em;
   border-bottom: 1px dotted #CFCFCF;
 }
+/* Remove the 'Read More' that is automatically part of the excerpt in the relatec posts section*/
+.related-posts .more {
+  display: none;
+}
 .related-post:hover {
   background-color: #f2f1ef;
   transition: all 0.2s ease-in-out;
 }
 .related-post:last-of-type {
   border-bottom: none;
+  margin-bottom: 0;
 }
 .related-post-title {
   font-weight: bold; 

@@ -22,7 +22,7 @@
           var related_post_loop = '<aside class="related-post clear">' +
                                   '<a href="'+ object.link + '">' + 
                                   '<h1 class="related-post-title">' + object.title.rendered + '</h1>' +
-                                  '<div class-"related-excerpt">' + 
+                                  '<div class="related-excerpt">' + 
                                   object.excerpt.rendered +
                                   '<div>' +
                                   '</a>' +
