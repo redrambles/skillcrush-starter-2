@@ -436,11 +436,13 @@ header.page-header {
 	margin: 0 auto;
 }
 .page-template-custom-masonry p {
-	margin: 10px;
+	margin: 10px 0px;
 }
 .page-template-custom-masonry .more {
-	margin: 0;
-	text-align: center;
+	display: none;
+}
+.page-template-custom-masonry .post-title a {
+	font-weight: 600;
 }
 
 .page-template-custom-masonry .more a {
@@ -463,10 +465,17 @@ header.page-header {
 	cursor: pointer;
 }
 .ms-item {
-width: 33%;
-padding: 1%;
-margin: 2% 0%;
+	width: 31%;
+	padding: 1%;
+	margin: 2% 1% 0;
 }
+.ms-item:hover {
+	/*background-color: rgba(255, 251, 208, 0.5);*/
+	background-color: rgba(255, 251, 208, 0.8);
+	transition: 300ms ease-in-out;
+	cursor: pointer;
+}
+
 .page-template-custom-masonry .page-header {
 	border-bottom: none;
 }
@@ -1964,7 +1973,7 @@ h3.code-button:hover {
 
 @media screen and (max-width: 800px) {
 	.ms-item {
-	width: 50%;
+	width: 48%;
 	padding: 2%;
 	}
 }
