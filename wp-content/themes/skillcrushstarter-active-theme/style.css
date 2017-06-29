@@ -1634,6 +1634,10 @@ h3.code-button:hover {
   box-sizing: inherit; 
 }	
 
+.page-template-murray .murray {
+	margin: 0;
+}
+
 .page-template-murray .clearfix:before,
 .page-template-murray .clearfix:after {
   content: " ";
