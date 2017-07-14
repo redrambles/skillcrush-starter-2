@@ -326,6 +326,43 @@ add_filter('get_the_archive_title', function ($title) {
     return preg_replace('/^\w+: /', '', $title);
 });
 
+// Sidebar Post Filter
+
+function sidebar_post_filter(){
+
+    $args = array(
+        'orderby' => 'date',
+        'order' => $_POST['date']
+    );  
+        if( isset( $_POST['categoryfilter'] ) )
+
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'id',
+                'terms' => $_POST['categoryfilter']
+            )
+        );
+
+    $query = new WP_Query( $args );
+
+    if( $query->have_posts() ) :
+        while( $query->have_posts() ): $query->the_post();
+			$link = get_the_permalink( $query->post->postID );
+            //echo '<h2>' . $query->post->post_title . '</h2>';
+			echo '<h2><a href="'. $link .'">' . $query->post->post_title . '</a></h2>';
+			
+        endwhile;
+        wp_reset_postdata();
+    else :
+        echo 'No posts found';
+    endif;
+    die();
+}
+add_action('wp_ajax_customfilter', 'sidebar_post_filter');
+add_action('wp_ajax_nopriv_customfilter', 'sidebar_post_filter');
+
+
 // TEST TEST - WORKS (to use the filter in red-cta-widget - will overwrite anything written in Appearance -> Widgets)
 // function red_widget_title( $title ){
 // 	$title = "BARF";

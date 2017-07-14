@@ -827,7 +827,41 @@ color: #45ac9d;
 #sb_instagram .sbi_follow_btn a {
 	background-color: #45AC9D;
 }
+/* Post filter form */
 
+.sidebar .sidebar-filter {
+	margin-top: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.85em;
+}
+.sidebar .sidebar-filter label {
+    width: 100%;
+    padding: 0.4em 0 0 0;
+    display: block;
+}
+.sidebar .sidebar-filter label:last-of-type {
+    padding-bottom: .5em;
+}
+.sidebar .sidebar-filter .filter-button {
+	background-color: #45ac9d;
+	color: white;
+    font-weight: bold;
+    padding: 7px 15px;
+    border: 1px solid #45ac9d;
+    border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+	margin-top: 1em;
+}
+.sidebar .sidebar-filter select {
+	color: #45ac9d;
+	height: 1.75em;
+	width: 100%;
+}
+.sidebar .sidebar-filter input[type="radio"] {
+	padding-bottom: .5em;
+}
 /* 4.2.1 Popular Posts Widget Styles */
 .sidebar .popular-posts,
 .sidebar .popular-posts  p {

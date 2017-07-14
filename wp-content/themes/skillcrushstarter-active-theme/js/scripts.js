@@ -49,3 +49,24 @@ jQuery(document).ready(function($) {
 
   // Say Hello
   console.log('Hiya, Gorgeous. Thanks for dropping by! xxx');
+
+  // Sidebar Filter 
+  jQuery(function($){
+    $('#filter').submit(function(){
+        var filter = $('#filter');
+        $.ajax({
+            url:filter.attr('action'),
+            data:filter.serialize(), // form data - will be output in '#response' div
+            type:filter.attr('method'), // POST
+            beforeSend:function(xhr){
+                filter.find('button').text('Applying Filters...');          
+            },
+            success:function(data){
+                filter.find('button').text('Apply filters');                
+                $('#response').html(data);
+
+            }
+        });
+        return false;
+    });
+});
