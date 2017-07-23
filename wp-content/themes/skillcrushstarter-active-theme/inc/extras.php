@@ -171,3 +171,36 @@ function my_recently_watched_shortcode() {
       echo $output;
       return ob_get_clean();
 }
+
+	// Display post filter form if on the blog page
+  // shortcode: [post_filter]
+  add_shortcode('post_filter', 'red_filter_posts');
+  function red_filter_posts(){
+    if(is_home()) { 
+      ob_start();
+      echo '<div class="widget sidebar-filter">
+        <h2>Filter Those Posts!</h2>
+        <form action="'. site_url() . '/wp-admin/admin-ajax.php" method="POST" id="filter">';
+        if( $terms = get_terms( 'category', 'orderby=name' ) ) :
+            echo '<select name="categoryfilter"><option>Select category...</option>';
+            foreach ( $terms as $term ) :
+              echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
+            endforeach;
+            echo '</select>';
+          endif;
+        
+          echo'<label>
+            <input type="radio" name="date" value="ASC" /> Date: Ascending
+          </label>
+          <label>
+            <input type="radio" name="date" value="DESC" checked="checked" /> Date: Descending
+          </label>
+          <button class="filter-button">Apply filters</button>
+          <input type="hidden" name="action" value="customfilter">
+        </form>
+        <div id="response"></div>
+      </div>';
+      
+        } 
+        return ob_get_clean();
+      }

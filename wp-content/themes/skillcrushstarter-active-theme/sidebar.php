@@ -16,20 +16,19 @@
 	<?php endif; ?>
 
 	<!-- Display post filter form if on the blog page-->
-	<?php if(is_home()) { ?>
-		<div class="widget sidebar-filter">
+	<?php if(is_home()) { 
+		echo '<div class="widget sidebar-filter">
 			<h2>Filter Those Posts!</h2>
-			<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-			<?php
-				if( $terms = get_terms( 'category', 'orderby=name' ) ) :
+			<form action="'. site_url() . '/wp-admin/admin-ajax.php" method="POST" id="filter">';
+			if( $terms = get_terms( 'category', 'orderby=name' ) ) :
 					echo '<select name="categoryfilter"><option>Select category...</option>';
 					foreach ( $terms as $term ) :
 						echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
 					endforeach;
 					echo '</select>';
 				endif;
-			?>
-				<label>
+			
+				echo'<label>
 					<input type="radio" name="date" value="ASC" /> Date: Ascending
 				</label>
 				<label>
@@ -39,7 +38,7 @@
 				<input type="hidden" name="action" value="customfilter">
 			</form>
 			<div id="response"></div>
-		</div>
-	<?php } ?>
+		</div>';
+			} ?>
 
 </div><!-- #secondary -->
