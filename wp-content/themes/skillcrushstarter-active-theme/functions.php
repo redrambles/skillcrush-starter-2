@@ -326,8 +326,7 @@ add_filter('get_the_archive_title', function ($title) {
     return preg_replace('/^\w+: /', '', $title);
 });
 
-// Sidebar Post Filter
-
+// Sidebar Post Filter Shortcode (in inc/extras.php)
 function sidebar_post_filter(){
 
     $args = array(
@@ -351,7 +350,6 @@ function sidebar_post_filter(){
 			$link = get_the_permalink( $query->post->postID );
             //echo '<h2>' . $query->post->post_title . '</h2>';
 			echo '<h2><a href="'. $link .'">' . $query->post->post_title . '</a></h2>';
-			
         endwhile;
         wp_reset_postdata();
     else :

@@ -172,7 +172,7 @@ function my_recently_watched_shortcode() {
       return ob_get_clean();
 }
 
-	// Display post filter form if on the blog page
+	// Display post filter form if on the blog page. This just outputs the form and the select. In functions.php is the function that actually makes this work.
   // shortcode: [post_filter]
   add_shortcode('post_filter', 'red_filter_posts');
   function red_filter_posts(){

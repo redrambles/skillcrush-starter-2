@@ -836,7 +836,8 @@ color: #45ac9d;
 }
 .sidebar .sidebar-filter label {
     width: 100%;
-    padding: 0.4em 0 0 0;
+	padding: 0.4em 0;
+	margin-bottom: 0.5em;
     display: block;
 }
 .sidebar .sidebar-filter label:last-of-type {
