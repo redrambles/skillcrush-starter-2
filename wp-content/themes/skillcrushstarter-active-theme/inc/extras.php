@@ -204,3 +204,37 @@ function my_recently_watched_shortcode() {
         } 
         return ob_get_clean();
       }
+
+  // Sidebar Post Filter Shortcode 
+  function red_sidebar_post_filter(){
+
+      $args = array(
+          'orderby' => 'date',
+          'order' => $_POST['date']
+      );  
+          if( isset( $_POST['categoryfilter'] ) )
+
+          $args['tax_query'] = array(
+              array(
+                  'taxonomy' => 'category',
+                  'field' => 'id',
+                  'terms' => $_POST['categoryfilter']
+              )
+          );
+
+      $query = new WP_Query( $args );
+
+      if( $query->have_posts() ) :
+          while( $query->have_posts() ): $query->the_post();
+        $link = get_the_permalink( $query->post->postID );
+              //echo '<h2>' . $query->post->post_title . '</h2>';
+        echo '<h2><a href="'. $link .'">' . $query->post->post_title . '</a></h2>';
+          endwhile;
+          wp_reset_postdata();
+      else :
+          echo 'No posts found';
+      endif;
+      die();
+  }
+  add_action('wp_ajax_customfilter', 'red_sidebar_post_filter');
+  add_action('wp_ajax_nopriv_customfilter', 'red_sidebar_post_filter');
