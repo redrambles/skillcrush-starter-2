@@ -6,9 +6,9 @@
   $('.get-related-posts').one( 'click', function(event) {
     event.preventDefault();
     var json_url = postdata.json_url; // this is defined in rest-related-posts.php
-    var post_id = postdata.post_id;
+    var post_id = postdata.post_id; // I don't think that this is necessary?
     console.log(json_url);
-    console.log(post_id);
+    console.log(post_id); // necessary?
     
     // AJAX
     $.ajax({
@@ -24,7 +24,7 @@
                                   '<h1 class="related-post-title">' + object.title.rendered + '</h1>' +
                                   '<div class="related-excerpt">' + 
                                   object.excerpt.rendered +
-                                  '<div>' +
+                                  '</div>' +
                                   '</a>' +
                                   '</aside>';
                                  

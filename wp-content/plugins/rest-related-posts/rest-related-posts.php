@@ -35,19 +35,18 @@ function related_posts_scripts( ) {
     wp_enqueue_script( 'related-posts-ajax-script', plugin_dir_url( __FILE__ ). 'js/related-posts.ajax.js', array('jquery'), '0,1', true);
     
     global $post;
-    $post_id = $post->ID;
     
     // Use this function to pass data from PHP to JS
     wp_localize_script( 'related-posts-ajax-script', 'postdata', 
       array (
-        'post_id' => $post_id,
+        'post_id' => $post->ID,
         'json_url' => rest_related_posts_json_query()
       )
     );
   }
 }
 
-// Create REST API url 
+// Create REST API url dynamically 
 function rest_related_posts_json_query() {
   $cats = get_the_category();
   $cat_ids = array();
@@ -77,7 +76,6 @@ function related_post_structure() {
 
 
 add_filter( 'the_content', __NAMESPACE__ . '\\related_posts' );
-
 // Display the related posts right after the post content on single posts only
 function related_posts( $content ) {
   
