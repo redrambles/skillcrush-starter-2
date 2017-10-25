@@ -1741,6 +1741,7 @@ h3.code-button:hover {
 	overflow: auto;
 }
 .page-template-murray .murrays .murray {
+	/* two murrays - smallest screen size */
   list-style: none; 
   float: left;
   display: inline-block;
@@ -1756,12 +1757,14 @@ h3.code-button:hover {
 
 
 @media (min-width: 768px) {
+	/* four murrays */
   .page-template-murray .murrays .murray {
     padding-bottom: 25%;
     width: 25%; 
 	} 
 }
 @media (min-width: 1025px) {
+	/* six murrays */
   .page-template-murray .murrays .murray {
     padding-bottom: 16.66667%;
     width: 16.66667%; 
