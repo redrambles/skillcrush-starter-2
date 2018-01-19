@@ -26,7 +26,7 @@ get_header(); ?>
 					<?php while ( have_posts() ) : the_post(); 
 					$show_excerpt = get_field('show_excerpt');
 						 if ( ( 0 == $wp_query->current_post ) && ( $paged < 2 ) && ($show_excerpt == 'no') ){
-							// if this is the first blog entry on the first blog page - display full content
+							// if this is the first blog entry on the first blog page and client hasn't chosen to only show excerpt in the admin - display full content
 							get_template_part('content', get_post_format());
 						} else {
 							// otherwise display excerpt
