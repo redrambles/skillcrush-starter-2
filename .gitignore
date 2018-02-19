@@ -1,6 +1,12 @@
 #ignore the following, yo!
+
+
+# System / auto-generated files
 .DS_Store
 **/.DS_Store
+.vscode
+
+# WP specific / backups
 wp-config.php
 wp-content/uploads/
 .htaccess
