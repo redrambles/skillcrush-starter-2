@@ -38,3 +38,4 @@ wp-content/themes/skillcrushstarter-active-theme/node_modules
 wp-content/themes/skillcrushstarter-active-theme/gulpfile.js
 wp-content/themes/skillcrushstarter-active-theme/img/source
 wp-content/themes/skillcrushstarter-active-theme/package-lock.json
+vendor/
