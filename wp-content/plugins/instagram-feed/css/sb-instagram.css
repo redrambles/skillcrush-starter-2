@@ -142,6 +142,10 @@
 }
 
 /* Videos */
+#sb_instagram svg:not(:root).svg-inline--fa {
+  height: 1em;
+}
+
 #sb_instagram .sbi_type_video .sbi_playbtn,
 #sb_instagram .sbi_type_carousel .sbi_playbtn,
 .sbi_type_carousel .fa-clone,
@@ -149,7 +153,7 @@
 #sb_instagram .sbi_type_video .svg-inline--fa.fa-play{
   display: block !important;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 
   color: #fff;
   color: rgba(255,255,255,0.9);
