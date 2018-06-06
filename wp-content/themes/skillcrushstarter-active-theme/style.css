@@ -1219,6 +1219,10 @@ a.download-button:hover {
 	display: flex; 
   flex-wrap: wrap;
 }
+
+.comments-area p.form-submit {
+	order: 5;
+}
 .comment-form p{	
 	-webkit-flex: 1 0 auto;       
 	-ms-flex: 1 0 auto;           
