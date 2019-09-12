@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Skillcrush Starter functions and definitions - meaningless comment addition here.
  *
@@ -134,8 +134,8 @@ function skillcrushstarter_custom_post_types() {
 		array(
 			// 'supports' => $supports,
 			'labels' => array(
-				'name' => _( 'Slider' ),
-				'singular_name' => _( 'Slider' )
+				'name' => __( 'Slider' ),
+				'singular_name' => __( 'Slider' )
 				),
 			'public' => true,
 			'has_archive' => false
@@ -256,10 +256,10 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 	acf_add_options_sub_page(array(
-	'page_title' 	=> 'Movie API Settings',
-	'menu_title'	=> 'Movie API',
-	'parent_slug'	=> 'skillcrushstarter-options',
-));
+		'page_title' 	=> 'Movie API Settings',
+		'menu_title'	=> 'Movie API',
+		'parent_slug'	=> 'skillcrushstarter-options',
+	));
 
 }
 
@@ -281,9 +281,9 @@ add_filter( 'attachment_fields_to_edit', 'red_media_attachment_field_to_edit', 1
 function red_media_edit_attachment( $attachment_id ){
 	if ( isset( $_REQUEST['attachments'][$attachment_id]['media_author'] ) ) {
 
-	$media_author = $_REQUEST['attachments'][$attachment_id]['media_author'];
+		$media_author = $_REQUEST['attachments'][$attachment_id]['media_author'];
 
-	update_post_meta( $attachment_id, 'media_author', $media_author );
+		update_post_meta( $attachment_id, 'media_author', $media_author );
 	}
 }
 add_action( 'edit_attachment', 'red_media_edit_attachment' );
@@ -338,4 +338,4 @@ require get_stylesheet_directory() . '/inc/admin/admin-functions.php';
 require get_stylesheet_directory() . '/inc/admin/admin-extras.php';
 require get_stylesheet_directory() . '/inc/extras.php';
 require get_stylesheet_directory() . '/inc/login.php';
-include get_stylesheet_directory() . '/inc/customizer.php';
+include get_stylesheet_directory() . '/inc/customizer.php'; 
