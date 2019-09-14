@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 /**
  * Skillcrush Starter functions and definitions - meaningless comment addition here.
  *
